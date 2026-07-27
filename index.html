@@ -2,46 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R0VZX6MVP8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-R0VZX6MVP8', {
-  page_path: window.location.pathname
-});
-</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Official portfolio of Ankit Verma (Ankitiqcode). AI, Data Analyst & Python Developer skilled in SQL, Power BI, Excel, Machine Learning and web development.">
-
-  <meta name="keywords" content="Ankitiqcode, Ankit Verma, AI Engineer, Data Analyst, Python Developer, SQL, Power BI, Excel, Machine Learning, Portfolio">
-
-  <meta name="author" content="Ankit Verma">
-
-  <meta name="robots" content="index, follow">
+  
+  <!-- Primary Meta Tags -->
+  <title>ankitiqcode | Ankit Verma | AI, Data Analyst & Python Developer</title>
+  <meta name="title" content="ankitiqcode | Ankit Verma | AI, Data Analyst & Python Developer">
+  <meta name="description" content="Official portfolio of Ankit Verma (ankitiqcode). AI, Data Analyst & Python Developer skilled in SQL, Power BI, Excel, Machine Learning, and web development.">
+  <meta name="keywords" content="ankitiqcode, Ankit Verma, ankitiqcode portfolio, ankitiqcode github, Ankit Verma Data Analyst, Ankit Verma Python Developer, SQL, Power BI, Machine Learning">
+  <meta name="author" content="Ankit Verma (ankitiqcode)">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="theme-color" content="#0f172a">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <title>Ankitiqcode | Ankit Verma | AI, Data Analyst & Python Developer</title>
   <link rel="canonical" href="https://ankitiqcode-portfolio.netlify.app/">
-  <meta property="og:title" content="Ankitiqcode | Ankit Verma | Data Analyst Portfolio">
-  <meta property="og:description" content="Official portfolio of Ankit Verma (Ankitiqcode). Data Analyst, Python Developer, SQL, Power BI and AI/ML Enthusiast.">
+
+  <!-- Google Tag Manager / Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R0VZX6MVP8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R0VZX6MVP8', { page_path: window.location.pathname });
+  </script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ankitiqcode-portfolio.netlify.app/">
-  <meta name="twitter:image" content="https://ankitiqcode-portfolio.netlify.app/images/og-image.png">
-  <meta property="og:site_name" content="Ankitiqcode">
+  <meta property="og:title" content="ankitiqcode | Ankit Verma | Data Analyst & Python Developer">
+  <meta property="og:description" content="Official portfolio of Ankit Verma (ankitiqcode). Data Analyst, Python Developer, SQL, Power BI, and AI/ML Enthusiast.">
+  <meta property="og:image" content="https://ankitiqcode-portfolio.netlify.app/images/og-image.png">
+  <meta property="og:site_name" content="ankitiqcode">
+
+  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://ankitiqcode-portfolio.netlify.app/">
+  <meta name="twitter:title" content="ankitiqcode | Ankit Verma | AI, Data Analyst & Python Developer">
+  <meta name="twitter:description" content="Official portfolio of Ankit Verma (ankitiqcode). AI, Data Analyst, Python Developer, SQL, Power BI & Machine Learning.">
+  <meta name="twitter:image" content="https://ankitiqcode-portfolio.netlify.app/images/og-image.jpg">
+  <meta name="twitter:creator" content="@ankitiqcode">
 
-<meta name="twitter:title" content="Ankitiqcode | AI, Data Analyst & Python Developer">
-
-<meta name="twitter:description" content="Official portfolio of Ankit Verma (Ankitiqcode). AI, Data Analyst, Python Developer, SQL, Power BI & Machine Learning.">
-
-<meta name="twitter:image" content="https://ankitiqcode-portfolio.netlify.app/images/og-image.jpg">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -67,16 +74,17 @@
       background: var(--bg);
       color: var(--text);
       overflow-x: hidden;
+      line-height: 1.6;
     }
 
     a { text-decoration: none; color: inherit; }
 
-    /* ── Scrollbar ── */
-    ::-webkit-scrollbar { width: 4px; }
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
-    ::-webkit-scrollbar-thumb { background: var(--cyan); border-radius: 2px; }
+    ::-webkit-scrollbar-thumb { background: var(--cyan); border-radius: 3px; }
 
-    /* ── Grid bg ── */
+    /* Grid background effect */
     body::before {
       content: '';
       position: fixed;
@@ -89,7 +97,18 @@
       z-index: 0;
     }
 
-    /* ── Glow orbs ── */
+    /* Noise overlay */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    /* Glow orbs */
     .orb {
       position: fixed;
       border-radius: 50%;
@@ -102,20 +121,9 @@
     .orb-2 { width: 400px; height: 400px; background: var(--pink); bottom: 10%; right: -100px; }
     .orb-3 { width: 350px; height: 350px; background: var(--cyan); top: 40%; left: 30%; }
 
-    /* ── Noise overlay ── */
-    body::after {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.5;
-    }
-
     .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1; }
 
-    /* ── Navbar ── */
+    /* Navbar */
     #navbar {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -133,7 +141,8 @@
 
     .nav-brand {
       display: flex; align-items: center; gap: 0.75rem;
-      font-size: 1.2rem; font-weight: 700;
+      font-size: 1.25rem; font-weight: 700; font-family: var(--mono);
+      color: var(--text);
     }
     .nav-brand span { color: var(--cyan); }
     .nav-brand-dot {
@@ -148,15 +157,15 @@
       content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px;
       background: var(--cyan); transition: width 0.3s;
     }
-    .nav-links a:hover { color: var(--text); }
-    .nav-links a:hover::after { width: 100%; }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); }
+    .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
 
     .nav-cv {
       font-size: 0.85rem; font-weight: 600; padding: 0.5rem 1.25rem;
-      border: 1px solid var(--cyan); color: var(--cyan); border-radius: 6px;
+      border: 1px solid var(--cyan); color: var(--cyan) !important; border-radius: 6px;
       transition: all 0.3s;
     }
-    .nav-cv:hover { background: var(--cyan); color: var(--bg); }
+    .nav-cv:hover { background: var(--cyan); color: var(--bg) !important; }
 
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
     .hamburger span { display: block; width: 24px; height: 2px; background: var(--text); transition: all 0.3s; }
@@ -173,11 +182,11 @@
       }
     }
 
-    /* ── Hero ── */
+    /* Hero Section */
     #home {
-      min-height: 100vh,800px;
+      min-height: 100vh;
       display: flex; align-items: center;
-      padding: 6rem 0 4rem;
+      padding: 7rem 0 4rem;
     }
     #home .container { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
 
@@ -228,7 +237,7 @@
     }
     .btn-ghost:hover { border-color: var(--cyan); color: var(--cyan); background: rgba(0,229,255,0.05); }
 
-    .hero-socials { display: flex; gap: 1rem; }
+    .hero-socials { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
     .social-link {
       width: 40px; height: 40px; border-radius: 8px;
       border: 1px solid var(--border); display: flex; align-items: center; justify-content: center;
@@ -263,6 +272,7 @@
     .hero-stats {
       position: absolute; background: var(--surface); border: 1px solid var(--border);
       border-radius: 12px; padding: 0.75rem 1rem; backdrop-filter: blur(20px);
+      z-index: 2;
     }
     .hero-stats.stat-1 { bottom: 20px; left: -20px; }
     .hero-stats.stat-2 { top: 40px; right: -10px; }
@@ -277,7 +287,7 @@
       .hero-stats.stat-2 { right: 0; }
     }
 
-    /* ── Section common ── */
+    /* Common Section Styles */
     section { padding: 6rem 0; position: relative; z-index: 1; }
 
     .section-label {
@@ -295,7 +305,7 @@
       border-radius: 2px; margin-bottom: 3rem;
     }
 
-    /* ── About ── */
+    /* About Section */
     #about { background: var(--bg2); }
     #about .container { display: grid; grid-template-columns: 1fr 1.5fr; gap: 5rem; align-items: start; }
 
@@ -339,9 +349,9 @@
 
     .timeline { display: flex; flex-direction: column; gap: 1.25rem; }
     .timeline-item { display: flex; gap: 1rem; }
-    .timeline-dot-wrap { display: flex; flex-direction: column; align-items: center; gap: 0; }
+    .timeline-dot-wrap { display: flex; flex-direction: column; align-items: center; }
     .timeline-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--cyan); flex-shrink: 0; margin-top: 5px; }
-    .timeline-line { flex: 1; width: 1px; background: var(--border); }
+    .timeline-line { flex: 1; width: 1px; background: var(--border); min-height: 30px; }
     .timeline-content { padding-bottom: 1rem; }
     .timeline-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 0.2rem; }
     .timeline-sub { font-size: 0.8rem; color: var(--cyan); }
@@ -349,172 +359,111 @@
 
     @media(max-width:768px){ #about .container { grid-template-columns: 1fr; } }
 
-/* ── Posts Section ── */
-/* ── Posts Section ── */
-#post{
-  background: var(--bg1);
-  padding-top: 60px;
-  padding-bottom: 20px; /* Space kam */
-  min-height: auto;
-}
+    /* Posts & Memories Section */
+    #post {
+      background: var(--bg);
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
 
-/* Toggle Header */
-.memories-toggle{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  cursor:pointer;
-  padding:15px 25px;
-  background:var(--bg3);
-  border:1px solid var(--border);
-  border-radius:18px;
-  transition:.3s;
-}
+    .memories-toggle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding: 15px 25px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      transition: .3s;
+    }
 
-.memories-toggle:hover{
-  border-color:var(--cyan);
-  box-shadow:0 0 20px rgba(0,229,255,.08);
-}
+    .memories-toggle:hover {
+      border-color: var(--cyan);
+      box-shadow: 0 0 20px rgba(0,229,255,.08);
+    }
 
-.memories-toggle .section-title{
-  margin:0 !important;
-}
+    .memories-toggle .section-title { margin: 0 !important; }
+    .memories-toggle i { color: var(--cyan); font-size: 1.3rem; transition: transform .3s; }
+    .memories-toggle i.rotate { transform: rotate(180deg); }
 
-.memories-toggle i{
-  color:var(--cyan);
-  font-size:1.3rem;
-  transition:.3s;
-}
+    .post-feed { display: none; }
+    .post-feed.show {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 25px;
+    }
 
-.rotate{
-  transform:rotate(180deg);
-}
+    .post-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: .35s ease;
+    }
 
-/* Hidden By Default */
-.post-feed{
-  display:none;
-}
+    .post-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0,229,255,.3);
+      box-shadow: 0 10px 30px rgba(0,229,255,.08);
+    }
 
-.post-feed.show{
-  display:flex;
-  flex-direction:column;
-  gap:2rem;
-  margin-top:25px;
-}
+    .post-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.25rem;
+    }
 
-/* Post Card */
-.post-card{
-  background:var(--bg3);
-  border:1px solid var(--border);
-  border-radius:20px;
-  overflow:hidden;
-  transition:.35s ease;
-}
+    .post-avatar {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--cyan);
+    }
 
-.post-card:hover{
-  transform:translateY(-4px);
-  border-color:rgba(0,229,255,.3);
-  box-shadow:0 10px 30px rgba(0,229,255,.08);
-}
+    .post-user h4 { margin: 0; color: var(--text); }
+    .post-user span { font-size: .8rem; color: var(--muted); }
 
-/* Header */
-.post-header{
-  display:flex;
-  align-items:center;
-  gap:1rem;
-  padding:1.25rem;
-}
+    .post-content { padding: 0 1.25rem 1rem; }
+    .post-content h3 { color: var(--text); margin-bottom: .75rem; font-size: 1.2rem; }
+    .post-content p { color: var(--muted); line-height: 1.8; }
 
-.post-avatar{
-  width:55px;
-  height:55px;
-  border-radius:50%;
-  object-fit:cover;
-  border:2px solid var(--cyan);
-}
+    .post-image img {
+      width: 100%;
+      height: auto;
+      max-height: 700px;
+      object-fit: contain;
+      border-radius: 14px;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .post-image img:hover { transform: scale(1.01); }
 
-.post-user h4{
-  margin:0;
-  color:var(--text);
-}
+    .post-footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 1.25rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .85rem;
+    }
+    .post-footer i { color: var(--cyan); margin-right: 0.4rem; }
 
-.post-user span{
-  font-size:.8rem;
-  color:var(--muted);
-}
+    @media(max-width:768px){
+      #post { padding-top: 40px; padding-bottom: 20px; }
+      .post-content h3 { font-size: 1.15rem; }
+      .post-footer { flex-direction: column; gap: 10px; align-items: flex-start; }
+    }
 
-/* Content */
-.post-content{
-  padding:0 1.25rem 1rem;
-}
-
-.post-content h3{
-  color:var(--text);
-  margin-bottom:.75rem;
-}
-
-.post-content p{
-  color:var(--muted);
-  line-height:1.8;
-}
-
-/* Image */
-.post-image img{
-    width:100%;
-    height:auto;
-    max-height:700px;
-    object-fit:contain;
-    border-radius:14px;
-    display:block;
-}
-
-.post-image img:hover{
-  transform:scale(1.02);
-}
-
-/* Footer */
-.post-footer{
-  display:flex;
-  justify-content:space-between;
-  padding:1rem 1.25rem;
-  border-top:1px solid var(--border);
-  color:var(--muted);
-  font-size:.85rem;
-}
-
-.post-footer i{
-  color:var(--cyan);
-}
-
-/* Mobile */
-@media(max-width:768px){
-
-  #post{
-    padding-top:40px;
-    padding-bottom:0px;
-  }
-
-  .post-content h3{
-    font-size:1.15rem;
-  }
-
-  .post-footer{
-    flex-direction:column;
-    gap:10px;
-    align-items:flex-start;
-  }
-}
-
-
-
-
-    /* ── Services ── */
+    /* Expertise / Services */
     #services .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.5rem; }
 
     .service-card {
       background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
       padding: 2rem 1.5rem; transition: all 0.4s; position: relative; overflow: hidden;
-      cursor: default;
     }
     .service-card::before {
       content: ''; position: absolute; inset: 0;
@@ -534,7 +483,7 @@
     .service-card h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.6rem; }
     .service-card p { font-size: 0.875rem; color: var(--muted); line-height: 1.7; }
 
-    /* ── Portfolio ── */
+    /* Portfolio Section */
     #portfolio { background: var(--bg2); }
 
     .filter-bar { display: flex; gap: 0.75rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
@@ -549,7 +498,7 @@
 
     .project-card {
       background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
-      overflow: hidden; transition: all 0.4s; cursor: pointer;
+      overflow: hidden; transition: all 0.4s;
     }
     .project-card:hover { transform: translateY(-6px); border-color: rgba(0,229,255,0.35); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
 
@@ -559,12 +508,12 @@
 
     .project-overlay {
       position: absolute; inset: 0; background: rgba(6,6,18,0.85);
-      display: flex; align-items: center; justify-content: center; gap: 1rem;
-      opacity: 0; transition: opacity 0.3s;
+      display: flex; align-items: center; justify-content: center; gap: 0.6rem; flex-wrap: wrap;
+      padding: 1rem; opacity: 0; transition: opacity 0.3s;
     }
     .project-card:hover .project-overlay { opacity: 1; }
     .project-overlay-btn {
-      padding: 0.5rem 1.1rem; border-radius: 6px; font-size: 0.82rem; font-weight: 600;
+      padding: 0.5rem 0.9rem; border-radius: 6px; font-size: 0.8rem; font-weight: 600;
       transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.4rem;
     }
     .pob-demo { background: var(--cyan); color: var(--bg); border: none; }
@@ -578,10 +527,10 @@
       padding: 0.25rem 0.65rem; border-radius: 100px; font-size: 0.72rem; font-weight: 500;
       background: rgba(0,229,255,0.1); color: var(--cyan); border: 1px solid rgba(0,229,255,0.2);
     }
-    .project-body h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .project-body h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.5rem; }
     .project-body p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
 
-    /* ── Skills bar ── */
+    /* Technical Skills Section */
     #skills-section { background: var(--bg); }
     .skills-bar-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 4rem; }
 
@@ -589,16 +538,16 @@
     .skill-bar-header { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.85rem; }
     .skill-bar-header span:first-child { color: var(--text); }
     .skill-bar-header span:last-child { color: var(--cyan); font-family: var(--mono); }
-    .skill-bar-track { height: 4px; background: var(--surface); border-radius: 2px; overflow: hidden; }
+    .skill-bar-track { height: 6px; background: var(--surface); border-radius: 3px; overflow: hidden; }
     .skill-bar-fill {
-      height: 100%; border-radius: 2px;
+      height: 100%; border-radius: 3px;
       background: linear-gradient(90deg, var(--cyan), var(--purple));
       width: 0%; transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
     }
 
     @media(max-width:768px){ .skills-bar-grid { grid-template-columns: 1fr; } }
 
-    /* ── Contact ── */
+    /* Contact Section */
     #contact { background: var(--bg2); }
     #contact .container { display: grid; grid-template-columns: 1fr 1.6fr; gap: 4rem; align-items: start; }
 
@@ -616,7 +565,7 @@
       color: var(--cyan); font-size: 1rem;
     }
     .contact-label { font-size: 0.75rem; color: var(--muted); margin-bottom: 0.25rem; }
-    .contact-value { font-size: 0.9rem; font-weight: 500; }
+    .contact-value { font-size: 0.9rem; font-weight: 500; word-break: break-all; }
 
     .contact-socials { display: flex; gap: 0.75rem; flex-wrap: wrap; }
     .contact-social {
@@ -661,17 +610,17 @@
       .form-row { grid-template-columns: 1fr; }
     }
 
-    /* ── Footer ── */
+    /* Footer */
     footer {
-      padding: 2rem 0; border-top: 1px solid var(--border);
+      padding: 2.5rem 0; border-top: 1px solid var(--border);
       background: var(--bg); position: relative; z-index: 1;
     }
     footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
     footer p { font-size: 0.85rem; color: var(--muted); }
-    footer .foot-brand { font-weight: 700; font-family: var(--mono); font-size: 0.9rem; }
+    footer .foot-brand { font-weight: 700; font-family: var(--mono); font-size: 0.95rem; }
     footer .foot-brand span { color: var(--cyan); }
 
-    /* ── Scroll to top ── */
+    /* Scroll to top */
     #scrollTop {
       position: fixed; bottom: 2rem; right: 2rem; z-index: 999;
       width: 44px; height: 44px; border-radius: 10px;
@@ -683,960 +632,991 @@
     #scrollTop.visible { opacity: 1; transform: translateY(0); }
     #scrollTop:hover { transform: translateY(-4px); }
 
-    /* ── Reveal animations ── */
+    /* Reveal animations */
     .reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s cubic-bezier(0.4,0,0.2,1); }
     .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    /* ── Active nav link ── */
-    .nav-links a.active { color: var(--cyan); }
-    .nav-links a.active::after { width: 100%; }
-
-    /* ── Loading screen ── */
-    #loader {
-      position: fixed; inset: 0; background: var(--bg); z-index: 9999;
-      display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 1.5rem;
-      transition: opacity 0.5s, visibility 0.5s;
-    }
-    #loader.hidden { opacity: 0; visibility: hidden; }
-    .loader-logo { font-size: 2rem; font-weight: 700; font-family: var(--mono); color: var(--cyan); }
-    .loader-bar { width: 200px; height: 2px; background: var(--surface); border-radius: 2px; overflow: hidden; }
-    .loader-fill { height: 100%; background: linear-gradient(90deg, var(--cyan), var(--purple)); animation: load 1.5s ease forwards; }
-    @keyframes load { from{width:0%} to{width:100%} }
   </style>
+
+  <!-- Comprehensive Structured Data (JSON-LD) for Google Search, AI Overviews, & Knowledge Graph -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Ankit Verma",
-  "alternateName": "Ankitiqcode",
-  "url": "https://ankitiqcode-portfolio.netlify.app/",
-  "jobTitle": "Aspiring Data Analyst",
-  "description": "Data Analyst, Python Developer, SQL, Power BI and AI/ML Enthusiast.",
-  "sameAs": [
-    "https://www.linkedin.com/in/ankitiqcode/",
-    "https://github.com/Ankitiqcode-tech",
-    "https://youtube.com/@ankitiqcode123"
-  ]
-}
-</script>
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://ankitiqcode-portfolio.netlify.app/#person",
+        "name": "Ankit Verma",
+        
+        "identifier": "ankitiqcode",
+        "url": "https://ankitiqcode-portfolio.netlify.app/",
+        "image": "https://ankitiqcode-portfolio.netlify.app/images/passport_photo_compressed.jpg",
+        "jobTitle": "Data Analyst & Python Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "QSpiders Software Testing and Training Institute"
+        },
+        "alumniOf": [
+          {
+            "@type": "EducationalOrganization",
+            "name": "Dr. A.P.J. Abdul Kalam Technical University"
+          },
+          {
+            "@type": "EducationalOrganization",
+            "name": "KNIPSS Faridipur, Sultanpur"
+          }
+        ],
+        "knowsAbout": [
+          "Data Analytics",
+          "Python Programming",
+          "SQL",
+          "Power BI",
+          "Machine Learning",
+          "Excel",
+          "AI Resume Screening",
+          "Artificial Intelligence",
+          "Web Development"
+        ],
+        "description": "Ankit Verma (ankitiqcode) is a Data Analyst, Python Developer, and AI/ML Enthusiast specializing in SQL, Power BI, Excel, predictive models, and web applications.",
+        "sameAs": [
+          "https://github.com/ankitiqcode",
+          "https://github.com/Ankitiqcode-tech",
+          "https://www.linkedin.com/in/ankitiqcode/",
+          "https://youtube.com/@ankitiqcode",
+          "https://youtube.com/@ankitiqcode123",
+          "https://x.com/ankitiqcode",
+          "https://www.instagram.com/ankitiqcode"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://ankitiqcode-portfolio.netlify.app/#website",
+        "url": "https://ankitiqcode-portfolio.netlify.app/",
+        "name": "ankitiqcode",
+        "description": "Official Portfolio & Professional Website of Ankit Verma (ankitiqcode).",
+        "publisher": { "@id": "https://ankitiqcode-portfolio.netlify.app/#person" },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "ItemPage",
+        "@id": "https://ankitiqcode-portfolio.netlify.app/#webpage",
+        "url": "https://ankitiqcode-portfolio.netlify.app/",
+        "name": "ankitiqcode | Ankit Verma | AI, Data Analyst & Python Developer",
+        "isPartOf": { "@id": "https://ankitiqcode-portfolio.netlify.app/#website" },
+        "about": { "@id": "https://ankitiqcode-portfolio.netlify.app/#person" },
+        "description": "Explore the official portfolio of ankitiqcode (Ankit Verma) featuring Data Analytics, Machine Learning, Power BI dashboards, and web projects."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://ankitiqcode-portfolio.netlify.app/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://ankitiqcode-portfolio.netlify.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://ankitiqcode-portfolio.netlify.app/blog/index.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
-<!-- Loading screen 
-<div id="loader">
-  <div class="loader-logo">AV<span style="color:var(--purple)">.</span></div>
-  <div class="loader-bar"><div class="loader-fill"></div></div>
-  <p style="font-size:0.8rem;color:var(--muted);font-family:var(--mono)">Initializing portfolio...</p>
-</div>-->
+  <!-- Background Orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
 
-<!-- Background effects -->
-<div class="orb orb-1"></div>
-<div class="orb orb-2"></div>
-<div class="orb orb-3"></div>
-
-<!-- Navbar -->
-<nav id="navbar">
-  <div class="container">
-    <div class="nav-brand">
-      <div class="nav-brand-dot"></div>
-      <span>ankitiqcode</span>
-    </div>
-    <div class="nav-links" id="navLinks">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="blog/index.html">Blog</a>
-      <a href="#post">Post</a>
-      <a href="#services">Expertise</a>
-      <a href="#portfolio">Projects</a>
-      <a href="#contact">Contact</a>
-      <a href="images/Ankit verma Resume.pdf" download class="nav-cv"><i class="fas fa-download"></i> Resume</a>
-    </div>
-    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
-    </div>
-  </div>
-</nav>
-
-<!-- Hero -->
-<section id="home">
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-tag"><span class="blink">▋</span>Open to Work</div>
-      <h1 class="hero-name">Hello, I'm<br><span class="highlight">Ankit Verma</span></h1>
-      <div class="hero-role" id="typedRole"><span class="cursor"></span></div>
-      <p class="hero-desc">Aspiring Data Analyst with expertise in Python, SQL, Power BI, and Excel. Passionate about transforming raw data into actionable insights and building real-world data-driven solutions</p>
-      <div class="hero-cta">
-        <a href="#contact" class="btn-primary"><i class="fas fa-paper-plane"></i> Hire Me</a>
-        <a href="#portfolio" class="btn-ghost"><i class="fas fa-folder-open"></i> View Projects</a>
-      </div>
-      <div class="hero-socials">
-        <a href="https://github.com/ankitiqcode" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/ankitiqcode/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://youtube.com/@ankitiqcode" target="_blank" class="contact-social"><i class="fab fa-youtube"></i> YouTube</a>
-        <a href="https://x.com/ankitiqcode" target="_blank" class="social-link"><i class="fab fa-x-twitter"></i></a>
-        <a href="https://www.instagram.com/ankitiqcode" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-    <div class="hero-image-wrap">
-      <div class="hero-image-bg"></div>
-      <div class="hero-image-ring"></div>
-      <img src="./images/passport_photo_compressed.jpg" alt="Ankit Verma" class="hero-img" onerror="this.style.background='linear-gradient(135deg,#00e5ff22,#7c3aed33)';this.src=''">
-      <div class="hero-stats stat-1">
-        <div class="stat-num">2026</div>
-        <div class="stat-label">Graduate</div>
-      </div>
-      <div class="hero-stats stat-2">
-        <div class="stat-num">10+</div>
-        <div class="stat-label">Projects Done</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- About -->
-<section id="about">
-  <div class="container">
-    <div>
-      <div class="about-img-wrap reveal">
-        <img src="images/ChatGPT Image Jun 14, 2026, 11_20_43 PM.png" alt="Ankit" class="about-img" onerror="this.style.minHeight='300px';this.style.background='linear-gradient(135deg,#1a1a35,#0d0d1f)'">
-        <div class="about-img-deco"></div>
-      </div>
-    </div>
-    <div class="about-text reveal" style="transition-delay:0.15s">
-      <div class="section-label">About me</div>
-      <h2 class="section-title">Passionate about code<br>& data</h2>
-      <div class="section-divider"></div>
-      <p>I'm a Computer Science student at Dr. A.P.J. Abdul Kalam Technical University with a strong foundation in Data Analytics, Machine Learning, Python, SQL, and Business Intelligence. I specialize in transforming raw data into actionable insights through interactive dashboards, predictive models, and data-driven solutions. Passionate about solving real-world challenges, I continuously explore innovative ways to leverage AI and analytics for impactful decision-making.
-</p>
-
-      <div class="tab-nav">
-        <button class="tab-btn active" onclick="switchTab('skills')">Skills</button>
-        <button class="tab-btn" onclick="switchTab('experience')">Experience</button>
-        <button class="tab-btn" onclick="switchTab('education')">Education</button>
-      </div>
-
-      <div class="tab-pane active" id="tab-skills">
-        <div class="skills-grid">
-          <div class="skill-chip"><i class="fas fa-code"></i> Python (Pandas, NumPy, Scikit-learn)</div>
-          <div class="skill-chip"><i class="fab fa-python"></i> SQL & Database Management</div>
-          <div class="skill-chip"><i class="fas fa-database"></i> Power BI & Excel</div>
-          <div class="skill-chip"><i class="fas fa-chart-bar"></i> Data Visualization (Matplotlib, Seaborn)</div>
-          <div class="skill-chip"><i class="fas fa-robot"></i> Machine Learning & Predictive Analytics</div>
-          <div class="skill-chip"><i class="fas fa-eye"></i> Data Cleaning & Statistical Analysis</div>
-          <div class="skill-chip"><i class="fas fa-chart-line"></i> Artificial Intelligence (AI/ML)</div>
-          <div class="skill-chip"><i class="fas fa-broom"></i>Web Development (HTML, CSS, JavaScript)</div>
+  <!-- Header / Navbar -->
+  <header>
+    <nav id="navbar" aria-label="Main Navigation">
+      <div class="container">
+        <a href="#home" class="nav-brand" aria-label="ankitiqcode Home">
+          <div class="nav-brand-dot"></div>
+          <span>ankitiqcode</span>
+        </a>
+        <div class="nav-links" id="navLinks">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="blog/index.html">Blog</a>
+          <a href="#post">Post</a>
+          <a href="#services">Expertise</a>
+          <a href="#portfolio">Projects</a>
+          <a href="#contact">Contact</a>
+          <a href="images/Ankit verma Resume.pdf" download class="nav-cv"><i class="fas fa-download"></i> Resume</a>
+        </div>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu" role="button" tabindex="0">
+          <span></span><span></span><span></span>
         </div>
       </div>
+    </nav>
+  </header>
 
-      <div class="tab-pane" id="tab-experience">
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot-wrap"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
-            <div class="timeline-content">
-              <div class="timeline-title">Intern (Data Analytics)</div>
-              <div class="timeline-sub">QSpiders Software Testing and Training Institute, Noida</div>
-              <div class="timeline-date">Jul 2025 – Present</div>
+  <main>
+    <!-- Hero Section -->
+    <section id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-tag"><span class="blink">▋</span>Open to Work</div>
+          <h1 class="hero-name">Hello, I'm<br><span class="highlight">Ankit Verma</span></h1>
+          <div class="hero-role" id="typedRole"><span class="cursor"></span></div>
+          <p class="hero-desc">Aspiring Data Analyst & Python Developer with expertise in SQL, Power BI, and Excel. Passionate about transforming raw data into actionable insights and building real-world data-driven solutions.</p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn-primary"><i class="fas fa-paper-plane"></i> Hire Me</a>
+            <a href="#portfolio" class="btn-ghost"><i class="fas fa-folder-open"></i> View Projects</a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://github.com/ankitiqcode" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ankitiqcode/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://youtube.com/@ankitiqcode" target="_blank" rel="noopener noreferrer" class="contact-social" aria-label="YouTube"><i class="fab fa-youtube"></i> YouTube</a>
+            <a href="https://x.com/ankitiqcode" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/ankitiqcode" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="hero-image-wrap">
+          <div class="hero-image-bg"></div>
+          <div class="hero-image-ring"></div>
+          <img src="./images/passport_photo_compressed.jpg" alt="Ankit Verma - ankitiqcode" class="hero-img" onerror="this.style.background='linear-gradient(135deg,#00e5ff22,#7c3aed33)';this.src=''">
+          <div class="hero-stats stat-1">
+            <div class="stat-num">2026</div>
+            <div class="stat-label">Graduate</div>
+          </div>
+          <div class="hero-stats stat-2">
+            <div class="stat-num">10+</div>
+            <div class="stat-label">Projects Done</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <div>
+          <div class="about-img-wrap reveal">
+            <img src="images/ChatGPT Image Jun 14, 2026, 11_20_43 PM.png" alt="Ankit Verma Data Analyst" class="about-img" onerror="this.style.minHeight='300px';this.style.background='linear-gradient(135deg,#1a1a35,#0d0d1f)'">
+            <div class="about-img-deco"></div>
+          </div>
+        </div>
+        <div class="about-text reveal" style="transition-delay:0.15s">
+          <div class="section-label">About me</div>
+          <h2 class="section-title">Passionate about code<br>& data</h2>
+          <div class="section-divider"></div>
+          <p>I'm a Computer Science student at Dr. A.P.J. Abdul Kalam Technical University with a strong foundation in Data Analytics, Machine Learning, Python, SQL, and Business Intelligence. I specialize in transforming raw data into actionable insights through interactive dashboards, predictive models, and data-driven solutions. Passionate about solving real-world challenges, I continuously explore innovative ways to leverage AI and analytics for impactful decision-making.</p>
+
+          <div class="tab-nav">
+            <button class="tab-btn active" onclick="switchTab('skills', event)">Skills</button>
+            <button class="tab-btn" onclick="switchTab('experience', event)">Experience</button>
+            <button class="tab-btn" onclick="switchTab('education', event)">Education</button>
+          </div>
+
+          <!-- Skills Tab Pane -->
+          <div class="tab-pane active" id="tab-skills">
+            <div class="skills-grid">
+              <div class="skill-chip"><i class="fas fa-code"></i> Python (Pandas, NumPy, Scikit-learn)</div>
+              <div class="skill-chip"><i class="fab fa-python"></i> SQL & Database Management</div>
+              <div class="skill-chip"><i class="fas fa-database"></i> Power BI & Excel</div>
+              <div class="skill-chip"><i class="fas fa-chart-bar"></i> Data Visualization (Matplotlib, Seaborn)</div>
+              <div class="skill-chip"><i class="fas fa-robot"></i> Machine Learning & Predictive Analytics</div>
+              <div class="skill-chip"><i class="fas fa-eye"></i> Data Cleaning & Statistical Analysis</div>
+              <div class="skill-chip"><i class="fas fa-chart-line"></i> Artificial Intelligence (AI/ML)</div>
+              <div class="skill-chip"><i class="fas fa-broom"></i> Web Development (HTML, CSS, JavaScript)</div>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-dot-wrap"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
-            <div class="timeline-content">
-              <div class="timeline-title">Intern (Machine Learning)</div>
-              <div class="timeline-sub">Softpro India Computer Technologies (P) Ltd., Lucknow</div>
-              <div class="timeline-date">Aug – Oct 2024</div>
+
+          <!-- Experience Tab Pane -->
+          <div class="tab-pane" id="tab-experience">
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot-wrap"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+                <div class="timeline-content">
+                  <div class="timeline-title">Intern (Data Analytics)</div>
+                  <div class="timeline-sub">QSpiders Software Testing and Training Institute, Noida</div>
+                  <div class="timeline-date">Jul 2025 – Present</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot-wrap"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+                <div class="timeline-content">
+                  <div class="timeline-title">Intern (Machine Learning)</div>
+                  <div class="timeline-sub">Softpro India Computer Technologies (P) Ltd., Lucknow</div>
+                  <div class="timeline-date">Aug – Oct 2024</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot-wrap"><div class="timeline-dot"></div></div>
+                <div class="timeline-content">
+                  <div class="timeline-title">Intern (Web Technologies)</div>
+                  <div class="timeline-sub">Softpro India Computer Technologies (P) Ltd., Lucknow</div>
+                  <div class="timeline-date">Aug – Oct 2024</div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-dot-wrap"><div class="timeline-dot"></div></div>
-            <div class="timeline-content">
-              <div class="timeline-title">Intern(Web Technologies)</div>
-              <div class="timeline-sub">Softpro India Computer Technologies (P) Ltd., Lucknow</div>
-              <div class="timeline-date">Aug – Oct 2024</div>
+
+          <!-- Education Tab Pane -->
+          <div class="tab-pane" id="tab-education">
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot-wrap"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+                <div class="timeline-content">
+                  <div class="timeline-title">B.Tech — Computer Science & Engineering</div>
+                  <div class="timeline-sub">Dr. A.P.J. Abdul Kalam Technical University</div>
+                  <div class="timeline-date">2023 – 2026</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot-wrap"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+                <div class="timeline-content">
+                  <div class="timeline-title">B.Sc — Mathematics</div>
+                  <div class="timeline-sub">62.5%</div>
+                  <div class="timeline-date">2020 – 2023</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot-wrap"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+                <div class="timeline-content">
+                  <div class="timeline-title">Intermediate — UP Board</div>
+                  <div class="timeline-sub">60.8%</div>
+                  <div class="timeline-date">2020</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot-wrap"><div class="timeline-dot"></div></div>
+                <div class="timeline-content">
+                  <div class="timeline-title">High School — UP Board</div>
+                  <div class="timeline-sub">67.16%</div>
+                  <div class="timeline-date">2018</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Posts & Memories Section -->
+    <section id="post">
+      <div class="container">
+        <div class="section-label reveal">Life Beyond Coding</div>
+
+        <!-- Toggle Header -->
+        <div class="memories-toggle reveal" onclick="toggleMemories()" role="button" tabindex="0">
+          <h2 class="section-title">Posts & Memories</h2>
+          <i class="fas fa-chevron-down" id="memoryIcon"></i>
+        </div>
+
+        <!-- Post Feed (Hidden By Default) -->
+        <div class="post-feed" id="postFeed">
+
+          <!-- Post Card 1 -->
+          <article class="post-card reveal">
+            <div class="post-header">
+              <img src="images/profile.jpg" alt="Ankit Verma Profile" class="post-avatar">
+              <div class="post-user">
+                <h4>Ankit Verma ✨</h4>
+                <span>📍 🎓 B.Tech Farewell 2026 | KNIPSS Faridipur, Sultanpur</span>
+              </div>
+            </div>
+            <div class="post-content">
+              <h3>🎓 Farewell Day – 16 May 2026</h3>
+              <p>A memorable farewell filled with laughter, friendships, achievements, and unforgettable moments. Grateful for the incredible journey at KNIPSS Faridipur, Sultanpur and the amazing classmates who made these years truly special. As one chapter ends, a new journey begins. Wishing everyone success, happiness, and a bright future ahead. 🎓✨</p>
+            </div>
+            <div class="post-image">
+              <img src="images/Farewell.jpeg" alt="B.Tech Farewell Memory">
+            </div>
+            <div class="post-footer">
+              <span><i class="fas fa-calendar"></i> May 2026</span>
+              <span><i class="fas fa-tag"></i> College Completion</span>
+            </div>
+          </article>
+
+          <!-- Post Card 2 -->
+          <article class="post-card reveal">
+            <div class="post-header">
+              <img src="images/profile.jpg" alt="Ankit Verma Profile" class="post-avatar">
+              <div class="post-user">
+                <h4>Ankit Verma ✨</h4>
+                <span>📍 ✍️ Scribble Day 2026 – Memories Written Forever ⭐</span>
+              </div>
+            </div>
+            <div class="post-content">
+              <h3>💙 Scribble Day | B.Tech CSE 2026</h3>
+              <p>One of the most memorable days of our B.Tech journey. Our uniforms became a canvas filled with signatures, wishes, inside jokes, and unforgettable memories. What started as simple scribbles turned into lifelong reminders of friendship, laughter, and the incredible moments we shared together. 💙🎓</p>
+            </div>
+            <div class="post-image">
+              <img src="images/Scribble Day.jpeg" alt="Scribble Day Memory">
+            </div>
+            <div class="post-footer">
+              <span><i class="fas fa-calendar"></i> May 2026</span>
+              <span><i class="fas fa-tag"></i> KNIPSS Faridipur, Sultanpur</span>
+            </div>
+          </article>
+
+          <!-- Post Card 4 -->
+          <article class="post-card reveal">
+            <div class="post-header">
+              <img src="images/profile.jpg" alt="Ankit Verma Profile" class="post-avatar">
+              <div class="post-user">
+                <h4>Ankit Verma ✨</h4>
+                <span>🎉 Senior Farewell Event | 16 May 2025</span>
+              </div>
+            </div>
+            <div class="post-content">
+              <h3>Farewell Celebration for Seniors 2025</h3>
+              <p>Proud to be part of the organizing team for our seniors' farewell ceremony. From planning and coordination to creating memorable moments, this event was a wonderful experience of teamwork, friendship, and celebration. A special day filled with laughter, gratitude, and unforgettable memories. 💙✨</p>
+            </div>
+            <div class="post-image">
+              <img src="images/fare.2nd.jpeg" alt="Senior Farewell Memory">
+            </div>
+            <div class="post-footer">
+              <span><i class="fas fa-calendar"></i> May 2025</span>
+              <span><i class="fas fa-tag"></i> KNIPSS Faridipur, Sultanpur</span>
+            </div>
+          </article>
+
+          <!-- Post Card 5 -->
+          <article class="post-card reveal">
+            <div class="post-header">
+              <img src="images/profile.jpg" alt="Ankit Verma Profile" class="post-avatar">
+              <div class="post-user">
+                <h4>Ankit Verma ✨</h4>
+                <span>Tech Fest 2025 – Innovation, Fun & Team Spirit</span>
+              </div>
+            </div>
+            <div class="post-content">
+              <h3>🚀 Tech Fest 2025 | 19 April 2025</h3>
+              <p>An exciting day filled with innovation, creativity, competitions, and unforgettable memories. Tech Fest was not just about technology—it was about teamwork, learning, leadership, and celebrating talent with friends and classmates. Grateful to be part of such an amazing event that brought together energy, enthusiasm, and inspiration. 💙✨</p>
+            </div>
+            <div class="post-image">
+              <img src="images/sports.jpeg" alt="Tech Fest Memory">
+            </div>
+            <div class="post-footer">
+              <span><i class="fas fa-calendar"></i> April 2025</span>
+              <span><i class="fas fa-tag"></i> KNIPSS Faridipur, Sultanpur</span>
+            </div>
+          </article>
+
+          <!-- Post Card 6 -->
+          <article class="post-card reveal">
+            <div class="post-header">
+              <img src="images/profile.jpg" alt="Ankit Verma Profile" class="post-avatar">
+              <div class="post-user">
+                <h4>Ankit Verma ✨</h4>
+                <span>Softpro India Training & Certification Journey</span>
+              </div>
+            </div>
+            <div class="post-content">
+              <h3>🎓 Softpro India Training Program | 18 November 2024</h3>
+              <p>Successfully completed my training in Python with Machine Learning at Softpro India, Lucknow. This journey provided valuable hands-on experience in programming, machine learning, problem-solving, and real-world project development. Grateful to the mentors and team for their guidance, support, and encouragement throughout the program. 🚀✨</p>
+            </div>
+            <div class="post-image">
+              <img src="images/softpro.jpeg" alt="Softpro Training Memory">
+            </div>
+            <div class="post-footer">
+              <span><i class="fas fa-calendar"></i> Nov 2024</span>
+              <span><i class="fas fa-tag"></i> Softpro India, Lucknow</span>
+            </div>
+          </article>
+
+          <!-- Post Card 7 -->
+          <article class="post-card reveal">
+            <div class="post-header">
+              <img src="images/profile.jpg" alt="Ankit Verma Profile" class="post-avatar">
+              <div class="post-user">
+                <h4>Ankit Verma ✨</h4>
+                <span>The Beginning of My B.Tech Journey</span>
+              </div>
+            </div>
+            <div class="post-content">
+              <h3>🚀 First Days of B.Tech | September 2023</h3>
+              <p>Every journey begins with a first step, and this was the beginning of my B.Tech life at KNIPSS Faridipur, Sultanpur. These early days introduced me to new friends, new experiences, and countless opportunities for learning and growth. Looking back, these moments marked the start of an unforgettable chapter filled with friendships, challenges, and memories that will last forever. 💙✨</p>
+            </div>
+            <div class="post-image">
+              <img src="images/b.tech start.jpeg" alt="B.Tech Start Memory">
+            </div>
+            <div class="post-footer">
+              <span><i class="fas fa-calendar"></i> Sep 2023</span>
+              <span><i class="fas fa-tag"></i> KNIPSS Faridipur, Sultanpur</span>
+            </div>
+          </article>
+
+          <!-- Post Card 8 -->
+          <article class="post-card reveal">
+            <div class="post-header">
+              <img src="images/profile.jpg" alt="Ankit Verma Profile" class="post-avatar">
+              <div class="post-user">
+                <h4>Ankit Verma ✨</h4>
+                <span>A Journey of B.Sc. Mathematics (2020–2023)</span>
+              </div>
+            </div>
+            <div class="post-content">
+              <h3>📚 B.Sc. Mathematics Journey | 2020–2023</h3>
+              <p>Three years filled with learning, growth, challenges, friendships, and unforgettable memories. My B.Sc. Mathematics journey not only strengthened my academic foundation but also helped me develop discipline, confidence, and problem-solving skills. Grateful for every lesson, every friendship, and every experience that shaped me into who I am today. 💙✨</p>
+            </div>
+            <div class="post-image">
+              <img src="images/second cart.jpeg" alt="B.Sc Mathematics Memory">
+            </div>
+            <div class="post-footer">
+              <span><i class="fas fa-calendar"></i> 2020 - 2023</span>
+              <span><i class="fas fa-tag"></i> KNIPSS Sultanpur</span>
+            </div>
+          </article>
+
+          <!-- Post Card 9 -->
+          <article class="post-card reveal">
+            <div class="post-header">
+              <img src="images/profile.jpg" alt="Ankit Verma Profile" class="post-avatar">
+              <div class="post-user">
+                <h4>Ankit Verma ✨</h4>
+                <span>National Service Scheme (NSS) – One Week Special Camp 2023</span>
+              </div>
+            </div>
+            <div class="post-content">
+              <h3>National Service Scheme (NSS) – One Week Special Camp 2023</h3>
+              <p>During my B.Sc. journey, I had the opportunity to participate in the National Service Scheme (NSS) One Week Special Camp. Through community service, awareness programs, and social activities, I learned the importance of teamwork, leadership, discipline, and social responsibility. It was a valuable experience that helped me grow both personally and socially. 💙✨</p>
+            </div>
+            <div class="post-image">
+              <img src="images/nss.jpeg" alt="NSS Camp Memory">
+            </div>
+            <div class="post-footer">
+              <span><i class="fas fa-calendar"></i> July 2021</span>
+              <span><i class="fas fa-tag"></i> B.Sc. Mathematics</span>
+            </div>
+          </article>
+
+          <!-- Post Card 10 -->
+          <article class="post-card reveal">
+            <div class="post-header">
+              <img src="images/profile.jpg" alt="Ankit Verma Profile" class="post-avatar">
+              <div class="post-user">
+                <h4>Ankit Verma ✨</h4>
+                <span>Intermediate School Days (2018–2020)</span>
+              </div>
+            </div>
+            <div class="post-content">
+              <h3>📚 Intermediate Journey | 2018–2020</h3>
+              <p>My Intermediate years were filled with learning, friendships, unforgettable memories, and valuable life lessons. From classrooms and examinations to celebrations and moments with friends, this journey played an important role in shaping my personality and future aspirations. Grateful for all the experiences and memories that made these years truly special. 💙✨</p>
+            </div>
+            <div class="post-image">
+              <img src="images/cart 1 .jpeg" alt="Intermediate School Memory">
+            </div>
+            <div class="post-footer">
+              <span><i class="fas fa-calendar"></i> 2018 - 2020</span>
+              <span><i class="fas fa-tag"></i> M.G.S. Inter College, Sultanpur</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="services">
+      <div class="container">
+        <div class="section-label reveal">What I do</div>
+        <h2 class="section-title reveal">My Expertise</h2>
+        <div class="section-divider reveal"></div>
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>Data Analytics</h3>
+            <p>Collecting, cleaning, analyzing, and transforming data into actionable insights using Python, SQL, Excel, and Power BI.</p>
+          </div>
+          <div class="service-card reveal" style="transition-delay:0.1s">
+            <div class="service-icon"><i class="fab fa-python"></i></div>
+            <h3>Python for Data Science</h3>
+            <p>Leveraging Python, Pandas, NumPy, Matplotlib, and Seaborn for data analysis, automation, and visualization.</p>
+          </div>
+          <div class="service-card reveal" style="transition-delay:0.2s">
+            <div class="service-icon"><i class="fas fa-database"></i></div>
+            <h3>SQL & Database Management</h3>
+            <p>Designing, querying, and optimizing databases to efficiently store, manage, and retrieve business-critical data.</p>
+          </div>
+          <div class="service-card reveal" style="transition-delay:0.3s">
+            <div class="service-icon"><i class="fas fa-brain"></i></div>
+            <h3>Machine Learning & AI</h3>
+            <p>Building predictive models using Scikit-learn and machine learning techniques for classification, regression, and intelligent decision-making.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="portfolio">
+      <div class="container">
+        <div class="section-label reveal">My work</div>
+        <h2 class="section-title reveal">Projects</h2>
+        <div class="section-divider reveal"></div>
+        
+        <div class="filter-bar reveal">
+          <button class="filter-btn active" onclick="filterProjects('all', this)">All</button>
+          <button class="filter-btn" onclick="filterProjects('ml', this)">Machine Learning</button>
+          <button class="filter-btn" onclick="filterProjects('web', this)">Web Dev</button>
+          <button class="filter-btn" onclick="filterProjects('data', this)">Data</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          
+          <!-- Project 1 -->
+          <article class="project-card reveal" data-cat="ml" style="transition-delay:0.1s">
+            <div class="project-img-wrap">
+              <img src="images/object-detection.png" alt="Object Detection System - ankitiqcode">
+              <div class="project-overlay">
+                <a href="images/finalresults.mp4" target="_blank" class="project-overlay-btn pob-demo"><i class="fas fa-play"></i> Demo</a>
+                <a href="https://object-detection-app-u8cxuvmxtqwzrt5tyvobxk.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-overlay-btn pob-src"><i class="fas fa-external-link-alt"></i> Live</a>
+                <a href="https://github.com/ankitiqcode/object-detection-app" target="_blank" rel="noopener noreferrer" class="project-overlay-btn pob-src"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags"><span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">YOLOv8</span></div>
+              <h3>Object Detection System</h3>
+              <p>A fully interactive Real-Time Object Detection System built using Python, YOLOv8, SSD MobileNet, OpenCV, and Streamlit with WebRTC live camera streaming.</p>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card reveal" data-cat="ml" style="transition-delay:0.2s">
+            <div class="project-img-wrap">
+              <img src="images/WhatsApp Image 2025-08-16 at 14.33.48_e41885ff.jpg" alt="Rainfall Prediction System - ankitiqcode">
+              <div class="project-overlay">
+                <a href="images/RAIN VIDEO.mp4" target="_blank" class="project-overlay-btn pob-demo"><i class="fas fa-play"></i> Demo</a>
+                <a href="https://rainfall-prediction-app-4cff.onrender.com" target="_blank" rel="noopener noreferrer" class="project-overlay-btn pob-src"><i class="fas fa-external-link-alt"></i> Live</a>
+                <a href="https://github.com/ankitiqcode/rainfall-prediction-app" target="_blank" rel="noopener noreferrer" class="project-overlay-btn pob-src"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags"><span class="tag">Python</span><span class="tag">Numpy/Pandas</span><span class="tag">Scikit-Learn</span></div>
+              <h3>Rainfall Prediction System</h3>
+              <p>Rainfall Prediction using Logistic Regression on weather data (temperature, precipitation, and wind speed) to accurately classify whether rainfall will occur.</p>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card reveal" data-cat="ml" style="transition-delay:0.3s">
+            <div class="project-img-wrap">
+              <img src="images/Ai chat bot images.png" alt="AI-powered FAQ Assistant - ankitiqcode">
+              <div class="project-overlay">
+                <a href="images/Ai chat bot vid.mp4" target="_blank" class="project-overlay-btn pob-demo"><i class="fas fa-play"></i> Demo</a>
+                <a href="https://ai-faq-assistant-mtxh07brs-ankit-vermas-projects-b6fa17d6.vercel.app" target="_blank" rel="noopener noreferrer" class="project-overlay-btn pob-src"><i class="fas fa-external-link-alt"></i> Live</a>
+                <a href="https://github.com/ankitiqcode/AI-FAQ-Assistant" target="_blank" rel="noopener noreferrer" class="project-overlay-btn pob-src"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags"><span class="tag">Next.js/React</span><span class="tag">Node.js</span><span class="tag">MongoDB</span></div>
+              <h3>AI-powered FAQ Assistant</h3>
+              <p>An AI-powered FAQ Assistant built using Next.js, Node.js, Express.js, MongoDB Atlas, and OpenRouter AI. Users can ask questions, receive AI responses, and view chat history.</p>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card reveal" data-cat="data" style="transition-delay:0.1s">
+            <div class="project-img-wrap">
+              <img src="images/Weather im.png" alt="Weather & Air Quality Dashboard - ankitiqcode">
+              <div class="project-overlay">
+                <a href="images/weather rec.mp4" target="_blank" class="project-overlay-btn pob-demo"><i class="fas fa-play"></i> Demo</a>
+                <a href="https://github.com/ankitiqcode/-Weather-Dashboard-in-Power-BI-" target="_blank" rel="noopener noreferrer" class="project-overlay-btn pob-src"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags"><span class="tag">Power BI</span><span class="tag">Weather API</span><span class="tag">DAX</span></div>
+              <h3>Weather & Air Quality Dashboard</h3>
+              <p>A data-driven Power BI dashboard visualizing temperature, humidity, wind speed, UV index, air quality (PM2.5, PM10, CO, NO2), and rain probability.</p>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project-card reveal" data-cat="data" style="transition-delay:0.2s">
+            <div class="project-img-wrap">
+              <img src="images/spotify im.png" alt="Spotify Dashboard Power BI - ankitiqcode">
+              <div class="project-overlay">
+                <a href="images/spootify video.mp4" target="_blank" class="project-overlay-btn pob-demo"><i class="fas fa-play"></i> Demo</a>
+                <a href="https://github.com/ankitiqcode/Spotify-dashboard" target="_blank" rel="noopener noreferrer" class="project-overlay-btn pob-src"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags"><span class="tag">Power BI</span><span class="tag">Excel/CSV</span><span class="tag">DAX</span></div>
+              <h3>Spotify Dashboard – Power BI</h3>
+              <p>An interactive Power BI report helping music analysts and playlist managers uncover streaming trends and insights from Spotify's Top 50 dataset.</p>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="project-card reveal" data-cat="data" style="transition-delay:0.3s">
+            <div class="project-img-wrap">
+              <img src="images/cryptomain ss.png" alt="Real-Time Crypto Analytics Dashboard - ankitiqcode">
+              <div class="project-overlay">
+                <a href="images/crypto recording.mp4" target="_blank" class="project-overlay-btn pob-demo"><i class="fas fa-play"></i> Demo</a>
+                <a href="https://github.com/ankitiqcode/Real-Time-Crypto-Analytics-Dashboard" target="_blank" rel="noopener noreferrer" class="project-overlay-btn pob-src"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">CoinGecko API</span></div>
+              <h3>Real-Time Crypto Analytics Dashboard</h3>
+              <p>Built a real-time cryptocurrency analytics dashboard tracking market trends, price movements, trading volume, and top-performing coins using Power BI and API integration.</p>
+            </div>
+          </article>
+
+          <!-- Project 7 -->
+          <article class="project-card reveal" data-cat="data" style="transition-delay:0.1s">
+            <div class="project-img-wrap">
+              <img src="images/fitness im.png" alt="Fitness Analytics Dashboard - ankitiqcode">
+              <div class="project-overlay">
+                <a href="images/fitness video.mp4" target="_blank" class="project-overlay-btn pob-demo"><i class="fas fa-play"></i> Demo</a>
+                <a href="https://github.com/ankitiqcode/Fitness-Dashboard" target="_blank" rel="noopener noreferrer" class="project-overlay-btn pob-src"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags"><span class="tag">Power BI Desktop</span><span class="tag">Figma</span><span class="tag">Excel</span></div>
+              <h3>Fitness Analytics Dashboard</h3>
+              <p>Designed an interactive Fitness Analytics Dashboard in Power BI with a custom Figma-based UI to track workout progress, member performance, and health metrics.</p>
+            </div>
+          </article>
+
+          <!-- Project 8 -->
+          <article class="project-card reveal" data-cat="data" style="transition-delay:0.2s">
+            <div class="project-img-wrap">
+              <img src="images/insurance im.png" alt="Insurance Risk Claims Analysis - ankitiqcode">
+              <div class="project-overlay">
+                <a href="images/insurance video.mp4" target="_blank" class="project-overlay-btn pob-demo"><i class="fas fa-play"></i> Demo</a>
+                <a href="https://github.com/ankitiqcode/INSURANCE-RISK-CLAMS-ANALYSIS-DASHBOARD" target="_blank" rel="noopener noreferrer" class="project-overlay-btn pob-src"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Data ETL</span></div>
+              <h3>Insurance Risk Claims Analysis Dashboard</h3>
+              <p>Analyzed insurance policyholders, vehicle details, and claim patterns to generate meaningful risk assessment and business insights using Power BI.</p>
+            </div>
+          </article>
+
+          <!-- Project 9 -->
+          <article class="project-card reveal" data-cat="web" style="transition-delay:0.3s">
+            <div class="project-img-wrap">
+              <img src="images/youtube_res.png" alt="Youtube Clone - ankitiqcode">
+              <div class="project-overlay">
+                <a href="images/YOUTUBE VID.mp4" target="_blank" class="project-overlay-btn pob-demo"><i class="fas fa-play"></i> Demo</a>
+                <a href="https://github.com/ankitiqcode/YouTube-Clone" target="_blank" rel="noopener noreferrer" class="project-overlay-btn pob-src"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span></div>
+              <h3>YouTube Clone</h3>
+              <p>Demonstrates serving static web assets (HTML, CSS, JS, Media) via static hosting optimized with dynamic caching and modern UI layout rendering.</p>
+            </div>
+          </article>
+
+          <!-- Project 10 -->
+          <article class="project-card reveal" data-cat="data" style="transition-delay:0.1s">
+            <div class="project-img-wrap">
+              <img src="images/ai resume.png" alt="AI Resume Screening System - ankitiqcode">
+              <div class="project-overlay">
+                <a href="https://ankit-ai-resume-screening.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-overlay-btn pob-demo"><i class="fas fa-external-link-alt"></i> Live</a>
+                <a href="https://github.com/ankitiqcode/AI-Resume-Screening-System" target="_blank" rel="noopener noreferrer" class="project-overlay-btn pob-src"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags"><span class="tag">Python</span><span class="tag">Gemini AI</span><span class="tag">Streamlit</span></div>
+              <h3>AI Resume Screening System</h3>
+              <p>An intelligent web application empowering recruiters and job seekers to screen, evaluate, and match resumes against job profiles using Google Gemini AI.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Progress Section -->
+    <section id="skills-section">
+      <div class="container">
+        <div class="section-label reveal">Proficiency</div>
+        <h2 class="section-title reveal">Technical Skills</h2>
+        <div class="section-divider reveal"></div>
+        <div class="skills-bar-grid" id="skillBars">
+          <div class="skill-bar-item reveal">
+            <div class="skill-bar-header"><span>Python</span><span>90%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-bar-item reveal" style="transition-delay:0.05s">
+            <div class="skill-bar-header"><span>SQL & Database Management</span><span>80%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+          </div>
+          <div class="skill-bar-item reveal" style="transition-delay:0.1s">
+            <div class="skill-bar-header"><span>Data Analytics</span><span>85%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-bar-item reveal" style="transition-delay:0.15s">
+            <div class="skill-bar-header"><span>Power BI & Excel</span><span>82%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div>
+          </div>
+          <div class="skill-bar-item reveal" style="transition-delay:0.2s">
+            <div class="skill-bar-header"><span>Machine Learning</span><span>88%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+          </div>
+          <div class="skill-bar-item reveal" style="transition-delay:0.25s">
+            <div class="skill-bar-header"><span>Data Visualization</span><span>78%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
+          </div>
+          <div class="skill-bar-item reveal" style="transition-delay:0.3s">
+            <div class="skill-bar-header"><span>Pandas & NumPy</span><span>88%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+          </div>
+          <div class="skill-bar-item reveal" style="transition-delay:0.35s">
+            <div class="skill-bar-header"><span>Scikit-learn</span><span>80%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <div>
+          <div class="section-label reveal">Get in touch</div>
+          <h2 class="section-title reveal">Contact Me</h2>
+          <div class="section-divider reveal"></div>
+          <div class="contact-info">
+            <div class="contact-item reveal">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <div class="contact-label">Email</div>
+                <div class="contact-value"><a href="mailto:ankitvermasultanpur9026@gmail.com">ankitvermasultanpur9026@gmail.com</a></div>
+              </div>
+            </div>
+            <div class="contact-item reveal" style="transition-delay:0.1s">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <div class="contact-label">Phone</div>
+                <div class="contact-value"><a href="tel:+919026329095">+91-9026329095</a></div>
+              </div>
+            </div>
+            <div class="contact-item reveal" style="transition-delay:0.2s">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <div class="contact-label">Location</div>
+                <div class="contact-value">India</div>
+              </div>
+            </div>
+            <div class="contact-socials reveal" style="transition-delay:0.3s">
+              <a href="https://github.com/ankitiqcode" target="_blank" rel="noopener noreferrer" class="contact-social"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://www.linkedin.com/in/ankitiqcode/" target="_blank" rel="noopener noreferrer" class="contact-social"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+              <a href="https://www.instagram.com/ankitiqcode" target="_blank" rel="noopener noreferrer" class="contact-social"><i class="fab fa-instagram"></i> Instagram</a>
+              <a href="https://youtube.com/@ankitiqcode" target="_blank" rel="noopener noreferrer" class="contact-social"><i class="fab fa-youtube"></i> YouTube</a>
+              <a href="https://x.com/ankitiqcode" target="_blank" rel="noopener noreferrer" class="contact-social"><i class="fab fa-x-twitter"></i> X</a>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="tab-pane" id="tab-education">
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot-wrap"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
-            <div class="timeline-content">
-              <div class="timeline-title">B.Tech — Computer Science & Engineering</div>
-              <div class="timeline-sub">Dr. A.P.J Abdul Kalam University</div>
-              <div class="timeline-date">2023 – 2026</div>
+        <!-- Contact Form -->
+        <div class="reveal" style="transition-delay:0.2s">
+          <form name="submit-to-google-sheet" class="contact-form" id="contactForm">
+            <h3 style="margin-bottom:1.5rem;font-size:1.1rem">Send a Message</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="form-name">Your Name</label>
+                <input type="text" id="form-name" name="Name" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="form-email">Your Email</label>
+                <input type="email" id="form-email" name="Email" placeholder="john@example.com" required>
+              </div>
             </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot-wrap"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
-            <div class="timeline-content">
-              <div class="timeline-title">B.Sc — Mathematics</div>
-              <div class="timeline-sub">62.5%</div>
-              <div class="timeline-date">2020 – 2023</div>
+            <div class="form-group">
+              <label for="form-subject">Subject</label>
+              <input type="text" id="form-subject" name="Subject" placeholder="What's this about?">
             </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot-wrap"><div class="timeline-dot"></div></div>
-            <div class="timeline-content">
-              <div class="timeline-title">Intermediate — UP Board</div>
-              <div class="timeline-sub">60.8%</div>
-              <div class="timeline-date">2020</div>
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" name="Message" rows="5" placeholder="Tell me about your project..."></textarea>
             </div>
-          <div class="timeline-item">
-            <div class="timeline-dot-wrap"><div class="timeline-dot"></div></div>
-            <div class="timeline-content">
-              <div class="timeline-title">High School — UP Board</div>
-              <div class="timeline-sub">67.16%</div>
-              <div class="timeline-date">2018</div>
-            </div>
-          </div>
+            <button type="submit" class="form-submit" id="submitBtn">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div class="form-msg" id="formMsg"></div>
+          </form>
         </div>
       </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="foot-brand"><span>ankitiqcode</span>.portfolio</p>
+      <p>© 2026 Ankit Verma — Made with <span style="color:var(--pink)">♥</span> · ankitiqcode</p>
+      <a href="https://github.com/Ankitiqcode-tech" target="_blank" rel="noopener noreferrer" style="color:var(--muted);font-size:1.2rem;transition:color 0.3s" aria-label="GitHub Profile" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--muted)'">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
-  </div>
-</section>
-
-<!-- Post -->
-<section id="post">
-  <div class="container">
-
-    <div class="section-label reveal">Life Beyond Coding</div>
-
-    <!-- Clickable Heading -->
-    <div class="memories-toggle reveal" onclick="toggleMemories()">
-      <h2 class="section-title">Posts & Memories</h2>
-      <i class="fas fa-chevron-down" id="memoryIcon"></i>
-    </div>
-
-    <!-- Hidden By Default -->
-    <div class="post-feed" id="postFeed">
-
-      <!-- Post Card 1 -->
-      <div class="post-card reveal">
-        <div class="post-header">
-          <img src="images/profile.jpg"alt="Profile" class="post-avatar">
-
-          <div class="post-user">
-            <h4>Ankit Verma ✨</h4>
-            <span>📍 🎓 B.Tech Farewell 2026 | KNIPSS Faridipur, Sultanpur</span>
-          </div>
-        </div>
-
-        <div class="post-content">
-          <h3>🎓 🎓 Farewell Day – 16 May 2026</h3>
-          <p>A memorable farewell filled with laughter, friendships, achievements, and unforgettable moments. Grateful for the incredible journey at KNIPSS Faridipur, Sultanpur and the amazing classmates who made these years truly special. As one chapter ends, a new journey begins. Wishing everyone success, happiness, and a bright future ahead. 🎓✨</p>
-        </div>
-
-        <div class="post-image">
-          <img src="images/Farewell.jpeg" alt="Memory">
-        </div>
-
-        <div class="post-footer">
-          <span><i class="fas fa-calendar"></i> May- 2026</span>
-          <span><i class="fas fa-tag"></i> College Completion</span>
-        </div>
-      </div>
-
-       <!-- Post Card 2 -->
-      <div class="post-card reveal">
-        <div class="post-header">
-          <img src="images/profile.jpg"alt="Profile" class="post-avatar">
-
-          <div class="post-user">
-            <h4>Ankit Verma ✨</h4>
-            <span>📍 ✍️ Scribble Day 2026 – Memories Written Forever ⭐</span>
-          </div>
-        </div>
-
-        <div class="post-content">
-          <h3>💙 Scribble Day | B.Tech CSE 2026</h3>
-          <p>
-            One of the most memorable days of our B.Tech journey. Our uniforms became a canvas filled with signatures, wishes, inside jokes, and unforgettable memories. What started as simple scribbles turned into lifelong reminders of friendship, laughter, and the incredible moments we shared together. 💙🎓</p>
-        </div>
-
-        <div class="post-image">
-          <img src="images/Scribble Day.jpeg" alt="Memory">
-        </div>
-
-        <div class="post-footer">
-          <span><i class="fas fa-calendar"></i> Maye- 2026</span>
-          <span><i class="fas fa-tag"></i> KNIPSS Faridipur, Sultanpur</span>
-        </div>
-      </div>
-
-      <!-- Post Card 3 -->
-      <!--div class="post-card reveal">
-        <div class="post-header">
-          <img src="images/profile.jpg"alt="Profile" class="post-avatar">
-
-          <div class="post-user">
-            <h4>Ankit Verma ✨</h4>
-            <span>🌄 Nainital Trip 2026 – Memories in the Hills ⭐</span>
-          </div>
-        </div>
-
-        <div class="post-content">
-          <h3>✨ Nainital Diaries – April 2026</h3>
-          <p>
-            An unforgettable journey to the beautiful hills of Nainital with friends and classmates. From scenic lakes and breathtaking views to endless laughter and memorable moments, this trip gave us memories that will last a lifetime. A perfect blend of adventure, friendship, and happiness. 💙✨</p>
-        </div>
-
-        <div class="post-image">
-          <img src="images/Nainital .jpeg" alt="Memory">
-        </div>
-
-        <div class="post-footer">
-          <span><i class="fas fa-calendar"></i> April- 2026</span>
-          <span><i class="fas fa-tag"></i> 📍 Nainital, Uttarakhand</span>
-        </div>
-      </div>-->
-
-
-      <!-- Post Card 4 -->
-      <div class="post-card reveal">
-        <div class="post-header">
-          <img src="images/profile.jpg"alt="Profile" class="post-avatar">
-
-          <div class="post-user">
-            <h4>Ankit Verma ✨</h4>
-            <span>🎉 Senior Farewell Event | 16 May 2025</span>
-          </div>
-        </div>
-        <div class="post-content">
-          <h3>Farewell Celebration for Seniors 2025</h3>
-          <p>Proud to be part of the organizing team for our seniors' farewell ceremony. From planning and coordination to creating memorable moments, this event was a wonderful experience of teamwork, friendship, and celebration. A special day filled with laughter, gratitude, and unforgettable memories. 💙✨ </p>
-        </div>
-        <div class="post-image">
-          <img src="images/fare.2nd.jpeg" alt="Memory">
-        </div>
-        <div class="post-footer">
-          <span><i class="fas fa-calendar"></i> May- 2025</span>
-          <span><i class="fas fa-tag"></i> 📍 KNIPSS Faridipur, Sultanpur</span>
-        </div>
-      </div>
-
-      <!-- Post Card 5 -->
-      <div class="post-card reveal">
-        <div class="post-header">
-          <img src="images/profile.jpg" alt="Profile" class="post-avatar">
-
-          <div class="post-user">
-            <h4>Ankit Verma ✨</h4>
-            <span>Tech Fest 2025 – Innovation, Fun & Team Spirit</span>
-          </div>
-        </div>
-
-        <div class="post-content">
-          <h3>🚀 Tech Fest 2025 | 19 April 2025</h3>
-          <p>An exciting day filled with innovation, creativity, competitions, and unforgettable memories. Tech Fest was not just about technology—it was about teamwork, learning, leadership, and celebrating talent with friends and classmates. Grateful to be part of such an amazing event that brought together energy, enthusiasm, and inspiration. 💙✨</p>
-        </div>
-
-        <div class="post-image">
-          <img src="images/sports.jpeg" alt="College Memory">
-        </div>
-
-        <div class="post-footer">
-          <span><i class="fas fa-calendar"></i> April 2025</span>
-          <span><i class="fas fa-tag"></i> 📍 KNIPSS Faridipur, Sultanpur</span>
-        </div>
-      </div>
-
-      <!-- Post Card 6 -->
-      <div class="post-card reveal">
-        <div class="post-header">
-          <img src="images/profile.jpg"alt="Profile" class="post-avatar">
-
-          <div class="post-user">
-            <h4>Ankit Verma ✨</h4>
-            <span>Softpro India Training & Certification Journey</span>
-          </div>
-        </div>
-        <div class="post-content">
-          <h3>🎓 Softpro India Training Program | 18 November 2024</h3>
-          <p>Successfully completed my training in Python with Machine Learning at Softpro India, Lucknow. This journey provided valuable hands-on experience in programming, machine learning, problem-solving, and real-world project development. Grateful to the mentors and team for their guidance, support, and encouragement throughout the program. 🚀✨✨ </p>
-        </div>
-        <div class="post-image">
-          <img src="images/softpro.jpeg" alt="Memory">
-        </div>
-        <div class="post-footer">
-          <span><i class="fas fa-calendar"></i> Nov- 2024</span>
-          <span><i class="fas fa-tag"></i> 📍 Softpro India, Lucknow</span>
-        </div>
-      </div>
-
-      <!-- Post Card 7 -->
-      <div class="post-card reveal">
-        <div class="post-header">
-          <img src="images/profile.jpg"alt="Profile" class="post-avatar">
-
-          <div class="post-user">
-            <h4>Ankit Verma ✨</h4>
-            <span>The Beginning of My B.Tech Journey</span>
-          </div>
-        </div>
-        <div class="post-content">
-          <h3>🚀 First Days of B.Tech | September 2023</h3>
-          <p>Every journey begins with a first step, and this was the beginning of my B.Tech life at KNIPSS Faridipur, Sultanpur. These early days introduced me to new friends, new experiences, and countless opportunities for learning and growth. Looking back, these moments marked the start of an unforgettable chapter filled with friendships, challenges, and memories that will last forever. 💙✨</p>
-        </div>
-        <div class="post-image">
-          <img src="images/b.tech start.jpeg" alt="Memory">
-        </div>
-        <div class="post-footer">
-          <span><i class="fas fa-calendar"></i> Sep- 2023</span>
-          <span><i class="fas fa-tag"></i> 📍 KNIPSS Faridipur, Sultanpur</span>
-        </div>
-      </div>
-
-      <!-- Post Card 8 -->
-      <div class="post-card reveal">
-        <div class="post-header">
-          <img src="images/profile.jpg"alt="Profile" class="post-avatar">
-
-          <div class="post-user">
-            <h4>Ankit Verma ✨</h4>
-            <span>A Journey of B.Sc. Mathematics (2020–2023)</span>
-          </div>
-        </div>
-        <div class="post-content">
-          <h3>📚 B.Sc. Mathematics Journey | 2020–2023</h3>
-          <p>Three years filled with learning, growth, challenges, friendships, and unforgettable memories. My B.Sc. Mathematics journey not only strengthened my academic foundation but also helped me develop discipline, confidence, and problem-solving skills. Grateful for every lesson, every friendship, and every experience that shaped me into who I am today. 💙✨</p>
-        </div>
-        <div class="post-image">
-          <img src="images/second cart.jpeg" alt="Memory">
-        </div>
-        <div class="post-footer">
-          <span><i class="fas fa-calendar"></i> 2020- 2023</span>
-          <span><i class="fas fa-tag"></i> 📍 KNIPSS Sultanpur</span>
-        </div>
-      </div>
-
-      <!-- Post Card 8 -->
-      <div class="post-card reveal">
-        <div class="post-header">
-          <img src="images/profile.jpg"alt="Profile" class="post-avatar">
-
-          <div class="post-user">
-            <h4>Ankit Verma ✨</h4>
-            <span>National Service Scheme (NSS) – One Week Special Camp 2023</span>
-          </div>
-        </div>
-        <div class="post-content">
-          <h3>National Service Scheme (NSS) – One Week Special Camp 2023</h3>
-          <p>During my B.Sc. journey, I had the opportunity to participate in the National Service Scheme (NSS) One Week Special Camp. Through community service, awareness programs, and social activities, I learned the importance of teamwork, leadership, discipline, and social responsibility. It was a valuable experience that helped me grow both personally and socially. 💙✨</p>
-        </div>
-        <div class="post-image">
-          <img src="images/nss.jpeg" alt="Memory">
-        </div>
-        <div class="post-footer">
-          <span><i class="fas fa-calendar"></i> July- 2021</span>
-          <span><i class="fas fa-tag"></i> 📚 B.Sc. Mathematics</span>
-        </div>
-      </div>
-
-      <!-- Post Card 9 -->
-      <div class="post-card reveal">
-        <div class="post-header">
-          <img src="images/profile.jpg"alt="Profile" class="post-avatar">
-
-          <div class="post-user">
-            <h4>Ankit Verma ✨</h4>
-            <span>Intermediate School Days (2018–2020)</span>
-          </div>
-        </div>
-        <div class="post-content">
-          <h3>📚 Intermediate Journey | 2018–2020</h3>
-          <p> My Intermediate years were filled with learning, friendships, unforgettable memories, and valuable life lessons. From classrooms and examinations to celebrations and moments with friends, this journey played an important role in shaping my personality and future aspirations. Grateful for all the experiences and memories that made these years truly special. 💙✨</p>
-        </div>
-        <div class="post-image">
-          <img src="images/cart 1 .jpeg" alt="Memory">
-        </div>
-        <div class="post-footer">
-          <span><i class="fas fa-calendar"></i> 2018 - 2020</span>
-          <span><i class="fas fa-tag"></i> M.G.S. Inter College, Sultanpur</span>
-        </div>
-      </div>
-
-
-      
-
-
-    </div>
-  </div>
-</section>
-    
-
-<!-- Expertise -->
-<section id="services">
-  <div class="container">
-    <div class="section-label reveal">What I do</div>
-    <h2 class="section-title reveal">My Expertise</h2>
-    <div class="section-divider reveal"></div>
-    <div class="services-grid">
-      <div class="service-card reveal">
-        <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-        <h3>Data Analytics</h3>
-        <p>Collecting, cleaning, analyzing, and transforming data into actionable insights using Python, SQL, Excel, and Power BI.</p>
-      </div>
-      <div class="service-card reveal" style="transition-delay:0.1s">
-        <div class="service-icon"><i class="fab fa-python"></i></div>
-        <h3>Python for Data Science</h3>
-        <p>Leveraging Python, Pandas, NumPy, Matplotlib, and Seaborn for data analysis, automation, and visualization.</p>
-      </div>
-      <div class="service-card reveal" style="transition-delay:0.2s">
-        <div class="service-icon"><i class="fas fa-database"></i></div>
-        <h3>SQL & Database Management</h3>
-        <p>Designing, querying, and optimizing databases to efficiently store, manage, and retrieve business-critical data.</p>
-      </div>
-      <div class="service-card reveal" style="transition-delay:0.3s">
-        <div class="service-icon"><i class="fas fa-brain"></i></div>
-        <h3>Machine Learning & AI</h3>
-        <p>Building predictive models using Scikit-learn and machine learning techniques for classification, regression, and intelligent decision-making.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Projects -->
-<section id="portfolio">
-  <div class="container">
-    <div class="section-label reveal">My work</div>
-    <h2 class="section-title reveal">Projects</h2>
-    <div class="section-divider reveal"></div>
-    <div class="filter-bar reveal">
-      <button class="filter-btn active" onclick="filterProjects('all', this)">All</button>
-      <button class="filter-btn" onclick="filterProjects('ml', this)">Machine Learning</button>
-      <button class="filter-btn" onclick="filterProjects('web', this)">Web Dev</button>
-      <button class="filter-btn" onclick="filterProjects('data', this)">Data</button>
-    </div>
-    <div class="projects-grid" id="projectsGrid">
-      <!-- Project 1 -->
-<div class="project-card reveal" data-cat="ml" style="transition-delay:0.3s">
-  <div class="project-img-wrap">
-    <img src="images/object-detection.png" alt="Object Detection System">
-    <div class="project-overlay">
-      <a href="images/finalresults.mp4" class="project-overlay-btn pob-demo"><i class="fas fa-play"></i> Demo</a>
-      <a href="https://object-detection-app-u8cxuvmxtqwzrt5tyvobxk.streamlit.app/" class="project-overlay-btn pob-src"><i class="fas fa-external-link-alt"></i> Live</a>
-      <a href="https://github.com/ankitiqcode/object-detection-app" class="project-overlay-btn pob-src"><i class="fab fa-github"></i> Code</a>
-    </div>
-  </div>
-  <div class="project-body">
-    <div class="project-tags"><span class="tag">Python </span><span class="tag">OpenCV</span><span class="tag">YOLOv8</span></div>
-    <h3>Object Detection System</h3>
-    <p>A fully interactive Real-Time Object Detection System built using Python, YOLOv8, SSD MobileNet, OpenCV, and Streamlit with WebRTC live camera streaming. </p>
-  </div>
-</div>
-
-<!-- Project 2 -->
-<div class="project-card reveal" data-cat="ml" style="transition-delay:0.4s">
-  <div class="project-img-wrap">
-    <img src="images/WhatsApp Image 2025-08-16 at 14.33.48_e41885ff.jpg" alt="Rainfall Prediction System">
-    <div class="project-overlay">
-      <a href="images/RAIN VIDEO.mp4" class="project-overlay-btn pob-demo"><i class="fas fa-play"></i> Demo</a>
-      <a href="https://rainfall-prediction-app-4cff.onrender.com" class="project-overlay-btn pob-src"><i class="fas fa-external-link-alt"></i> Live</a>
-      <a href="https://github.com/ankitiqcode/rainfall-prediction-app" class="project-overlay-btn pob-src"><i class="fab fa-github"></i> Code</a>
-    </div>
-  </div>
-  <div class="project-body">
-    <div class="project-tags"><span class="tag">Python</span><span class="tag">Numpy/Pandas</span><span class="tag">Matplotlib/Scikit-Learn</span></div>
-    <h3>Rainfall Prediction System</h3>
-    <p>Rainfall Prediction using Logistic Regression on weather data (temperature, precipitation, and wind speed) to accurately classify whether rainfall will occur (Yes/No).</p>
-  </div>
-</div>
-
-<!-- Project 3 -->
-<div class="project-card reveal" data-cat="ml" style="transition-delay:0.5s">
-  <div class="project-img-wrap">
-    <img src="images/Ai chat bot images.png" alt="AI-powered FAQ Assistant">
-    <div class="project-overlay">
-      <a href="images/Ai chat bot vid.mp4" class="project-overlay-btn pob-demo"><i class="fas fa-play"></i> Demo</a>
-      <a href="ai-faq-assistant-mtxh07brs-ankit-vermas-projects-b6fa17d6.vercel.app" class="project-overlay-btn pob-src"><i class="fas fa-external-link-alt"></i> Live</a>
-      <a href="https://github.com/ankitiqcode/AI-FAQ-Assistant" class="project-overlay-btn pob-src"><i class="fab fa-github"></i> Code</a>
-    </div>
-  </div>
-  <div class="project-body">
-    <div class="project-tags"><span class="tag">Next.js/React.js</span><span class="tag">Node.js/Express.js</span><span class="tag">MongoDB </span></div>
-    <h3>AI-powered FAQ Assistant</h3>
-    <p>An AI-powered FAQ Assistant built using Next.js, Node.js, Express.js, MongoDB Atlas, and OpenRouter AI. Users can ask questions, receive AI-generated responses, and view stored conversation history.</p>
-  </div>
-</div>
-
-<!-- Project 4 -->
-<div class="project-card reveal" data-cat="data" style="transition-delay:0.6s">
-  <div class="project-img-wrap">
-    <img src="images/Weather im.png" alt="Weather & Air Quality Dashboard">
-    <div class="project-overlay">
-      <a href="images/weather rec.mp4" class="project-overlay-btn pob-demo"><i class="fas fa-play"></i> Demo</a>
-      <a href="https://github.com/ankitiqcode/-Weather-Dashboard-in-Power-BI-" class="project-overlay-btn pob-src"><i class="fab fa-github"></i> Code</a>
-    </div>
-  </div>
-  <div class="project-body">
-    <div class="project-tags"><span class="tag">Power BI</span><span class="tag">Weather API </span><span class="tag">DAX & Power Query</span></div>
-    <h3>Weather & Air Quality Dashboard</h3>
-    <p>A data-driven Power BI dashboard that visualizes temperature, humidity, wind speed, UV index, air quality (PM2.5, PM10, CO, NO2, SO2, O3), and rain probability with clear and actionable insights.</p>
-  </div>
-</div>
-
-<!-- Project 5 -->
-<div class="project-card reveal" data-cat="data" style="transition-delay:0.7s">
-  <div class="project-img-wrap">
-    <img src="images/spotify im.png" alt="Spotify Dashboard ">
-    <div class="project-overlay">
-      <a href="images/spootify video.mp4" class="project-overlay-btn pob-demo"><i class="fas fa-play"></i> Demo</a>
-      <a href="https://github.com/ankitiqcode/Spotify-dashboard" class="project-overlay-btn pob-src"><i class="fab fa-github"></i> Code</a>
-    </div>
-  </div>
-  <div class="project-body">
-    <div class="project-tags"><span class="tag">Power BI</span><span class="tag"> Excel/CSV  </span><span class="tag"> DAX </span></div>
-    <h3>Spotify Dashboard – Power BI</h3>
-    <p>The Spotify Dashboard is an interactive Power BI report designed to help music analysts, playlist managers, and marketing teams uncover insights from Spotify's Top 50 dataset.</p>
-  </div>
-</div>
-
-<!-- Project 6 -->
-<div class="project-card reveal" data-cat="data" style="transition-delay:0.8s">
-  <div class="project-img-wrap">
-    <img src="images/cryptomain ss.png" alt="Real-Time Crypto Analytics Dashboard">
-    <div class="project-overlay">
-      <a href="images/crypto recording.mp4" class="project-overlay-btn pob-demo"><i class="fas fa-play"></i> Demo</a>
-      <a href="https://github.com/ankitiqcode/Real-Time-Crypto-Analytics-Dashboard" class="project-overlay-btn pob-src"><i class="fab fa-github"></i> Code</a>
-    </div>
-  </div>
-  <div class="project-body">
-    <div class="project-tags"><span class="tag">Power BI/Power Query</span><span class="tag">DAX</span><span class="tag">CoinGecko API</span></div>
-    <h3>Real-Time Crypto Analytics Dashboard </h3>
-    <p>Built a real-time cryptocurrency analytics dashboard to track market trends, price movements, trading volume, and top-performing coins using Power BI, DAX, and API integration.</p>
-  </div>
-</div>
-
-<!-- Project 7 -->
-<div class="project-card reveal" data-cat="data" style="transition-delay:0.9s">
-  <div class="project-img-wrap">
-    <img src="images/fitness im.png" alt="Fitness Analytics Dashboard">
-    <div class="project-overlay">
-      <a href="images/fitness video.mp4" class="project-overlay-btn pob-demo"><i class="fas fa-play"></i> Demo</a>
-      <a href="https://github.com/ankitiqcode/Fitness-Dashboard" class="project-overlay-btn pob-src"><i class="fab fa-github"></i> Code</a>
-    </div>
-  </div>
-  <div class="project-body">
-    <div class="project-tags"><span class="tag">Power BI Desktop</span><span class="tag">Figma </span><span class="tag">Excel/CSV </span></div>
-    <h3>Fitness Analytics Dashboard</h3>
-    <p>Designed an interactive Fitness Analytics Dashboard in Power BI with custom Figma-based UI to track workout progress, member performance, and key health metrics.</p>
-  </div>
-</div>
-
-<!-- Project 8 -->
-<div class="project-card reveal" data-cat="data" style="transition-delay:0.4s">
-  <div class="project-img-wrap">
-    <img src="images/insurance im.png" alt="INSURANCE-RISK-CLAMS-ANALYSIS-DASHBOARD">
-    <div class="project-overlay">
-      <a href="images/insurance video.mp4" class="project-overlay-btn pob-demo"><i class="fas fa-play"></i> Demo</a>
-      <a href="https://github.com/ankitiqcode/INSURANCE-RISK-CLAMS-ANALYSIS-DASHBOARD" class="project-overlay-btn pob-src"><i class="fab fa-github"></i> Code</a>
-    </div>
-  </div>
-  <div class="project-body">
-    <div class="project-tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Data Cleaning & Transformation</span></div>
-    <h3>INSURANCE-RISK-CLAMS-ANALYSIS-DASHBOARD</h3>
-    <p>This project focuses on analyzing insurance policyholders, vehicle details, and claim patterns to generate meaningful business insights using Power BI. The goal of this dashboard is to help insurance companies:</p>
-  </div>
-</div>
-
-<!-- Project 9 -->
-<div class="project-card reveal" data-cat="web" style="transition-delay:0.4s">
-  <div class="project-img-wrap">
-    <img src="images/youtube_res.png" alt="Youtube Clone">
-    <div class="project-overlay">
-      <a href="images/YOUTUBE VID.mp4" class="project-overlay-btn pob-demo"><i class="fas fa-play"></i> Demo</a>
-      <a href="https://github.com/ankitiqcode/YouTube-Clone" class="project-overlay-btn pob-src"><i class="fab fa-github"></i> Code</a>
-    </div>
-  </div>
-  <div class="project-body">
-    <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript </span></div>
-    <h3>Youtube Clone</h3>
-    <p>This project demonstrates how static assets (HTML, CSS, JS, Images, and Videos) are served to clients via a Static Host (e.g., Nginx, GitHub Pages) and optimized using a CDN (Cache Layer) for performance.</p>
-  </div>
-</div>
-<!-- Project 10 -->
-
-<div class="project-card reveal" data-cat="data" style="transition-delay:0.4s">
-  <div class="project-img-wrap">
-    <img src="images/ai resume.png" alt="AI Resume Screening System ">
-    <div class="project-overlay">
-      <a href="https://ankit-ai-resume-screening.streamlit.app/" class="project-overlay-btn pob-demo"><i class="fas fa-play"></i> Live</a>
-      <a href="https://github.com/ankitiqcode/AI-Resume-Screening-System" class="project-overlay-btn pob-src"><i class="fab fa-github"></i> Code</a>
-    </div>
-  </div>
-  <div class="project-body">
-    <div class="project-tags"><span class="tag">Python</span><span class="tag">Google Gemini AI</span><span class="tag">Streamlit</span></div>
-    <h3>AI Resume Screening System</h3>
-    <p>AI Resume Screening System is an intelligent web application that helps recruiters and job seekers analyze resumes using Artificial Intelligence.</p>
-  </div>
-</div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Skills Progress -->
-<section id="skills-section">
-  <div class="container">
-    <div class="section-label reveal">Proficiency</div>
-    <h2 class="section-title reveal">Technical Skills</h2>
-    <div class="section-divider reveal"></div>
-    <div class="skills-bar-grid" id="skillBars">
-      <div class="skill-bar-item reveal">
-        <div class="skill-bar-header"><span>Python</span><span>90%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
-      </div>
-      <div class="skill-bar-item reveal" style="transition-delay:0.05s">
-        <div class="skill-bar-header"><span>SQL & Database Management</span><span>80%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
-      </div>
-      <div class="skill-bar-item reveal" style="transition-delay:0.1s">
-        <div class="skill-bar-header"><span>Data Analytics</span><span>87%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
-      </div>
-      <div class="skill-bar-item reveal" style="transition-delay:0.15s">
-        <div class="skill-bar-header"><span>Power BI & Excel  </span><span>85%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div>
-      </div>
-      <div class="skill-bar-item reveal" style="transition-delay:0.2s">
-        <div class="skill-bar-header"><span>Machine Learning </span><span>82%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
-      </div>
-      <div class="skill-bar-item reveal" style="transition-delay:0.25s">
-        <div class="skill-bar-header"><span>Data Visualization</span><span>85%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
-      </div>
-       <div class="skill-bar-item reveal" style="transition-delay:0.25s">
-        <div class="skill-bar-header"><span>Pandas & NumPy </span><span>88%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
-      </div>
-       <div class="skill-bar-item reveal" style="transition-delay:0.25s">
-        <div class="skill-bar-header"><span>Scikit-learn</span><span>80%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact -->
-<section id="contact">
-  <div class="container">
-    <div>
-      <div class="section-label reveal">Get in touch</div>
-      <h2 class="section-title reveal">Contact Me</h2>
-      <div class="section-divider reveal"></div>
-      <div class="contact-info">
-        <div class="contact-item reveal">
-          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-          <div>
-            <div class="contact-label">Email</div>
-            <div class="contact-value">ankitvermasultanpur9026@gmail.com</div>
-          </div>
-        </div>
-        <div class="contact-item reveal" style="transition-delay:0.1s">
-          <div class="contact-icon"><i class="fas fa-phone"></i></div>
-          <div>
-            <div class="contact-label">Phone</div>
-            <div class="contact-value">+91-9026329095</div>
-          </div>
-        </div>
-        <div class="contact-item reveal" style="transition-delay:0.2s">
-          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-          <div>
-            <div class="contact-label">Location</div>
-            <div class="contact-value">India</div>
-          </div>
-        </div>
-        <div class="contact-socials reveal" style="transition-delay:0.3s">
-          <a href="https://github.com/ankitiqcode" target="_blank" class="contact-social"><i class="fab fa-github"></i> GitHub</a>
-          <a href="https://www.linkedin.com/in/ankitiqcode/ " target="_blank" class="contact-social"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-          <a href="https://www.instagram.com/ankitiqcode" target="_blank" class="contact-social"><i class="fab fa-instagram"></i> Instagram</a>
-          <a href="https://youtube.com/@ankitiqcode" target="_blank" class="contact-social"><i class="fab fa-youtube"></i> YouTube</a>
-          <a href="https://x.com/ankitiqcode" target="_blank" class="contact-social"><i class="fab fa-x-twitter"></i> X</a>
-        </div>
-      </div>
-    </div>
-    <div class="reveal" style="transition-delay:0.2s">
-      <form name="submit-to-google-sheet" class="contact-form">
-        <h3 style="margin-bottom:1.5rem;font-size:1.1rem">Send a Message</h3>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Your Name</label>
-            <input type="text" name="Name" placeholder="John Doe" required>
-          </div>
-          <div class="form-group">
-            <label>Your Email</label>
-            <input type="email" name="Email" placeholder="john@example.com" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Subject</label>
-          <input type="text" name="Subject" placeholder="What's this about?">
-        </div>
-        <div class="form-group">
-          <label>Message</label>
-          <textarea name="Message" rows="5" placeholder="Tell me about your project..."></textarea>
-        </div>
-        <button type="submit" class="form-submit" id="submitBtn">
-          <i class="fas fa-paper-plane"></i> Send Message
-        </button>
-        <div class="form-msg" id="formMsg"></div>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <div class="container">
-    <p class="foot-brand"><span>AV</span>.portfolio</p>
-    <p>© 2025 Ankit Verma — Made with <span style="color:var(--pink)">♥</span> · Ankitiqcode</p>
-    <a href="https://github.com/Ankitiqcode-tech" target="_blank" style="color:var(--muted);font-size:1.2rem;transition:color 0.3s" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--muted)'"><i class="fab fa-github"></i></a>
-  </div>
-</footer>
-
-<!-- Scroll to top -->
-<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
-
-<script>
-  // Loader
-  window.addEventListener('load', () => {
-    setTimeout(() => document.getElementById('loader').classList.add('hidden'), 1600);
-  });
-
-  // Typing effect
-  const roles = ['Data Analyst', 'Full-Stack Developer', 'ML Engineer', 'Problem Solver'];
-  let ri = 0, ci = 0, deleting = false;
-  const roleEl = document.getElementById('typedRole');
-  function typeRole() {
-    const word = roles[ri];
-    if (!deleting) {
-      roleEl.innerHTML = word.slice(0, ci + 1) + '<span class="cursor"></span>';
-      ci++;
-      if (ci === word.length) { deleting = true; setTimeout(typeRole, 1800); return; }
-    } else {
-      roleEl.innerHTML = word.slice(0, ci - 1) + '<span class="cursor"></span>';
-      ci--;
-      if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; }
-    }
-    setTimeout(typeRole, deleting ? 60 : 100);
-  }
-  setTimeout(typeRole, 2000);
-
-  // Navbar scroll effect
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 50);
-    document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400);
-    highlightNav();
-  });
-
-  // Active nav
-  function highlightNav() {
-    const sections = document.querySelectorAll('section[id]');
-    const links = document.querySelectorAll('.nav-links a[href^="#"]');
-    let current = '';
-    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 200) current = s.id; });
-    links.forEach(l => {
-      l.classList.remove('active');
-      if (l.getAttribute('href') === '#' + current) l.classList.add('active');
-    });
-  }
-
-  // Tabs
-  function switchTab(name) {
-    document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.getElementById('tab-' + name).classList.add('active');
-    event.target.classList.add('active');
-  }
-
-  // Project filter
-  function filterProjects(cat, btn) {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    document.querySelectorAll('.project-card').forEach(c => {
-      const cats = c.dataset.cat || '';
-      c.style.display = (cat === 'all' || cats.includes(cat)) ? 'block' : 'none';
-    });
-  }
-
-  // Scroll reveal
-  const revealEls = document.querySelectorAll('.reveal');
-  const revealObs = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  revealEls.forEach(el => revealObs.observe(el));
-
-  // Skill bars
-  const barObs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.querySelectorAll('.skill-bar-fill').forEach(b => {
-          b.style.width = b.dataset.width + '%';
-        });
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript functionality -->
+  <script>
+    // Typing Effect for Roles
+    const roles = ['Data Analyst', 'Python Developer', 'ML Engineer', 'Problem Solver'];
+    let ri = 0, ci = 0, deleting = false;
+    const roleEl = document.getElementById('typedRole');
+
+    function typeRole() {
+      if (!roleEl) return;
+      const word = roles[ri];
+      if (!deleting) {
+        roleEl.innerHTML = word.slice(0, ci + 1) + '<span class="cursor"></span>';
+        ci++;
+        if (ci === word.length) { deleting = true; setTimeout(typeRole, 1800); return; }
+      } else {
+        roleEl.innerHTML = word.slice(0, ci - 1) + '<span class="cursor"></span>';
+        ci--;
+        if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; }
       }
-    });
-  }, { threshold: 0.3 });
-  document.getElementById('skillBars') && barObs.observe(document.getElementById('skillBars'));
-
-  // Mobile menu
-  function toggleMenu() {
-    document.getElementById('navLinks').classList.toggle('open');
-  }
-  document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
-    document.getElementById('navLinks').classList.remove('open');
-  }));
-
-
-  // Contact form
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyBA2-7EVGROSrvrGHof85eHcJ4w4_qbCp3CGAX5ZA9NhSrbq3G1cA2z2vYIFwdFxR3/exec';
-  const form = document.forms['submit-to-google-sheet'];
-  const formMsg = document.getElementById('formMsg');
-  const submitBtn = document.getElementById('submitBtn');
-  if (form) {
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-      submitBtn.disabled = true;
-      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(() => {
-          formMsg.textContent = '✓ Message sent! I\'ll get back to you soon.';
-          formMsg.className = 'form-msg success';
-          form.reset();
-          submitBtn.innerHTML = '<i class="fas fa-check"></i> Sent!';
-          setTimeout(() => {
-            formMsg.textContent = ''; submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-            submitBtn.disabled = false;
-          }, 4000);
-        })
-        .catch(() => {
-          formMsg.textContent = '✗ Something went wrong. Try emailing directly.';
-          formMsg.className = 'form-msg error';
-          submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-          submitBtn.disabled = false;
-        });
-    });
-  }
-</script>
-
-<script>
-function toggleMemories() {
-    const feed = document.getElementById("postFeed");
-    const icon = document.getElementById("memoryIcon");
-    const divider = document.getElementById("postDivider");
-
-    feed.classList.toggle("show");
-    icon.classList.toggle("rotate");
-
-    if (feed.classList.contains("show")) {
-        divider.style.display = "block";
-    } else {
-        divider.style.display = "none";
+      setTimeout(typeRole, deleting ? 60 : 100);
     }
-}
-</script>
+    document.addEventListener('DOMContentLoaded', () => setTimeout(typeRole, 1000));
 
+    // Navbar Scroll & Scroll Top Toggle
+    const navbar = document.getElementById('navbar');
+    const scrollTopBtn = document.getElementById('scrollTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+
+      if (window.scrollY > 400) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+
+      highlightNav();
+    });
+
+    // Active Navigation Highlight
+    function highlightNav() {
+      const sections = document.querySelectorAll('section[id]');
+      const links = document.querySelectorAll('.nav-links a[href^="#"]');
+      let current = '';
+
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 200) current = s.id;
+      });
+
+      links.forEach(l => {
+        l.classList.remove('active');
+        if (l.getAttribute('href') === '#' + current) l.classList.add('active');
+      });
+    }
+
+    // Tab Switching Mechanism
+    function switchTab(name, event) {
+      document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      
+      const targetPane = document.getElementById('tab-' + name);
+      if (targetPane) targetPane.classList.add('active');
+      if (event && event.target) event.target.classList.add('active');
+    }
+
+    // Projects Filtering
+    function filterProjects(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      document.querySelectorAll('.project-card').forEach(c => {
+        const cats = c.dataset.cat || '';
+        if (cat === 'all' || cats.includes(cat)) {
+          c.style.display = 'block';
+        } else {
+          c.style.display = 'none';
+        }
+      });
+    }
+
+    // Scroll Reveal Observer
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => revealObs.observe(el));
+
+    // Animated Skill Bars Observer
+    const barObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.querySelectorAll('.skill-bar-fill').forEach(b => {
+            b.style.width = b.dataset.width + '%';
+          });
+        }
+      });
+    }, { threshold: 0.3 });
+    const skillBarsEl = document.getElementById('skillBars');
+    if (skillBarsEl) barObs.observe(skillBarsEl);
+
+    // Mobile Hamburger Navigation Drawer
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('open');
+      });
+    });
+
+    // Toggle Posts & Memories Feed
+    function toggleMemories() {
+      const feed = document.getElementById("postFeed");
+      const icon = document.getElementById("memoryIcon");
+      if (feed) feed.classList.toggle("show");
+      if (icon) icon.classList.toggle("rotate");
+    }
+
+    // Google Sheets Contact Form Submission Handler
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyBA2-7EVGROSrvrGHof85eHcJ4w4_qbCp3CGAX5ZA9NhSrbq3G1cA2z2vYIFwdFxR3/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const formMsg = document.getElementById('formMsg');
+    const submitBtn = document.getElementById('submitBtn');
+
+    if (form) {
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitBtn.disabled = true;
+
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then(() => {
+            formMsg.textContent = '✓ Message sent! I\'ll get back to you soon.';
+            formMsg.className = 'form-msg success';
+            form.reset();
+            submitBtn.innerHTML = '<i class="fas fa-check"></i> Sent!';
+            setTimeout(() => {
+              formMsg.textContent = ''; 
+              submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+              submitBtn.disabled = false;
+            }, 4000);
+          })
+          .catch(() => {
+            formMsg.textContent = '✗ Something went wrong. Try emailing directly.';
+            formMsg.className = 'form-msg error';
+            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+            submitBtn.disabled = false;
+          });
+      });
+    }
+  </script>
 </body>
 </html>
