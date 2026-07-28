@@ -121,8 +121,13 @@
     .orb-2 { width: 400px; height: 400px; background: var(--pink); bottom: 10%; right: -100px; }
     .orb-3 { width: 350px; height: 350px; background: var(--cyan); top: 40%; left: 30%; }
 
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1; }
-
+    .container {
+    width: min(95%, 1400px);
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
     /* Navbar */
     #navbar {
       position: fixed;

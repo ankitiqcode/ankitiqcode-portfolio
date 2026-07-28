@@ -1,0 +1,1547 @@
+<article>
+
+<!-- ==================== SEO META BLOCK ==================== -->
+<section class="seo-meta" aria-label="SEO Metadata">
+<h2>SEO Metadata</h2>
+<ul>
+<li><strong>Meta Title:</strong> SQL Interview Questions &amp; Answers (2026 Edition)</li>
+<li><strong>Meta Description:</strong> 100+ SQL interview questions with answers, queries &amp; tips for freshers, data analysts &amp; developers. Master joins, CTEs, window functions &amp; more in 2026.</li>
+<li><strong>URL Slug:</strong> /blog/sql-interview-questions-and-answers-2026</li>
+<li><strong>Primary Keywords:</strong> SQL interview questions, SQL interview questions and answers, SQL interview questions for data analyst, SQL interview questions 2026, SQL joins interview questions, SQL window functions interview questions, SQL query interview questions, SQL interview questions for freshers</li>
+</ul>
+</section>
+
+<h1>SQL Interview Questions and Answers (2026 Edition) — The Complete Guide for Freshers to Data Analysts</h1>
+
+<p>
+If you're preparing for a Data Analyst, SQL Developer, Backend Engineer, or Software Engineering interview in 2026, this guide is built to be the only SQL resource you need. It covers SQL from the absolute basics — what SQL is and how SELECT works — all the way to advanced topics like window functions, recursive CTEs, transaction isolation levels, and real interview scenarios asked at product-based and service-based companies.
+</p>
+<p>
+This article includes <strong>100+ SQL interview questions with detailed answers, real example queries, output explanations, and interview tips</strong>, organized by difficulty (Easy, Medium, Hard) so you can study strategically instead of randomly. Whether you're a fresher walking into your first technical round or a working professional brushing up before a Data Analyst interview, you'll find a structured path here.
+</p>
+
+<div class="info-card">
+<p><strong>👨‍💻 About the Author:</strong> This guide is written by <strong>Ankit Verma (AnkitIQCode)</strong>, a software engineer and technical content creator who writes practical, interview-focused tutorials on SQL, Python, and Data Analytics. All queries in this article have been tested for correctness and written the way interviewers actually expect them — clear, efficient, and explainable.</p>
+</div>
+
+<!-- ==================== TABLE OF CONTENTS ==================== -->
+<nav aria-label="Table of Contents">
+<h2 id="toc">Table of Contents</h2>
+<ul>
+<li><a href="#what-is-sql">1. What is SQL?</a></li>
+<li><a href="#features-of-sql">2. Features of SQL</a></li>
+<li><a href="#sql-commands">3. SQL Commands (DDL, DML, DCL, TCL, DQL)</a></li>
+<li><a href="#sql-data-types">4. SQL Data Types</a></li>
+<li><a href="#constraints">5. SQL Constraints</a></li>
+<li><a href="#keys">6. SQL Keys</a></li>
+<li><a href="#operators">7. SQL Operators</a></li>
+<li><a href="#where-orderby-groupby-having">8. WHERE, ORDER BY, GROUP BY, HAVING</a></li>
+<li><a href="#aggregate-functions">9. Aggregate Functions</a></li>
+<li><a href="#joins">10. SQL JOINS (with Comparison Table)</a></li>
+<li><a href="#union-vs-unionall">11. UNION vs UNION ALL</a></li>
+<li><a href="#views">12. Views</a></li>
+<li><a href="#indexes">13. Indexes</a></li>
+<li><a href="#stored-procedures">14. Stored Procedures</a></li>
+<li><a href="#triggers">15. Triggers</a></li>
+<li><a href="#cte">16. Common Table Expressions (CTE)</a></li>
+<li><a href="#window-functions">17. Window Functions</a></li>
+<li><a href="#subqueries">18. Subqueries &amp; Correlated Subqueries</a></li>
+<li><a href="#transactions-acid">19. Transactions &amp; ACID Properties</a></li>
+<li><a href="#normalization">20. Normalization &amp; Denormalization</a></li>
+<li><a href="#interview-questions">21. 100+ SQL Interview Questions &amp; Answers</a></li>
+<li><a href="#common-mistakes">22. Common SQL Interview Mistakes</a></li>
+<li><a href="#optimization-tips">23. SQL Optimization &amp; Performance Tuning Tips</a></li>
+<li><a href="#cheat-sheet">24. SQL Cheat Sheet</a></li>
+<li><a href="#revision-notes">25. Quick Revision Notes</a></li>
+<li><a href="#roadmap">26. SQL Interview Preparation Roadmap</a></li>
+<li><a href="#faqs">27. FAQs</a></li>
+<li><a href="#conclusion">28. Conclusion</a></li>
+</ul>
+</nav>
+
+<!-- ==================== WHAT IS SQL ==================== -->
+<h2 id="what-is-sql">1. What is SQL?</h2>
+<p>
+<strong>SQL (Structured Query Language)</strong> is the standard language used to communicate with relational database management systems (RDBMS) like MySQL, PostgreSQL, SQL Server, and Oracle. It lets you define database structures, insert and modify data, retrieve information using powerful queries, and control access — all using a declarative, English-like syntax.
+</p>
+<p>
+In simple terms: SQL is how humans and applications "talk" to structured, table-based data. Every time you check your bank balance, browse an e-commerce catalog, or view analytics on a dashboard, SQL is very likely working behind the scenes.
+</p>
+<div class="note-box">
+<strong>📌 Note:</strong> SQL is <em>declarative</em>, not procedural — you describe <em>what</em> data you want, not <em>how</em> to fetch it step by step. The database engine decides the most efficient execution path.
+</div>
+
+<!-- ==================== FEATURES ==================== -->
+<h2 id="features-of-sql">2. Features of SQL</h2>
+<ul>
+<li><strong>Declarative syntax</strong> — describe the result, not the retrieval algorithm.</li>
+<li><strong>Platform independence</strong> — core SQL works across MySQL, PostgreSQL, SQL Server, Oracle with minor dialect differences.</li>
+<li><strong>Data integrity</strong> — constraints like PRIMARY KEY, FOREIGN KEY, and CHECK enforce valid data.</li>
+<li><strong>Powerful querying</strong> — joins, subqueries, and window functions support complex analytics.</li>
+<li><strong>Transaction support</strong> — COMMIT, ROLLBACK, and SAVEPOINT ensure safe multi-step operations.</li>
+<li><strong>Security &amp; access control</strong> — GRANT and REVOKE manage who can do what.</li>
+<li><strong>Scalability</strong> — modern RDBMSs handle everything from small apps to petabyte-scale warehouses.</li>
+</ul>
+
+<!-- ==================== SQL COMMANDS ==================== -->
+<h2 id="sql-commands">3. SQL Commands: DDL, DML, DCL, TCL, DQL</h2>
+<p>SQL commands are grouped into five categories based on their purpose:</p>
+
+<table>
+<caption>SQL Command Categories</caption>
+<thead>
+<tr><th>Category</th><th>Full Form</th><th>Purpose</th><th>Example Commands</th></tr>
+</thead>
+<tbody>
+<tr><td>DDL</td><td>Data Definition Language</td><td>Define/modify schema structure</td><td>CREATE, ALTER, DROP, TRUNCATE</td></tr>
+<tr><td>DML</td><td>Data Manipulation Language</td><td>Manipulate actual data</td><td>INSERT, UPDATE, DELETE</td></tr>
+<tr><td>DQL</td><td>Data Query Language</td><td>Retrieve data</td><td>SELECT</td></tr>
+<tr><td>DCL</td><td>Data Control Language</td><td>Manage permissions</td><td>GRANT, REVOKE</td></tr>
+<tr><td>TCL</td><td>Transaction Control Language</td><td>Manage transactions</td><td>COMMIT, ROLLBACK, SAVEPOINT</td></tr>
+</tbody>
+</table>
+
+<h3>DDL Example</h3>
+<pre><code>CREATE TABLE Departments (
+    dept_id INT PRIMARY KEY,
+    dept_name VARCHAR(50) NOT NULL
+);
+
+ALTER TABLE Departments ADD COLUMN location VARCHAR(100);
+
+DROP TABLE IF EXISTS OldDepartments;</code></pre>
+
+<h3>DML Example</h3>
+<pre><code>INSERT INTO Departments (dept_id, dept_name) VALUES (1, 'Engineering');
+
+UPDATE Departments SET location = 'Bangalore' WHERE dept_id = 1;
+
+DELETE FROM Departments WHERE dept_id = 99;</code></pre>
+
+<h3>DCL Example</h3>
+<pre><code>GRANT SELECT, INSERT ON Employees TO analyst_user;
+
+REVOKE INSERT ON Employees FROM analyst_user;</code></pre>
+
+<h3>TCL Example</h3>
+<pre><code>BEGIN TRANSACTION;
+UPDATE Employees SET salary = salary + 2000 WHERE dept_id = 1;
+COMMIT;</code></pre>
+
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Interviewers frequently ask "Is TRUNCATE DDL or DML?" — it's DDL. It auto-commits and cannot always be rolled back, unlike DELETE.</div>
+
+<!-- ==================== DATA TYPES ==================== -->
+<h2 id="sql-data-types">4. SQL Data Types</h2>
+<table>
+<caption>Common SQL Data Types</caption>
+<thead><tr><th>Category</th><th>Data Types</th><th>Use Case</th></tr></thead>
+<tbody>
+<tr><td>Numeric</td><td>INT, BIGINT, DECIMAL, FLOAT</td><td>IDs, counts, prices, salaries</td></tr>
+<tr><td>String</td><td>CHAR, VARCHAR, TEXT</td><td>Names, descriptions, codes</td></tr>
+<tr><td>Date/Time</td><td>DATE, TIME, DATETIME, TIMESTAMP</td><td>Order dates, timestamps</td></tr>
+<tr><td>Boolean</td><td>BOOLEAN / BIT</td><td>Flags like is_active</td></tr>
+<tr><td>Binary</td><td>BLOB, VARBINARY</td><td>Images, files</td></tr>
+</tbody>
+</table>
+
+<!-- ==================== CONSTRAINTS ==================== -->
+<h2 id="constraints">5. SQL Constraints</h2>
+<table>
+<thead><tr><th>Constraint</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td>PRIMARY KEY</td><td>Uniquely identifies each row; no NULLs</td></tr>
+<tr><td>FOREIGN KEY</td><td>Links to another table's primary key</td></tr>
+<tr><td>UNIQUE</td><td>Ensures all values in a column are distinct</td></tr>
+<tr><td>NOT NULL</td><td>Disallows NULL values</td></tr>
+<tr><td>CHECK</td><td>Validates values against a condition</td></tr>
+<tr><td>DEFAULT</td><td>Assigns a default value when none is provided</td></tr>
+</tbody>
+</table>
+<pre><code>CREATE TABLE Employees (
+    emp_id INT PRIMARY KEY,
+    emp_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    salary DECIMAL(10,2) CHECK (salary > 0),
+    dept_id INT,
+    status VARCHAR(20) DEFAULT 'Active',
+    FOREIGN KEY (dept_id) REFERENCES Departments(dept_id)
+);</code></pre>
+
+<!-- ==================== KEYS ==================== -->
+<h2 id="keys">6. SQL Keys</h2>
+<table>
+<thead><tr><th>Key Type</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>Primary Key</td><td>Uniquely identifies a row; no NULLs; one per table</td></tr>
+<tr><td>Foreign Key</td><td>References a primary key in another table</td></tr>
+<tr><td>Candidate Key</td><td>Any column(s) eligible to be the primary key</td></tr>
+<tr><td>Super Key</td><td>Any set of columns that uniquely identifies a row (may include extras)</td></tr>
+<tr><td>Composite Key</td><td>Primary key formed from two or more columns</td></tr>
+<tr><td>Alternate Key</td><td>Candidate key not chosen as the primary key</td></tr>
+</tbody>
+</table>
+
+<!-- ==================== OPERATORS ==================== -->
+<h2 id="operators">7. SQL Operators</h2>
+<ul>
+<li><strong>Arithmetic:</strong> +, -, *, /, %</li>
+<li><strong>Comparison:</strong> =, !=, &lt;&gt;, &gt;, &lt;, &gt;=, &lt;=</li>
+<li><strong>Logical:</strong> AND, OR, NOT, BETWEEN, IN, LIKE, IS NULL</li>
+<li><strong>Set:</strong> UNION, UNION ALL, INTERSECT, EXCEPT/MINUS</li>
+</ul>
+
+<!-- ==================== WHERE/ORDER/GROUP/HAVING ==================== -->
+<h2 id="where-orderby-groupby-having">8. WHERE, ORDER BY, GROUP BY, HAVING</h2>
+<pre><code>SELECT dept_id, COUNT(*) AS emp_count, AVG(salary) AS avg_salary
+FROM Employees
+WHERE status = 'Active'
+GROUP BY dept_id
+HAVING COUNT(*) > 3
+ORDER BY avg_salary DESC;</code></pre>
+<div class="note-box"><strong>📌 Execution order (not writing order):</strong> FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY. Interviewers love asking this — memorize it.</div>
+
+<!-- ==================== AGGREGATE FUNCTIONS ==================== -->
+<h2 id="aggregate-functions">9. Aggregate Functions</h2>
+<table>
+<caption>Aggregate Function Comparison</caption>
+<thead><tr><th>Function</th><th>Purpose</th><th>Handles NULL?</th></tr></thead>
+<tbody>
+<tr><td>COUNT(*)</td><td>Counts all rows</td><td>Includes NULL rows</td></tr>
+<tr><td>COUNT(column)</td><td>Counts non-null values in a column</td><td>Ignores NULL</td></tr>
+<tr><td>SUM()</td><td>Adds numeric values</td><td>Ignores NULL</td></tr>
+<tr><td>AVG()</td><td>Calculates average</td><td>Ignores NULL</td></tr>
+<tr><td>MIN() / MAX()</td><td>Smallest/largest value</td><td>Ignores NULL</td></tr>
+</tbody>
+</table>
+
+<!-- ==================== JOINS ==================== -->
+<h2 id="joins">10. SQL JOINS (with Comparison Table)</h2>
+<p>Joins combine rows from two or more tables based on a related column. Here's a full comparison:</p>
+<table>
+<caption>JOIN Types Comparison</caption>
+<thead><tr><th>JOIN Type</th><th>Returns</th><th>Unmatched Rows</th></tr></thead>
+<tbody>
+<tr><td>INNER JOIN</td><td>Only matching rows in both tables</td><td>Excluded</td></tr>
+<tr><td>LEFT JOIN</td><td>All left table rows + matches</td><td>Right side NULL</td></tr>
+<tr><td>RIGHT JOIN</td><td>All right table rows + matches</td><td>Left side NULL</td></tr>
+<tr><td>FULL OUTER JOIN</td><td>All rows from both tables</td><td>NULL on non-matching side</td></tr>
+<tr><td>SELF JOIN</td><td>Table joined to itself</td><td>Depends on join type used</td></tr>
+<tr><td>CROSS JOIN</td><td>Cartesian product (all combinations)</td><td>N/A — no condition</td></tr>
+</tbody>
+</table>
+
+<h3>INNER JOIN</h3>
+<pre><code>SELECT e.emp_name, d.dept_name
+FROM Employees e
+INNER JOIN Departments d ON e.dept_id = d.dept_id;</code></pre>
+
+<h3>LEFT JOIN</h3>
+<pre><code>SELECT e.emp_name, d.dept_name
+FROM Employees e
+LEFT JOIN Departments d ON e.dept_id = d.dept_id;</code></pre>
+
+<h3>RIGHT JOIN</h3>
+<pre><code>SELECT e.emp_name, d.dept_name
+FROM Employees e
+RIGHT JOIN Departments d ON e.dept_id = d.dept_id;</code></pre>
+
+<h3>FULL OUTER JOIN</h3>
+<pre><code>SELECT e.emp_name, d.dept_name
+FROM Employees e
+FULL OUTER JOIN Departments d ON e.dept_id = d.dept_id;</code></pre>
+
+<h3>SELF JOIN</h3>
+<pre><code>SELECT e.emp_name AS employee, m.emp_name AS manager
+FROM Employees e
+LEFT JOIN Employees m ON e.manager_id = m.emp_id;</code></pre>
+
+<h3>CROSS JOIN</h3>
+<pre><code>SELECT p.product_name, s.size_name
+FROM Products p
+CROSS JOIN Sizes s;</code></pre>
+
+<div class="warning-box"><strong>⚠️ Common Mistake:</strong> Forgetting the ON condition in a JOIN accidentally turns it into a CROSS JOIN, producing a massive, incorrect result set. Always double-check your join conditions.</div>
+
+<!-- ==================== UNION vs UNION ALL ==================== -->
+<h2 id="union-vs-unionall">11. UNION vs UNION ALL</h2>
+<table>
+<thead><tr><th>Aspect</th><th>UNION</th><th>UNION ALL</th></tr></thead>
+<tbody>
+<tr><td>Duplicates</td><td>Removed</td><td>Kept</td></tr>
+<tr><td>Performance</td><td>Slower (dedup overhead)</td><td>Faster</td></tr>
+<tr><td>Use Case</td><td>Need distinct combined results</td><td>Duplicates are fine/expected</td></tr>
+</tbody>
+</table>
+<pre><code>SELECT emp_name FROM Employees
+UNION ALL
+SELECT cust_name FROM Customers;</code></pre>
+
+<!-- ==================== VIEWS ==================== -->
+<h2 id="views">12. Views</h2>
+<p>A view is a stored SELECT query that acts as a virtual table — useful for simplifying complex queries and restricting access to sensitive columns.</p>
+<pre><code>CREATE VIEW EmployeePublic AS
+SELECT emp_id, emp_name, dept_id FROM Employees;
+
+SELECT * FROM EmployeePublic;</code></pre>
+
+<!-- ==================== INDEXES ==================== -->
+<h2 id="indexes">13. Indexes</h2>
+<p>Indexes speed up data retrieval at the cost of extra storage and slightly slower writes.</p>
+<pre><code>CREATE INDEX idx_employee_email ON Employees(email);</code></pre>
+<div class="tip-box"><strong>💡 Best Practice:</strong> Index columns used frequently in WHERE, JOIN, and ORDER BY clauses — but avoid over-indexing write-heavy tables.</div>
+
+<!-- ==================== STORED PROCEDURES ==================== -->
+<h2 id="stored-procedures">14. Stored Procedures</h2>
+<pre><code>CREATE PROCEDURE GiveRaise (IN p_dept_id INT, IN p_amount DECIMAL(10,2))
+BEGIN
+    UPDATE Employees SET salary = salary + p_amount WHERE dept_id = p_dept_id;
+END;
+
+CALL GiveRaise(3, 5000);</code></pre>
+
+<!-- ==================== TRIGGERS ==================== -->
+<h2 id="triggers">15. Triggers</h2>
+<pre><code>CREATE TRIGGER trg_salary_audit
+AFTER UPDATE ON Employees
+FOR EACH ROW
+BEGIN
+    INSERT INTO SalaryAudit(emp_id, old_salary, new_salary, changed_at)
+    VALUES (OLD.emp_id, OLD.salary, NEW.salary, NOW());
+END;</code></pre>
+
+<!-- ==================== CTE ==================== -->
+<h2 id="cte">16. Common Table Expressions (CTE)</h2>
+<pre><code>WITH RankedEmp AS (
+    SELECT emp_name, dept_id, salary,
+    ROW_NUMBER() OVER (PARTITION BY dept_id ORDER BY salary DESC) AS rnk
+    FROM Employees
+)
+SELECT * FROM RankedEmp WHERE rnk <= 3;</code></pre>
+
+<!-- ==================== WINDOW FUNCTIONS ==================== -->
+<h2 id="window-functions">17. Window Functions</h2>
+<table>
+<caption>Window Function Comparison</caption>
+<thead><tr><th>Function</th><th>Behavior on Ties</th></tr></thead>
+<tbody>
+<tr><td>ROW_NUMBER()</td><td>Unique number for every row, no gaps</td></tr>
+<tr><td>RANK()</td><td>Same rank for ties, skips next rank(s)</td></tr>
+<tr><td>DENSE_RANK()</td><td>Same rank for ties, no skipped ranks</td></tr>
+<tr><td>LAG() / LEAD()</td><td>Access previous/next row's value</td></tr>
+</tbody>
+</table>
+<pre><code>SELECT emp_name, salary,
+ROW_NUMBER() OVER (ORDER BY salary DESC) AS rn,
+RANK() OVER (ORDER BY salary DESC) AS rnk,
+DENSE_RANK() OVER (ORDER BY salary DESC) AS drnk
+FROM Employees;</code></pre>
+
+<!-- ==================== SUBQUERIES ==================== -->
+<h2 id="subqueries">18. Subqueries &amp; Correlated Subqueries</h2>
+<pre><code>-- Simple Subquery
+SELECT emp_name FROM Employees
+WHERE salary > (SELECT AVG(salary) FROM Employees);
+
+-- Correlated Subquery
+SELECT e1.emp_name, e1.salary FROM Employees e1
+WHERE e1.salary > (
+    SELECT AVG(e2.salary) FROM Employees e2 WHERE e2.dept_id = e1.dept_id
+);</code></pre>
+
+<!-- ==================== TRANSACTIONS & ACID ==================== -->
+<h2 id="transactions-acid">19. Transactions &amp; ACID Properties</h2>
+<table>
+<thead><tr><th>Property</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td>Atomicity</td><td>All operations succeed, or none do</td></tr>
+<tr><td>Consistency</td><td>Data moves between valid states only</td></tr>
+<tr><td>Isolation</td><td>Concurrent transactions don't interfere</td></tr>
+<tr><td>Durability</td><td>Committed changes survive crashes</td></tr>
+</tbody>
+</table>
+<pre><code>BEGIN TRANSACTION;
+UPDATE Accounts SET balance = balance - 500 WHERE acct_id = 1;
+UPDATE Accounts SET balance = balance + 500 WHERE acct_id = 2;
+COMMIT;</code></pre>
+
+<!-- ==================== NORMALIZATION ==================== -->
+<h2 id="normalization">20. Normalization &amp; Denormalization</h2>
+<table>
+<thead><tr><th>Normal Form</th><th>Rule</th></tr></thead>
+<tbody>
+<tr><td>1NF</td><td>Atomic values, no repeating groups</td></tr>
+<tr><td>2NF</td><td>1NF + no partial dependency on composite key</td></tr>
+<tr><td>3NF</td><td>2NF + no transitive dependency</td></tr>
+<tr><td>BCNF</td><td>Every determinant is a candidate key</td></tr>
+</tbody>
+</table>
+<div class="info-card"><strong>Denormalization</strong> intentionally adds redundancy to reduce joins and speed up reads — common in reporting/OLAP systems.</div>
+
+<!-- ==================== INTERVIEW QUESTIONS SECTION START ==================== -->
+<h2 id="interview-questions">21. 100+ SQL Interview Questions and Answers</h2>
+<p>
+Below are 100 hand-crafted SQL interview questions covering beginner to advanced levels, complete with answers, example scenarios, working SQL queries, output explanations, and interview tips. Questions are tagged <span class="badge diff-easy">Easy</span>, <span class="badge diff-medium">Medium</span>, or <span class="badge diff-hard">Hard</span> so you can prioritize your prep.
+</p>
+
+<h3 id="qa-basics">Beginner-Level SQL Interview Questions</h3>
+<div class="qa-card" id="q1">
+<h4>Q1. What is SQL and why is it used? <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> SQL (Structured Query Language) is a standard language used to create, read, update, and delete data stored in a relational database. It lets you define table structures, insert and modify records, and run complex queries to retrieve exactly the data you need.</p>
+<p><strong>Example scenario:</strong> A company stores employee records in a relational database and uses SQL to fetch employees hired after 2023.</p>
+<pre><code>SELECT emp_name, hire_date FROM Employees WHERE hire_date &gt; '2023-01-01';</code></pre>
+<p><strong>Output explanation:</strong> Returns the name and hire date of every employee hired after 1 Jan 2023.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Always mention that SQL works with relational (table-based) databases and is both a data definition and data manipulation language — interviewers like to hear the DDL/DML distinction early.</div>
+</div>
+<div class="qa-card" id="q2">
+<h4>Q2. What are the main features of SQL? <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> SQL is declarative (you describe what you want, not how to get it), platform-independent, supports multiple data types, allows complex joins and aggregations, enforces data integrity through constraints, and integrates transaction control for safe multi-step operations.</p>
+<p><strong>Example scenario:</strong> You can write the same SELECT query on MySQL, PostgreSQL, or SQL Server with only minor syntax differences.</p>
+<pre><code>SELECT COUNT(*) FROM Employees;</code></pre>
+<p><strong>Output explanation:</strong> Returns the total number of rows in the Employees table.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> List 4–5 features confidently; interviewers often just want to check you understand SQL is declarative, not procedural.</div>
+</div>
+<div class="qa-card" id="q3">
+<h4>Q3. What are the different types of SQL commands? <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> SQL commands are grouped into five categories: DDL (Data Definition Language) for schema, DML (Data Manipulation Language) for data, DCL (Data Control Language) for permissions, TCL (Transaction Control Language) for transactions, and DQL (Data Query Language) for SELECT-based retrieval.</p>
+<p><strong>Example scenario:</strong> CREATE TABLE (DDL), INSERT INTO (DML), GRANT (DCL), COMMIT (TCL), and SELECT (DQL) are all SQL commands from different categories.</p>
+<pre><code>CREATE TABLE Departments (dept_id INT PRIMARY KEY, dept_name VARCHAR(50));</code></pre>
+<p><strong>Output explanation:</strong> Creates a new Departments table with two columns — a DDL operation that changes the schema, not the data.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Draw a quick mental table of the 5 categories with 2 example commands each before the interview — this question shows up almost every time.</div>
+</div>
+<div class="qa-card" id="q4">
+<h4>Q4. What is the difference between DDL and DML? <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> DDL commands (CREATE, ALTER, DROP, TRUNCATE) define or modify the structure of database objects and auto-commit. DML commands (INSERT, UPDATE, DELETE) manipulate the actual data inside tables and can be rolled back within a transaction.</p>
+<p><strong>Example scenario:</strong> ALTER TABLE changes a table's structure (DDL); UPDATE changes the values inside it (DML).</p>
+<pre><code>ALTER TABLE Employees ADD COLUMN email VARCHAR(100);
+UPDATE Employees SET email = 'a@b.com' WHERE emp_id = 1;</code></pre>
+<p><strong>Output explanation:</strong> First statement adds a new column to the schema; second statement fills in a value for one row.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Remember: DDL = structure, auto-committed; DML = data, rollback-able. This distinction is a classic trick question.</div>
+</div>
+<div class="qa-card" id="q5">
+<h4>Q5. What is the difference between CHAR and VARCHAR? <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> CHAR is a fixed-length string type that pads unused space with blanks, making it faster for consistently sized data. VARCHAR is variable-length and stores only the actual characters used plus a small length indicator, saving space for variable data.</p>
+<p><strong>Example scenario:</strong> A 2-letter state code fits CHAR(2); a customer name of variable length fits VARCHAR(50) better.</p>
+<pre><code>CREATE TABLE Customers (state CHAR(2), full_name VARCHAR(50));</code></pre>
+<p><strong>Output explanation:</strong> Creates a table where 'state' always occupies 2 bytes, while 'full_name' occupies only as many bytes as the actual name.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Say CHAR is faster for fixed-size codes (like country codes), VARCHAR saves storage for variable text — this shows practical understanding.</div>
+</div>
+<div class="qa-card" id="q6">
+<h4>Q6. What are SQL constraints? Name the common ones. <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> Constraints are rules enforced on table columns to maintain data accuracy and integrity. Common constraints include PRIMARY KEY, FOREIGN KEY, UNIQUE, NOT NULL, CHECK, and DEFAULT.</p>
+<p><strong>Example scenario:</strong> A CHECK constraint can ensure an employee's salary is always positive.</p>
+<pre><code>CREATE TABLE Employees (emp_id INT PRIMARY KEY, salary DECIMAL(10,2) CHECK (salary &gt; 0));</code></pre>
+<p><strong>Output explanation:</strong> Any attempt to insert a negative salary will be rejected by the database.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Interviewers love follow-ups like 'what happens if you violate a constraint?' — know that it throws an error and the statement is rejected.</div>
+</div>
+<div class="qa-card" id="q7">
+<h4>Q7. What is a Primary Key? <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> A Primary Key uniquely identifies each row in a table. It cannot contain NULL values, must be unique, and a table can have only one primary key (which may span multiple columns as a composite key).</p>
+<p><strong>Example scenario:</strong> emp_id uniquely identifies each row in the Employees table.</p>
+<pre><code>CREATE TABLE Employees (emp_id INT PRIMARY KEY, emp_name VARCHAR(50));</code></pre>
+<p><strong>Output explanation:</strong> Guarantees that no two rows can ever have the same emp_id, and emp_id can never be NULL.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Mention composite primary keys — many candidates forget a primary key can consist of more than one column.</div>
+</div>
+<div class="qa-card" id="q8">
+<h4>Q8. What is a Foreign Key? <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> A Foreign Key is a column (or set of columns) in one table that references the Primary Key of another table, enforcing referential integrity between the two tables.</p>
+<p><strong>Example scenario:</strong> The dept_id column in Employees references dept_id in Departments.</p>
+<pre><code>CREATE TABLE Employees (emp_id INT PRIMARY KEY, dept_id INT, FOREIGN KEY (dept_id) REFERENCES Departments(dept_id));</code></pre>
+<p><strong>Output explanation:</strong> Ensures every dept_id entered in Employees must already exist in Departments, preventing orphan records.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Explain ON DELETE CASCADE / ON DELETE SET NULL as advanced follow-up knowledge — it shows depth.</div>
+</div>
+<div class="qa-card" id="q9">
+<h4>Q9. What is the difference between Primary Key and Unique Key? <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> A Primary Key does not allow NULLs and only one exists per table. A Unique Key allows one NULL value (in most databases) and a table can have multiple unique keys.</p>
+<p><strong>Example scenario:</strong> email can be a Unique Key allowing NULL for one row, while emp_id remains the single Primary Key.</p>
+<pre><code>CREATE TABLE Employees (emp_id INT PRIMARY KEY, email VARCHAR(100) UNIQUE);</code></pre>
+<p><strong>Output explanation:</strong> emp_id must always be present and unique; email must be unique among non-null values but one row could leave it NULL.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> A very common trap question — always mention the NULL-handling difference explicitly.</div>
+</div>
+<div class="qa-card" id="q10">
+<h4>Q10. What are the different types of SQL operators? <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> SQL operators include Arithmetic (+, -, *, /, %), Comparison (=, !=, &gt;, &lt;, &gt;=, &lt;=), Logical (AND, OR, NOT, BETWEEN, IN, LIKE), and Set operators (UNION, INTERSECT, EXCEPT/MINUS).</p>
+<p><strong>Example scenario:</strong> The BETWEEN operator filters salaries within a given range.</p>
+<pre><code>SELECT emp_name FROM Employees WHERE salary BETWEEN 40000 AND 80000;</code></pre>
+<p><strong>Output explanation:</strong> Returns employees whose salary lies inclusively between 40,000 and 80,000.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Group operators into these 4 categories mentally — it helps you answer follow-up questions faster.</div>
+</div>
+<div class="qa-card" id="q11">
+<h4>Q11. What is the difference between WHERE and HAVING? <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> WHERE filters individual rows before any grouping happens and cannot use aggregate functions. HAVING filters groups after GROUP BY has been applied and can use aggregate functions like SUM() or COUNT().</p>
+<p><strong>Example scenario:</strong> You want departments with more than 5 employees.</p>
+<pre><code>SELECT dept_id, COUNT(*) AS emp_count FROM Employees GROUP BY dept_id HAVING COUNT(*) &gt; 5;</code></pre>
+<p><strong>Output explanation:</strong> Returns only those dept_id groups whose employee count exceeds 5 — this filtering happens after grouping.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> One-liner to remember: 'WHERE filters rows, HAVING filters groups.' Interviewers ask this in almost every SQL round.</div>
+</div>
+<div class="qa-card" id="q12">
+<h4>Q12. What does the ORDER BY clause do? <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> ORDER BY sorts the result set by one or more columns, in ascending (ASC, default) or descending (DESC) order.</p>
+<p><strong>Example scenario:</strong> Sort employees by salary from highest to lowest.</p>
+<pre><code>SELECT emp_name, salary FROM Employees ORDER BY salary DESC;</code></pre>
+<p><strong>Output explanation:</strong> Returns all employees sorted with the highest-paid employee first.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Mention you can sort by multiple columns and even by column position number (ORDER BY 2) — a nice bonus fact.</div>
+</div>
+<div class="qa-card" id="q13">
+<h4>Q13. What is the purpose of the GROUP BY clause? <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> GROUP BY groups rows sharing the same values in specified columns so aggregate functions (SUM, AVG, COUNT, etc.) can be applied to each group separately.</p>
+<p><strong>Example scenario:</strong> Find the total salary paid per department.</p>
+<pre><code>SELECT dept_id, SUM(salary) AS total_salary FROM Employees GROUP BY dept_id;</code></pre>
+<p><strong>Output explanation:</strong> Returns one row per department showing the sum of salaries for employees in that department.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Remember every non-aggregated column in SELECT must appear in GROUP BY — this is a frequent syntax error.</div>
+</div>
+<div class="qa-card" id="q14">
+<h4>Q14. What is the difference between DELETE, TRUNCATE, and DROP? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> DELETE removes rows one at a time (can use WHERE, is logged, rollback-able), TRUNCATE removes all rows at once (faster, minimal logging, resets identity, cannot use WHERE), and DROP removes the entire table structure along with its data permanently.</p>
+<p><strong>Example scenario:</strong> You want to clear all data but keep the table structure for reuse.</p>
+<pre><code>TRUNCATE TABLE Employees;</code></pre>
+<p><strong>Output explanation:</strong> Instantly empties the Employees table while keeping its schema intact.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Say TRUNCATE is DDL (auto-commit, cannot rollback in most databases) while DELETE is DML — a classic gotcha.</div>
+</div>
+<div class="qa-card" id="q15">
+<h4>Q15. What is a NULL value in SQL? <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> NULL represents missing, unknown, or inapplicable data. It is not the same as zero or an empty string, and any arithmetic or comparison with NULL returns NULL (unknown) — you must use IS NULL / IS NOT NULL to test for it.</p>
+<p><strong>Example scenario:</strong> An employee record without a recorded phone number stores NULL, not '0' or ''.</p>
+<pre><code>SELECT emp_name FROM Employees WHERE phone IS NULL;</code></pre>
+<p><strong>Output explanation:</strong> Returns employees whose phone number has not been entered.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Never say 'salary = NULL' in a WHERE clause — explain why it silently returns nothing, since NULL comparisons are always unknown.</div>
+</div>
+<div class="qa-card" id="q16">
+<h4>Q16. What is the difference between IN and BETWEEN? <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> IN checks whether a value matches any value in a specified list. BETWEEN checks whether a value falls within an inclusive range of two values.</p>
+<p><strong>Example scenario:</strong> Filter employees who work in dept_id 1, 3, or 5, versus employees with salary between 30000 and 60000.</p>
+<pre><code>SELECT * FROM Employees WHERE dept_id IN (1,3,5);
+SELECT * FROM Employees WHERE salary BETWEEN 30000 AND 60000;</code></pre>
+<p><strong>Output explanation:</strong> First query returns rows matching any listed dept_id; second returns rows with salary in that inclusive range.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Mention BETWEEN is inclusive on both ends — a detail interviewers often probe.</div>
+</div>
+<div class="qa-card" id="q17">
+<h4>Q17. What is the LIKE operator used for? <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> LIKE performs pattern matching in string columns using wildcards: % for zero or more characters and _ for exactly one character.</p>
+<p><strong>Example scenario:</strong> Find all employees whose name starts with 'A'.</p>
+<pre><code>SELECT emp_name FROM Employees WHERE emp_name LIKE 'A%';</code></pre>
+<p><strong>Output explanation:</strong> Returns every employee whose name begins with the letter A.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Know that LIKE is case-insensitive in MySQL by default but case-sensitive in PostgreSQL — mention this to show cross-database awareness.</div>
+</div>
+<div class="qa-card" id="q18">
+<h4>Q18. What is the difference between UNION and UNION ALL? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> UNION combines results from two SELECT queries and removes duplicate rows, which involves extra processing. UNION ALL combines results without removing duplicates, making it faster.</p>
+<p><strong>Example scenario:</strong> Combine current employees and former employees lists.</p>
+<pre><code>SELECT emp_name FROM Employees
+UNION
+SELECT emp_name FROM FormerEmployees;</code></pre>
+<p><strong>Output explanation:</strong> Returns a merged, de-duplicated list of employee names from both tables.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> If duplicates genuinely don't matter, always recommend UNION ALL for performance — a strong optimization talking point.</div>
+</div>
+<div class="qa-card" id="q19">
+<h4>Q19. What are Aggregate Functions in SQL? Name a few. <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> Aggregate functions perform a calculation on a set of rows and return a single summarized value. Common ones are COUNT(), SUM(), AVG(), MIN(), and MAX().</p>
+<p><strong>Example scenario:</strong> Find the average salary across the company.</p>
+<pre><code>SELECT AVG(salary) AS avg_salary FROM Employees;</code></pre>
+<p><strong>Output explanation:</strong> Returns one single value representing the average salary of all employees.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Mention that COUNT(*) counts all rows including NULLs, while COUNT(column) ignores NULLs in that column — a favorite trick question.</div>
+</div>
+<div class="qa-card" id="q20">
+<h4>Q20. What is the difference between COUNT(*), COUNT(1), and COUNT(column_name)? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> COUNT(*) counts all rows regardless of NULLs. COUNT(1) behaves the same as COUNT(*) in modern optimizers (counts all rows). COUNT(column_name) counts only rows where that specific column is NOT NULL.</p>
+<p><strong>Example scenario:</strong> Count all employees vs count employees who have a manager assigned.</p>
+<pre><code>SELECT COUNT(*) AS total_emp, COUNT(manager_id) AS with_manager FROM Employees;</code></pre>
+<p><strong>Output explanation:</strong> total_emp shows every row; with_manager shows only rows where manager_id is not NULL.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Say COUNT(*) and COUNT(1) usually have identical performance in modern engines — don't fall for the myth that COUNT(1) is faster.</div>
+</div>
+<div class="qa-card" id="q21">
+<h4>Q21. What is a Composite Key? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> A Composite Key is a primary key made up of two or more columns that together uniquely identify a row, used when no single column is unique enough on its own.</p>
+<p><strong>Example scenario:</strong> In an Enrollments table, (student_id, course_id) together form a composite key.</p>
+<pre><code>CREATE TABLE Enrollments (student_id INT, course_id INT, PRIMARY KEY (student_id, course_id));</code></pre>
+<p><strong>Output explanation:</strong> Ensures a student cannot be enrolled in the exact same course twice, but can enroll in multiple different courses.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Give a real-world junction-table example like this one — it demonstrates practical schema design thinking.</div>
+</div>
+<div class="qa-card" id="q22">
+<h4>Q22. What is a Candidate Key? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> A Candidate Key is any column or combination of columns that could qualify as a unique identifier for a table. One candidate key is chosen as the Primary Key; the rest become Alternate Keys.</p>
+<p><strong>Example scenario:</strong> In Employees, both emp_id and email could independently identify a row uniquely, making both candidate keys.</p>
+<pre><code>-- emp_id and email are both candidate keys;
+-- emp_id is chosen as Primary Key</code></pre>
+<p><strong>Output explanation:</strong> Only emp_id enforces uniqueness as the primary key, while email may still be marked UNIQUE separately.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Explain the hierarchy: Super Key → Candidate Key → Primary Key — this chain impresses interviewers.</div>
+</div>
+<div class="qa-card" id="q23">
+<h4>Q23. What is a Super Key? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> A Super Key is any set of one or more columns that can uniquely identify a row; it may include extra, unnecessary attributes. Every Candidate Key is a Super Key, but not every Super Key is minimal enough to be a Candidate Key.</p>
+<p><strong>Example scenario:</strong> (emp_id, emp_name) is a super key because it's unique, even though emp_name alone isn't needed.</p>
+<pre><code>-- Super Key example: (emp_id, emp_name, dept_id)</code></pre>
+<p><strong>Output explanation:</strong> Uniquely identifies rows but carries redundant columns beyond what's minimally required.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Keep this crisp: 'Super Key ⊇ Candidate Key ⊇ Primary Key' — a clean way to summarize key hierarchy.</div>
+</div>
+<div class="qa-card" id="q24">
+<h4>Q24. What is the difference between a Clustered and Non-Clustered Index? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> A Clustered Index determines the physical storage order of table data — a table can have only one. A Non-Clustered Index creates a separate structure with pointers back to the actual data rows — a table can have many.</p>
+<p><strong>Example scenario:</strong> Primary key columns typically get a clustered index automatically in SQL Server.</p>
+<pre><code>CREATE CLUSTERED INDEX idx_emp_id ON Employees(emp_id);
+CREATE NONCLUSTERED INDEX idx_emp_name ON Employees(emp_name);</code></pre>
+<p><strong>Output explanation:</strong> The clustered index physically sorts the table by emp_id; the non-clustered index speeds up lookups by emp_name without reordering data.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Analogy that works well in interviews: clustered index = phone book sorted by name; non-clustered index = book's alphabetical topic index at the back.</div>
+</div>
+<div class="qa-card" id="q25">
+<h4>Q25. What is Normalization? Name its normal forms briefly. <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> Normalization is the process of organizing data to reduce redundancy and improve data integrity by dividing large tables into smaller related ones. Key normal forms: 1NF (atomic values, no repeating groups), 2NF (no partial dependency on composite keys), 3NF (no transitive dependency), and BCNF (every determinant is a candidate key).</p>
+<p><strong>Example scenario:</strong> Splitting a single 'Orders' table containing customer address into separate Orders and Customers tables removes repeated address data.</p>
+<pre><code>-- Before: Orders(order_id, cust_name, cust_address, product)
+-- After 3NF:
+-- Customers(cust_id, cust_name, cust_address)
+-- Orders(order_id, cust_id, product)</code></pre>
+<p><strong>Output explanation:</strong> Splitting into two related tables eliminates redundant customer address data stored across many orders.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Be ready to explain 1NF, 2NF, 3NF with one-line examples each — this is asked in nearly every data analyst interview.</div>
+</div>
+<h3 id="qa-joins">SQL JOIN Interview Questions</h3>
+<div class="qa-card" id="q26">
+<h4>Q26. What is an INNER JOIN? <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> INNER JOIN returns only the rows that have matching values in both joined tables based on the join condition.</p>
+<p><strong>Example scenario:</strong> Get employee names along with their department names, only for employees who have an assigned department.</p>
+<pre><code>SELECT e.emp_name, d.dept_name FROM Employees e INNER JOIN Departments d ON e.dept_id = d.dept_id;</code></pre>
+<p><strong>Output explanation:</strong> Returns only employees who have a matching department; employees with a NULL or invalid dept_id are excluded.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Draw two overlapping circles mentally — INNER JOIN is the intersection only.</div>
+</div>
+<div class="qa-card" id="q27">
+<h4>Q27. What is a LEFT JOIN (LEFT OUTER JOIN)? <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> LEFT JOIN returns all rows from the left table and the matched rows from the right table; unmatched right-side columns are filled with NULL.</p>
+<p><strong>Example scenario:</strong> List all employees, including those not yet assigned to any department.</p>
+<pre><code>SELECT e.emp_name, d.dept_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.dept_id;</code></pre>
+<p><strong>Output explanation:</strong> Every employee appears in the result; dept_name is NULL for employees without a matching department.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Classic follow-up: 'How do you find employees with NO department?' Add WHERE d.dept_id IS NULL after the LEFT JOIN.</div>
+</div>
+<div class="qa-card" id="q28">
+<h4>Q28. What is a RIGHT JOIN (RIGHT OUTER JOIN)? <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> RIGHT JOIN returns all rows from the right table and the matched rows from the left table; unmatched left-side columns are filled with NULL.</p>
+<p><strong>Example scenario:</strong> List all departments, including ones with no employees assigned yet.</p>
+<pre><code>SELECT e.emp_name, d.dept_name FROM Employees e RIGHT JOIN Departments d ON e.dept_id = d.dept_id;</code></pre>
+<p><strong>Output explanation:</strong> Every department appears; emp_name is NULL for departments that currently have zero employees.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Mention that RIGHT JOIN is just a LEFT JOIN with tables swapped — many teams avoid RIGHT JOIN for readability.</div>
+</div>
+<div class="qa-card" id="q29">
+<h4>Q29. What is a FULL OUTER JOIN? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> FULL OUTER JOIN returns all rows from both tables, matching where possible and filling NULLs where no match exists on either side.</p>
+<p><strong>Example scenario:</strong> List every employee and every department, matched where possible, unmatched on either side otherwise.</p>
+<pre><code>SELECT e.emp_name, d.dept_name FROM Employees e FULL OUTER JOIN Departments d ON e.dept_id = d.dept_id;</code></pre>
+<p><strong>Output explanation:</strong> Shows matched employee-department pairs, plus employees without departments and departments without employees.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Note MySQL lacks native FULL OUTER JOIN — mention simulating it with LEFT JOIN UNION RIGHT JOIN.</div>
+</div>
+<div class="qa-card" id="q30">
+<h4>Q30. What is a SELF JOIN? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> A SELF JOIN joins a table to itself, typically to compare rows within the same table, such as finding employees and their managers stored in the same table.</p>
+<p><strong>Example scenario:</strong> Find each employee along with their manager's name, where manager_id references emp_id in the same table.</p>
+<pre><code>SELECT e.emp_name AS employee, m.emp_name AS manager FROM Employees e LEFT JOIN Employees m ON e.manager_id = m.emp_id;</code></pre>
+<p><strong>Output explanation:</strong> Each row shows an employee's name paired with their manager's name from the same Employees table.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Always use table aliases for self joins — interviewers check if you know aliasing is mandatory here.</div>
+</div>
+<div class="qa-card" id="q31">
+<h4>Q31. What is a CROSS JOIN? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> CROSS JOIN returns the Cartesian product of two tables — every row from the first table paired with every row from the second, with no join condition.</p>
+<p><strong>Example scenario:</strong> Generate every possible combination of Products and Sizes for a catalog.</p>
+<pre><code>SELECT p.product_name, s.size_name FROM Products p CROSS JOIN Sizes s;</code></pre>
+<p><strong>Output explanation:</strong> If Products has 5 rows and Sizes has 3 rows, the result contains 15 rows — every combination.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Warn that CROSS JOIN on large tables can explode row counts — always mention this performance risk.</div>
+</div>
+<div class="qa-card" id="q32">
+<h4>Q32. How do you find employees who do NOT belong to any department? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> Use a LEFT JOIN from Employees to Departments and filter for rows where the department key is NULL, meaning no match was found.</p>
+<p><strong>Example scenario:</strong> Departments without a matching entry in Departments for some employees.</p>
+<pre><code>SELECT e.emp_name FROM Employees e LEFT JOIN Departments d ON e.dept_id = d.dept_id WHERE d.dept_id IS NULL;</code></pre>
+<p><strong>Output explanation:</strong> Returns only employees whose dept_id had no corresponding row in the Departments table.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> This LEFT JOIN + IS NULL pattern is one of the most frequently asked practical SQL questions — memorize it.</div>
+</div>
+<h3 id="qa-advanced">Advanced SQL Interview Questions</h3>
+<div class="qa-card" id="q33">
+<h4>Q33. What is a Subquery? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> A Subquery (or inner query) is a query nested inside another SQL query, used to return data that the outer query then uses for filtering, comparison, or as a derived table.</p>
+<p><strong>Example scenario:</strong> Find employees who earn more than the company's average salary.</p>
+<pre><code>SELECT emp_name, salary FROM Employees WHERE salary &gt; (SELECT AVG(salary) FROM Employees);</code></pre>
+<p><strong>Output explanation:</strong> Returns employees whose individual salary exceeds the overall average salary computed by the inner query.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Distinguish scalar subqueries (single value), row subqueries, and table subqueries — interviewers may ask you to classify one.</div>
+</div>
+<div class="qa-card" id="q34">
+<h4>Q34. What is a Correlated Subquery? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> A Correlated Subquery references a column from the outer query, so it re-executes once for every row processed by the outer query, unlike a regular subquery that runs independently.</p>
+<p><strong>Example scenario:</strong> Find employees earning more than the average salary of their own department.</p>
+<pre><code>SELECT e1.emp_name, e1.salary FROM Employees e1 WHERE e1.salary &gt; (SELECT AVG(e2.salary) FROM Employees e2 WHERE e2.dept_id = e1.dept_id);</code></pre>
+<p><strong>Output explanation:</strong> For each employee, the inner query recalculates the department average and compares only within that same department.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Explain the performance trade-off: correlated subqueries can be slow on large tables — often rewritten using window functions.</div>
+</div>
+<div class="qa-card" id="q35">
+<h4>Q35. What is the difference between a Subquery and a JOIN? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> A JOIN combines columns from multiple tables into one result set in a single pass and is usually more efficient for retrieving combined data. A Subquery is often used for filtering or existence checks and can be less efficient, especially when correlated, though it can be more readable for certain logic.</p>
+<p><strong>Example scenario:</strong> Get employees along with department names — better solved with a JOIN than a subquery.</p>
+<pre><code>-- JOIN approach
+SELECT e.emp_name, d.dept_name FROM Employees e JOIN Departments d ON e.dept_id = d.dept_id;</code></pre>
+<p><strong>Output explanation:</strong> Returns combined employee and department data in a single efficient pass, rather than a row-by-row subquery lookup.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Say: 'I prefer JOINs for combining columns, subqueries for existence checks or scalar comparisons' — shows judgment, not just syntax knowledge.</div>
+</div>
+<div class="qa-card" id="q36">
+<h4>Q36. What is a Common Table Expression (CTE)? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> A CTE, defined with WITH, is a temporary named result set that exists only for the duration of a single query, improving readability and enabling recursive queries.</p>
+<p><strong>Example scenario:</strong> Find the top 3 highest-paid employees per department using a CTE with ROW_NUMBER().</p>
+<pre><code>WITH RankedEmp AS (
+  SELECT emp_name, dept_id, salary,
+  ROW_NUMBER() OVER (PARTITION BY dept_id ORDER BY salary DESC) AS rnk
+  FROM Employees
+)
+SELECT * FROM RankedEmp WHERE rnk &lt;= 3;</code></pre>
+<p><strong>Output explanation:</strong> Returns up to 3 highest-paid employees within each department, ranked by salary in descending order.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Mention CTEs are not materialized/cached by default in most databases — they're re-evaluated each reference, unlike temp tables.</div>
+</div>
+<div class="qa-card" id="q37">
+<h4>Q37. What is a Recursive CTE? Give an example. <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> A Recursive CTE references itself to process hierarchical or recursive data, such as organizational charts or category trees, by combining an anchor query with a recursive query joined back to the CTE.</p>
+<p><strong>Example scenario:</strong> Find all employees under a given manager, including indirect reports, in an org hierarchy.</p>
+<pre><code>WITH RECURSIVE OrgChart AS (
+  SELECT emp_id, emp_name, manager_id FROM Employees WHERE manager_id IS NULL
+  UNION ALL
+  SELECT e.emp_id, e.emp_name, e.manager_id FROM Employees e
+  JOIN OrgChart o ON e.manager_id = o.emp_id
+)
+SELECT * FROM OrgChart;</code></pre>
+<p><strong>Output explanation:</strong> Starts from top-level managers (anchor) and recursively adds each level of subordinates until no more matches remain.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Recursive CTEs are a favorite for 'employee hierarchy' style questions in product-based companies — practice this pattern.</div>
+</div>
+<div class="qa-card" id="q38">
+<h4>Q38. What are Window Functions in SQL? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> Window functions perform calculations across a set of rows related to the current row (a 'window') without collapsing the result into a single row, using the OVER() clause. Examples include ROW_NUMBER(), RANK(), DENSE_RANK(), LAG(), LEAD(), and SUM() OVER().</p>
+<p><strong>Example scenario:</strong> Show each employee's salary alongside the running total of salaries within their department.</p>
+<pre><code>SELECT emp_name, dept_id, salary,
+SUM(salary) OVER (PARTITION BY dept_id ORDER BY emp_id) AS running_total
+FROM Employees;</code></pre>
+<p><strong>Output explanation:</strong> Each row shows the individual salary plus a cumulative running total calculated within its own department.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Window functions are one of the most-tested advanced SQL topics in 2026 interviews — practice RANK vs DENSE_RANK vs ROW_NUMBER thoroughly.</div>
+</div>
+<div class="qa-card" id="q39">
+<h4>Q39. What is the difference between RANK(), DENSE_RANK(), and ROW_NUMBER()? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> ROW_NUMBER() assigns a unique sequential number to every row with no gaps or ties. RANK() assigns the same rank to tied rows but skips subsequent rank numbers. DENSE_RANK() also assigns the same rank to ties but does not skip the next rank number.</p>
+<p><strong>Example scenario:</strong> Rank employees by salary within a department where two employees are tied for 2nd place.</p>
+<pre><code>SELECT emp_name, salary,
+ROW_NUMBER() OVER (ORDER BY salary DESC) AS rn,
+RANK() OVER (ORDER BY salary DESC) AS rnk,
+DENSE_RANK() OVER (ORDER BY salary DESC) AS drnk
+FROM Employees;</code></pre>
+<p><strong>Output explanation:</strong> For a tie at rank 2: ROW_NUMBER gives 2,3; RANK gives 2,2 then jumps to 4; DENSE_RANK gives 2,2 then continues at 3.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Draw this exact tie-scenario on paper before your interview — it's asked almost universally for window function rounds.</div>
+</div>
+<div class="qa-card" id="q40">
+<h4>Q40. What are LAG() and LEAD() used for? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> LAG() accesses data from a previous row and LEAD() accesses data from a following row within the same result set, without needing a self-join — useful for period-over-period comparisons.</p>
+<p><strong>Example scenario:</strong> Compare each month's sales to the previous month's sales.</p>
+<pre><code>SELECT month, sales,
+LAG(sales, 1) OVER (ORDER BY month) AS prev_month_sales
+FROM MonthlySales;</code></pre>
+<p><strong>Output explanation:</strong> Each row shows the current month's sales next to the prior month's sales for easy month-over-month comparison.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Common real interview task: 'Calculate the difference between current and previous row' — combine LAG() with simple subtraction.</div>
+</div>
+<div class="qa-card" id="q41">
+<h4>Q41. What is a View in SQL? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> A View is a virtual table based on the result of a stored SELECT query. It doesn't store data itself (in most cases) but simplifies complex queries, and can restrict access to specific columns for security.</p>
+<p><strong>Example scenario:</strong> Create a simplified view exposing only non-sensitive employee details.</p>
+<pre><code>CREATE VIEW EmployeePublic AS
+SELECT emp_id, emp_name, dept_id FROM Employees;</code></pre>
+<p><strong>Output explanation:</strong> Users querying EmployeePublic see only emp_id, emp_name, and dept_id — sensitive columns like salary stay hidden.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Mention Materialized Views as a follow-up — they physically store data and need periodic refresh, unlike regular views.</div>
+</div>
+<div class="qa-card" id="q42">
+<h4>Q42. What is an Index and why is it used? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> An Index is a database object that improves the speed of data retrieval by creating a sorted structure (often a B-Tree) on one or more columns, at the cost of extra storage and slightly slower writes.</p>
+<p><strong>Example scenario:</strong> Speed up searches on the email column, which is frequently filtered.</p>
+<pre><code>CREATE INDEX idx_employee_email ON Employees(email);</code></pre>
+<p><strong>Output explanation:</strong> Future queries filtering on email use the index to locate matching rows quickly, instead of scanning the whole table.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Always balance the answer: indexes speed up reads but slow down INSERT/UPDATE/DELETE due to index maintenance overhead.</div>
+</div>
+<div class="qa-card" id="q43">
+<h4>Q43. What is a Stored Procedure? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> A Stored Procedure is a precompiled, reusable block of SQL code stored in the database that can accept parameters, contain logic (loops, conditionals), and be called repeatedly by name.</p>
+<p><strong>Example scenario:</strong> A procedure that gives a raise to all employees in a given department.</p>
+<pre><code>CREATE PROCEDURE GiveRaise (IN p_dept_id INT, IN p_amount DECIMAL(10,2))
+BEGIN
+  UPDATE Employees SET salary = salary + p_amount WHERE dept_id = p_dept_id;
+END;</code></pre>
+<p><strong>Output explanation:</strong> Calling GiveRaise(3, 5000) increases the salary of every employee in department 3 by 5,000.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Highlight benefits: reusability, reduced network traffic, and centralized business logic — great talking points.</div>
+</div>
+<div class="qa-card" id="q44">
+<h4>Q44. What is a Trigger in SQL? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> A Trigger is a special stored procedure that automatically executes in response to specific events (INSERT, UPDATE, DELETE) on a table, often used for auditing or enforcing complex business rules.</p>
+<p><strong>Example scenario:</strong> Automatically log every salary update into an audit table.</p>
+<pre><code>CREATE TRIGGER trg_salary_audit
+AFTER UPDATE ON Employees
+FOR EACH ROW
+BEGIN
+  INSERT INTO SalaryAudit(emp_id, old_salary, new_salary, changed_at)
+  VALUES (OLD.emp_id, OLD.salary, NEW.salary, NOW());
+END;</code></pre>
+<p><strong>Output explanation:</strong> Every time an employee's salary is updated, a new row automatically appears in SalaryAudit recording the change.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Mention risks: triggers can hide business logic and hurt performance if overused — show balanced judgment.</div>
+</div>
+<div class="qa-card" id="q45">
+<h4>Q45. What is a Transaction in SQL? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> A Transaction is a sequence of one or more SQL operations executed as a single logical unit of work — either all operations succeed (COMMIT) or none do (ROLLBACK), preserving data consistency.</p>
+<p><strong>Example scenario:</strong> Transfer money between two bank accounts safely.</p>
+<pre><code>BEGIN TRANSACTION;
+UPDATE Accounts SET balance = balance - 500 WHERE acct_id = 1;
+UPDATE Accounts SET balance = balance + 500 WHERE acct_id = 2;
+COMMIT;</code></pre>
+<p><strong>Output explanation:</strong> Both balance updates succeed together; if either statement fails, a ROLLBACK undoes both, so money is never lost mid-transfer.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Always tie transactions back to ACID properties in your answer — interviewers expect that connection.</div>
+</div>
+<div class="qa-card" id="q46">
+<h4>Q46. What are the ACID properties in SQL? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> ACID stands for Atomicity (all-or-nothing execution), Consistency (data moves from one valid state to another), Isolation (concurrent transactions don't interfere with each other), and Durability (once committed, changes survive system failures).</p>
+<p><strong>Example scenario:</strong> A failed bank transfer transaction rolls back completely, leaving no partial update — demonstrating Atomicity.</p>
+<pre><code>-- Atomicity example
+BEGIN TRANSACTION;
+UPDATE Accounts SET balance = balance - 500 WHERE acct_id = 1;
+-- error occurs here
+ROLLBACK;</code></pre>
+<p><strong>Output explanation:</strong> The ROLLBACK undoes the debit entirely, so the account balance remains exactly as it was before the transaction started.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Have one crisp real-world example ready for each of the 4 letters — A, C, I, D — this is asked constantly.</div>
+</div>
+<div class="qa-card" id="q47">
+<h4>Q47. What are the different Transaction Isolation Levels? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> The four standard isolation levels are READ UNCOMMITTED (allows dirty reads), READ COMMITTED (prevents dirty reads), REPEATABLE READ (prevents dirty and non-repeatable reads), and SERIALIZABLE (strictest, prevents phantom reads too, at the cost of concurrency).</p>
+<p><strong>Example scenario:</strong> An e-commerce checkout system might use REPEATABLE READ to avoid inconsistent stock counts mid-transaction.</p>
+<pre><code>SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;</code></pre>
+<p><strong>Output explanation:</strong> Ensures that within the same transaction, repeated reads of the same row return identical results even if other transactions modify it concurrently.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Be ready to explain dirty read, non-repeatable read, and phantom read with one-sentence examples each.</div>
+</div>
+<div class="qa-card" id="q48">
+<h4>Q48. What is the difference between COMMIT, ROLLBACK, and SAVEPOINT? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> COMMIT permanently saves all changes made during the current transaction. ROLLBACK undoes changes made since the last COMMIT (or SAVEPOINT). SAVEPOINT sets a named point within a transaction that you can roll back to without undoing the entire transaction.</p>
+<p><strong>Example scenario:</strong> Roll back only part of a multi-step transaction using a savepoint.</p>
+<pre><code>BEGIN TRANSACTION;
+UPDATE Employees SET salary = salary + 1000 WHERE dept_id = 1;
+SAVEPOINT sp1;
+UPDATE Employees SET salary = salary + 2000 WHERE dept_id = 2;
+ROLLBACK TO sp1;
+COMMIT;</code></pre>
+<p><strong>Output explanation:</strong> The dept_id = 2 raise is undone by the rollback to sp1, but the dept_id = 1 raise is kept and permanently saved by COMMIT.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> SAVEPOINT questions test if you understand partial rollback — a strong answer here signals real transaction experience.</div>
+</div>
+<div class="qa-card" id="q49">
+<h4>Q49. What is Denormalization and when would you use it? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> Denormalization intentionally introduces controlled redundancy into a normalized schema to reduce the number of joins needed, improving read performance for reporting or analytics-heavy workloads at the cost of some data duplication.</p>
+<p><strong>Example scenario:</strong> A reporting dashboard table stores a pre-joined, flattened combination of Orders, Customers, and Products for faster queries.</p>
+<pre><code>CREATE TABLE SalesReportFlat AS
+SELECT o.order_id, c.cust_name, p.product_name, o.quantity, o.order_date
+FROM Orders o JOIN Customers c ON o.cust_id = c.cust_id JOIN Products p ON o.product_id = p.product_id;</code></pre>
+<p><strong>Output explanation:</strong> Creates a single flat table that analysts can query directly without repeatedly joining three normalized tables.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Say denormalization is a deliberate trade-off for read speed in OLAP/reporting systems, not a mistake — shows maturity.</div>
+</div>
+<div class="qa-card" id="q50">
+<h4>Q50. What is the difference between OLTP and OLAP? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> OLTP (Online Transaction Processing) systems handle many short, frequent read/write transactions, like order processing, and favor normalized schemas. OLAP (Online Analytical Processing) systems handle complex analytical queries over large historical datasets and favor denormalized, star/snowflake schemas.</p>
+<p><strong>Example scenario:</strong> An e-commerce checkout database is OLTP; a sales analytics warehouse summarizing years of orders is OLAP.</p>
+<pre><code>-- OLTP: fast single-row insert
+INSERT INTO Orders (cust_id, product_id, quantity) VALUES (101, 5, 2);
+-- OLAP: heavy aggregate query
+SELECT product_id, SUM(quantity) FROM Orders GROUP BY product_id;</code></pre>
+<p><strong>Output explanation:</strong> The OLTP insert completes in milliseconds for one transaction; the OLAP query scans and aggregates millions of historical rows.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Data analyst interviews frequently pair this with 'what is a data warehouse/star schema' — be ready to extend the answer.</div>
+</div>
+<div class="qa-card" id="q61">
+<h4>Q61. What is the difference between DROP, TRUNCATE, and DELETE in terms of rollback? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> DELETE is fully logged and can be rolled back within a transaction. TRUNCATE is minimally logged and, in most databases, cannot be rolled back once committed (though some databases allow it inside an explicit transaction). DROP removes the object entirely and generally cannot be rolled back after commit.</p>
+<p><strong>Example scenario:</strong> Accidentally truncating a production table without a transaction wrapper.</p>
+<pre><code>-- Safer approach
+BEGIN TRANSACTION;
+TRUNCATE TABLE Orders;
+-- verify before committing
+ROLLBACK;</code></pre>
+<p><strong>Output explanation:</strong> Depending on the database, wrapping TRUNCATE in an explicit transaction may allow you to roll it back before commit — but don't rely on this everywhere.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Always mention taking a backup or wrapping risky DDL/TRUNCATE statements in a transaction where supported — shows production discipline.</div>
+</div>
+<div class="qa-card" id="q62">
+<h4>Q62. What is a Deadlock and how can it be avoided? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> A Deadlock occurs when two or more transactions hold locks that the other transactions need, creating a cycle where none can proceed. It can be avoided by accessing tables in a consistent order, keeping transactions short, and using appropriate isolation levels.</p>
+<p><strong>Example scenario:</strong> Transaction A locks Table1 then waits for Table2, while Transaction B locks Table2 then waits for Table1.</p>
+<pre><code>-- Best practice: always update tables in the same order
+BEGIN TRANSACTION;
+UPDATE Accounts SET balance = balance - 100 WHERE acct_id = 1;
+UPDATE Accounts SET balance = balance + 100 WHERE acct_id = 2;
+COMMIT;</code></pre>
+<p><strong>Output explanation:</strong> By always locking accounts in ascending acct_id order across all transactions, circular waiting is prevented.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Mention that most databases automatically detect deadlocks and kill one transaction as a 'victim' — show you understand the recovery mechanism too.</div>
+</div>
+<div class="qa-card" id="q63">
+<h4>Q63. What is the difference between a Function and a Stored Procedure? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> A Function must return a single value (or table) and can be used inside a SELECT statement, but cannot modify data or use transaction control statements in most databases. A Stored Procedure can perform DML/DDL operations, doesn't have to return a value, and is called independently, not embedded in a query.</p>
+<p><strong>Example scenario:</strong> A function to calculate bonus vs a procedure to apply that bonus to all employees.</p>
+<pre><code>CREATE FUNCTION CalcBonus(salary DECIMAL) RETURNS DECIMAL
+RETURN salary * 0.10;</code></pre>
+<p><strong>Output explanation:</strong> CalcBonus can be used directly inside a SELECT statement like SELECT emp_name, CalcBonus(salary) FROM Employees.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Interviewers like the phrase: 'Functions compute and return; procedures perform and act' — a clean one-liner.</div>
+</div>
+<div class="qa-card" id="q64">
+<h4>Q64. What is the purpose of the EXPLAIN / EXPLAIN PLAN statement? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> EXPLAIN shows the database's query execution plan — how it intends to scan tables, use indexes, join data, and estimate cost — helping developers identify performance bottlenecks before optimizing a query.</p>
+<p><strong>Example scenario:</strong> Diagnose why a query filtering on email is slow.</p>
+<pre><code>EXPLAIN SELECT * FROM Customers WHERE email = 'test@example.com';</code></pre>
+<p><strong>Output explanation:</strong> The output reveals whether the database performs a full table scan or uses an index, along with estimated row counts and cost.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Always mention 'seq scan vs index scan' — spotting a full table scan on a large table in an EXPLAIN plan is a key optimization skill.</div>
+</div>
+<div class="qa-card" id="q65">
+<h4>Q65. What is Query Optimization? Name a few techniques. <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> Query optimization is the process of rewriting or restructuring SQL to reduce execution time and resource usage. Techniques include adding proper indexes, avoiding SELECT *, using JOINs instead of correlated subqueries where possible, filtering early, and analyzing execution plans.</p>
+<p><strong>Example scenario:</strong> Replacing SELECT * with only the needed columns to reduce I/O.</p>
+<pre><code>-- Before
+SELECT * FROM Orders WHERE cust_id = 101;
+-- After
+SELECT order_id, order_date, amount FROM Orders WHERE cust_id = 101;</code></pre>
+<p><strong>Output explanation:</strong> The optimized query retrieves only necessary columns, reducing data transfer and memory usage, especially on wide tables.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Have 5 optimization techniques memorized as a checklist — this open-ended question is asked in almost every senior-level round.</div>
+</div>
+<div class="qa-card" id="q66">
+<h4>Q66. Why should you avoid SELECT * in production queries? <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> SELECT * retrieves all columns even if unnecessary, increasing I/O, network transfer, and memory usage. It also breaks if the table schema changes and makes queries harder to read, plus it can prevent the optimizer from using covering indexes efficiently.</p>
+<p><strong>Example scenario:</strong> A report only needs emp_name and salary but uses SELECT *, unnecessarily pulling large text/blob columns too.</p>
+<pre><code>SELECT emp_name, salary FROM Employees;</code></pre>
+<p><strong>Output explanation:</strong> Retrieves only the two required columns, reducing data transferred and allowing potential use of a covering index.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> This is a rapid-fire favorite — always have this answer ready in under 10 seconds.</div>
+</div>
+<div class="qa-card" id="q67">
+<h4>Q67. What is a Covering Index? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> A Covering Index includes all the columns a query needs, so the database can satisfy the query entirely from the index without accessing the actual table data, significantly improving performance.</p>
+<p><strong>Example scenario:</strong> A query that filters by dept_id and selects only emp_name can be fully served by an index on (dept_id, emp_name).</p>
+<pre><code>CREATE INDEX idx_dept_name ON Employees(dept_id, emp_name);</code></pre>
+<p><strong>Output explanation:</strong> The query SELECT emp_name FROM Employees WHERE dept_id = 3 can be answered directly from the index, skipping table lookups entirely.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Bring this up unprompted when discussing indexing strategy — it signals advanced, real-world performance tuning knowledge.</div>
+</div>
+<div class="qa-card" id="q68">
+<h4>Q68. When should you avoid creating too many indexes? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> Excessive indexing slows down INSERT, UPDATE, and DELETE operations because every index must be updated alongside the data, and it increases storage overhead. Indexes should be created based on actual query patterns, not preemptively on every column.</p>
+<p><strong>Example scenario:</strong> A heavily-written logging table with 10 indexes suffers slow inserts during peak traffic.</p>
+<pre><code>-- Review and drop unused indexes
+DROP INDEX idx_unused_column ON LogTable;</code></pre>
+<p><strong>Output explanation:</strong> Removing an unused index reduces write overhead on every future insert into LogTable.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Mention using query logs / index usage statistics to identify and drop unused indexes — a real DBA-level insight.</div>
+</div>
+<div class="qa-card" id="q69">
+<h4>Q69. What is Index Fragmentation and how do you fix it? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> Index Fragmentation happens when data pages become disorganized due to frequent inserts, updates, and deletes, causing the index to no longer be stored in optimal contiguous order, which slows down reads. It's fixed by rebuilding or reorganizing the index periodically.</p>
+<p><strong>Example scenario:</strong> A frequently updated Orders table gradually develops fragmented indexes over months.</p>
+<pre><code>ALTER INDEX idx_orders_date ON Orders REBUILD;</code></pre>
+<p><strong>Output explanation:</strong> Rebuilding the index restores it to a clean, contiguous structure, restoring optimal read performance.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Mention this is typically a scheduled DBA maintenance task, not something run ad hoc during business hours.</div>
+</div>
+<div class="qa-card" id="q70">
+<h4>Q70. How would you optimize a slow query with multiple JOINs? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> Check the execution plan for full table scans, ensure join columns are indexed (especially foreign keys), filter data as early as possible with WHERE before joining large tables, avoid unnecessary columns, and consider breaking the query into smaller steps or using temp tables for very complex logic.</p>
+<p><strong>Example scenario:</strong> A report joining Orders, Customers, and Products runs slowly.</p>
+<pre><code>-- Ensure indexes exist on join keys
+CREATE INDEX idx_orders_cust ON Orders(cust_id);
+CREATE INDEX idx_orders_prod ON Orders(product_id);</code></pre>
+<p><strong>Output explanation:</strong> Adding indexes on the foreign key columns used in JOIN conditions lets the optimizer avoid full scans on Orders.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Structure your answer as a checklist (indexes → filters → execution plan → schema) — interviewers reward a systematic approach.</div>
+</div>
+<div class="qa-card" id="q71">
+<h4>Q71. What is Partitioning in databases? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> Partitioning splits a large table into smaller, more manageable physical segments (by range, list, or hash) while still being queried as one logical table, improving performance and maintenance for very large datasets.</p>
+<p><strong>Example scenario:</strong> Partition a Sales table by year so queries filtering on recent years scan far less data.</p>
+<pre><code>CREATE TABLE Sales (sale_id INT, sale_date DATE, amount DECIMAL)
+PARTITION BY RANGE (YEAR(sale_date)) (
+  PARTITION p2024 VALUES LESS THAN (2025),
+  PARTITION p2025 VALUES LESS THAN (2026)
+);</code></pre>
+<p><strong>Output explanation:</strong> A query filtering WHERE sale_date &gt;= '2025-01-01' only scans the p2025 partition instead of the entire table.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Mention partition pruning explicitly — it's the exact term interviewers listen for when discussing partitioning benefits.</div>
+</div>
+<div class="qa-card" id="q72">
+<h4>Q72. What is the difference between a Temporary Table and a CTE? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> A Temporary Table physically stores data for the session/transaction and can be indexed and reused across multiple statements. A CTE exists only for the duration of a single query, is not indexed, and is generally re-evaluated each time it's referenced.</p>
+<p><strong>Example scenario:</strong> Reusing intermediate results across several queries in a session vs. simplifying one complex query.</p>
+<pre><code>CREATE TEMPORARY TABLE TempHighEarners AS
+SELECT * FROM Employees WHERE salary &gt; 80000;</code></pre>
+<p><strong>Output explanation:</strong> TempHighEarners can now be queried multiple times within the session without recomputing the filter each time.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Say CTEs improve readability for a single query, while temp tables are better when you need to reuse or index intermediate results.</div>
+</div>
+<div class="qa-card" id="q73">
+<h4>Q73. What is the difference between UNION and JOIN? <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> JOIN combines columns from two tables side by side based on a related column. UNION stacks rows from two queries vertically, requiring the same number of columns and compatible data types in both queries.</p>
+<p><strong>Example scenario:</strong> Combine two lists of names (UNION) vs. combining employee and department details (JOIN).</p>
+<pre><code>SELECT emp_name FROM Employees
+UNION
+SELECT cust_name FROM Customers;</code></pre>
+<p><strong>Output explanation:</strong> Produces a single stacked list combining names from both tables, with duplicates removed.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Simple analogy: 'JOIN adds columns, UNION adds rows' — a quick memorable line for interviews.</div>
+</div>
+<div class="qa-card" id="q74">
+<h4>Q74. What are Set Operators in SQL besides UNION? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> Besides UNION and UNION ALL, SQL supports INTERSECT (returns only rows common to both queries) and EXCEPT/MINUS (returns rows in the first query that are not in the second).</p>
+<p><strong>Example scenario:</strong> Find customers who placed orders in both 2024 and 2025.</p>
+<pre><code>SELECT cust_id FROM Orders WHERE YEAR(order_date) = 2024
+INTERSECT
+SELECT cust_id FROM Orders WHERE YEAR(order_date) = 2025;</code></pre>
+<p><strong>Output explanation:</strong> Returns only customer IDs that appear in both the 2024 and 2025 order lists.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Note MySQL added native INTERSECT/EXCEPT support in recent versions — mention checking your specific database version.</div>
+</div>
+<h3 id="qa-dataanalyst">Data Analyst SQL Interview Questions</h3>
+<div class="qa-card" id="q51">
+<h4>Q51. How do you find the second highest salary in a table? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> Use a subquery with LIMIT/OFFSET, or DISTINCT with ORDER BY and OFFSET, or a window function like DENSE_RANK() to skip the top value and get the next distinct one.</p>
+<p><strong>Example scenario:</strong> Find the second highest salary in Employees.</p>
+<pre><code>SELECT DISTINCT salary FROM Employees ORDER BY salary DESC LIMIT 1 OFFSET 1;</code></pre>
+<p><strong>Output explanation:</strong> Skips the highest salary (offset 1) and returns the next distinct highest value.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Also know the MAX() subquery version: SELECT MAX(salary) FROM Employees WHERE salary &lt; (SELECT MAX(salary) FROM Employees) — some interviewers specifically want this pattern.</div>
+</div>
+<div class="qa-card" id="q52">
+<h4>Q52. How do you find duplicate records in a table? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> Group by the columns that should be unique, then use HAVING COUNT(*) &gt; 1 to find groups that appear more than once.</p>
+<p><strong>Example scenario:</strong> Find duplicate email addresses in the Customers table.</p>
+<pre><code>SELECT email, COUNT(*) AS cnt FROM Customers GROUP BY email HAVING COUNT(*) &gt; 1;</code></pre>
+<p><strong>Output explanation:</strong> Returns each duplicated email along with how many times it appears, so you can investigate or clean the data.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Follow-up almost always asked: 'now delete the duplicates keeping only one' — practice that pattern using ROW_NUMBER() with a CTE.</div>
+</div>
+<div class="qa-card" id="q53">
+<h4>Q53. How do you delete duplicate rows but keep one copy? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> Use a CTE with ROW_NUMBER() partitioned by the duplicate-defining columns, then delete rows where the row number is greater than 1.</p>
+<p><strong>Example scenario:</strong> Remove duplicate customer emails, keeping the earliest inserted row.</p>
+<pre><code>WITH Ranked AS (
+  SELECT *, ROW_NUMBER() OVER (PARTITION BY email ORDER BY cust_id) AS rn
+  FROM Customers
+)
+DELETE FROM Ranked WHERE rn &gt; 1;</code></pre>
+<p><strong>Output explanation:</strong> Keeps the first occurrence (rn = 1) of each email and removes every later duplicate row.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> This exact pattern — CTE + ROW_NUMBER + DELETE — is one of the highest-frequency practical SQL interview questions.</div>
+</div>
+<div class="qa-card" id="q54">
+<h4>Q54. How do you find the Nth highest salary generically? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> Use DENSE_RANK() in a CTE or subquery, then filter WHERE rank = N — this correctly handles ties, unlike LIMIT/OFFSET approaches.</p>
+<p><strong>Example scenario:</strong> Find the 3rd highest distinct salary.</p>
+<pre><code>WITH RankedSalary AS (
+  SELECT salary, DENSE_RANK() OVER (ORDER BY salary DESC) AS rnk
+  FROM Employees
+)
+SELECT DISTINCT salary FROM RankedSalary WHERE rnk = 3;</code></pre>
+<p><strong>Output explanation:</strong> Returns the salary value that ranks 3rd among distinct salary values, correctly skipping duplicate rank ties.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Explicitly say why DENSE_RANK is safer than OFFSET when duplicate salaries exist — this nuance impresses interviewers.</div>
+</div>
+<div class="qa-card" id="q55">
+<h4>Q55. How do you calculate a running total (cumulative sum)? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> Use SUM() as a window function with ORDER BY inside OVER() to accumulate values row by row within a defined order (and optional partition).</p>
+<p><strong>Example scenario:</strong> Calculate cumulative sales for each day in a Sales table.</p>
+<pre><code>SELECT sale_date, amount,
+SUM(amount) OVER (ORDER BY sale_date) AS running_total
+FROM Sales;</code></pre>
+<p><strong>Output explanation:</strong> Each row shows that day's sale amount plus the sum of all sales up to and including that date.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Running totals and moving averages are extremely common in data analyst take-home tests — practice both.</div>
+</div>
+<div class="qa-card" id="q56">
+<h4>Q56. How do you calculate a moving average in SQL? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> Use AVG() as a window function with a ROWS BETWEEN frame to define how many preceding/following rows to include in each average calculation.</p>
+<p><strong>Example scenario:</strong> Calculate a 3-day moving average of sales.</p>
+<pre><code>SELECT sale_date, amount,
+AVG(amount) OVER (ORDER BY sale_date ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) AS moving_avg_3day
+FROM Sales;</code></pre>
+<p><strong>Output explanation:</strong> Each row's moving average is calculated from the current day plus the two preceding days.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Explain ROWS BETWEEN framing clearly — it's the piece most candidates fumble under interview pressure.</div>
+</div>
+<div class="qa-card" id="q57">
+<h4>Q57. How do you find customers who have never placed an order? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> Use a LEFT JOIN from Customers to Orders and filter where the Orders key is NULL, or use a NOT IN / NOT EXISTS subquery.</p>
+<p><strong>Example scenario:</strong> Identify customers with zero orders for a re-engagement email campaign.</p>
+<pre><code>SELECT c.cust_id, c.cust_name FROM Customers c
+LEFT JOIN Orders o ON c.cust_id = o.cust_id
+WHERE o.order_id IS NULL;</code></pre>
+<p><strong>Output explanation:</strong> Returns only customers who have no matching row at all in the Orders table.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Mention NOT EXISTS as a generally safer alternative to NOT IN when the subquery column can contain NULLs.</div>
+</div>
+<div class="qa-card" id="q58">
+<h4>Q58. What is the difference between NOT IN and NOT EXISTS? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> NOT IN can behave unexpectedly and return zero rows if the subquery's result set contains even one NULL value. NOT EXISTS uses a correlated existence check and handles NULLs safely, making it generally the more reliable choice.</p>
+<p><strong>Example scenario:</strong> Find employees whose dept_id is not present in a Departments list that might contain a NULL.</p>
+<pre><code>SELECT emp_name FROM Employees e
+WHERE NOT EXISTS (SELECT 1 FROM Departments d WHERE d.dept_id = e.dept_id);</code></pre>
+<p><strong>Output explanation:</strong> Correctly returns employees with no matching department, even if the Departments table has NULL dept_id values elsewhere.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> This is a favorite 'gotcha' interview question — always recommend NOT EXISTS over NOT IN for safety.</div>
+</div>
+<div class="qa-card" id="q59">
+<h4>Q59. How do you pivot rows into columns in SQL? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> Use conditional aggregation with CASE WHEN inside SUM()/COUNT(), or a database-specific PIVOT operator, to transform row values into separate columns.</p>
+<p><strong>Example scenario:</strong> Show total sales per product as separate columns for each quarter.</p>
+<pre><code>SELECT product_id,
+SUM(CASE WHEN quarter = 'Q1' THEN sales ELSE 0 END) AS Q1_sales,
+SUM(CASE WHEN quarter = 'Q2' THEN sales ELSE 0 END) AS Q2_sales
+FROM QuarterlySales GROUP BY product_id;</code></pre>
+<p><strong>Output explanation:</strong> Returns one row per product with separate columns for Q1 and Q2 sales instead of separate rows per quarter.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> CASE WHEN + SUM() pivoting is the most portable technique across databases — safer to mention than vendor-specific PIVOT syntax.</div>
+</div>
+<div class="qa-card" id="q60">
+<h4>Q60. How would you find students who scored above the class average in each subject? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> Use a correlated subquery or window function (AVG() OVER PARTITION BY subject) to compare each student's marks to the average for their specific subject.</p>
+<p><strong>Example scenario:</strong> Using a Students/Marks table, find students scoring above their subject's average.</p>
+<pre><code>SELECT student_id, subject, marks FROM (
+  SELECT student_id, subject, marks,
+  AVG(marks) OVER (PARTITION BY subject) AS subj_avg
+  FROM Marks
+) t WHERE marks &gt; subj_avg;</code></pre>
+<p><strong>Output explanation:</strong> Returns only student-subject rows where the individual score beats the average score for that particular subject.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Window functions inside a derived table/subquery are a clean pattern — practice writing it fluently without hesitation.</div>
+</div>
+<div class="qa-card" id="q75">
+<h4>Q75. How would you find the department with the highest average salary? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> Group employees by department, calculate the average salary per group, then order descending and limit to the top result (or use a subquery/window function to handle ties).</p>
+<p><strong>Example scenario:</strong> Identify the top-paying department for a compensation benchmarking report.</p>
+<pre><code>SELECT dept_id, AVG(salary) AS avg_salary FROM Employees
+GROUP BY dept_id ORDER BY avg_salary DESC LIMIT 1;</code></pre>
+<p><strong>Output explanation:</strong> Returns the single department with the highest average salary across its employees.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Ask the interviewer if ties should be handled — showing that consideration is itself a strong signal.</div>
+</div>
+<div class="qa-card" id="q76">
+<h4>Q76. How do you find employees who earn more than their manager? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> Self-join the Employees table so each employee row is matched with their manager's row (via manager_id = emp_id), then filter where the employee's salary exceeds the manager's salary.</p>
+<p><strong>Example scenario:</strong> A classic 'employee earns more than boss' interview question.</p>
+<pre><code>SELECT e.emp_name AS employee, e.salary AS emp_salary, m.salary AS mgr_salary
+FROM Employees e JOIN Employees m ON e.manager_id = m.emp_id
+WHERE e.salary &gt; m.salary;</code></pre>
+<p><strong>Output explanation:</strong> Returns only employees whose individual salary is higher than the salary of the manager they report to.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> This exact question appears on nearly every 'famous SQL interview questions' list — practice it until it's automatic.</div>
+</div>
+<div class="qa-card" id="q77">
+<h4>Q77. How do you calculate percentage contribution of each product to total sales? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> Divide each product's total sales by the overall total sales (using a window function SUM() OVER() with no partition, or a subquery for the grand total), then multiply by 100.</p>
+<p><strong>Example scenario:</strong> Show each product's share of total company revenue.</p>
+<pre><code>SELECT product_id, SUM(amount) AS product_sales,
+ROUND(SUM(amount) * 100.0 / SUM(SUM(amount)) OVER (), 2) AS pct_of_total
+FROM Orders GROUP BY product_id;</code></pre>
+<p><strong>Output explanation:</strong> Each row shows a product's total sales and what percentage that represents of overall company sales.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Watch out for integer division — always multiply by 100.0 (a decimal) to avoid truncated zero results in some databases.</div>
+</div>
+<div class="qa-card" id="q78">
+<h4>Q78. How do you find the top 3 products by sales in each category? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> Use ROW_NUMBER() or DENSE_RANK() partitioned by category, ordered by total sales descending, inside a CTE, then filter for rank &lt;= 3.</p>
+<p><strong>Example scenario:</strong> A merchandising team wants the top 3 best-selling products per category.</p>
+<pre><code>WITH RankedProducts AS (
+  SELECT category, product_name, SUM(quantity) AS total_qty,
+  ROW_NUMBER() OVER (PARTITION BY category ORDER BY SUM(quantity) DESC) AS rnk
+  FROM Orders o JOIN Products p ON o.product_id = p.product_id
+  GROUP BY category, product_name
+)
+SELECT * FROM RankedProducts WHERE rnk &lt;= 3;</code></pre>
+<p><strong>Output explanation:</strong> Returns exactly the top 3 best-selling products within each product category, ranked by total quantity sold.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> This 'top-N per group' pattern is arguably the single most common real-world SQL interview question — master it cold.</div>
+</div>
+<div class="qa-card" id="q79">
+<h4>Q79. How would you detect month-over-month growth rate in sales? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> Use LAG() to fetch the previous month's total, then calculate the percentage change between the current and previous month.</p>
+<p><strong>Example scenario:</strong> Report monthly sales growth rate for a business dashboard.</p>
+<pre><code>SELECT month, total_sales,
+ROUND((total_sales - LAG(total_sales) OVER (ORDER BY month)) * 100.0
+  / LAG(total_sales) OVER (ORDER BY month), 2) AS growth_pct
+FROM MonthlySales;</code></pre>
+<p><strong>Output explanation:</strong> Each row shows the percentage increase or decrease in sales compared to the immediately preceding month.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Mention handling the first row's NULL growth value gracefully (e.g., with COALESCE) — attention to edge cases stands out.</div>
+</div>
+<div class="qa-card" id="q80">
+<h4>Q80. How do you find gaps in a sequence of numbers (e.g., missing order IDs)? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> Compare each value to the next expected value using LEAD() or a self-join, and flag rows where the difference is greater than 1, indicating a gap in the sequence.</p>
+<p><strong>Example scenario:</strong> Identify missing order_id values in an Orders table for data quality checks.</p>
+<pre><code>SELECT order_id, LEAD(order_id) OVER (ORDER BY order_id) - order_id AS gap
+FROM Orders
+HAVING gap &gt; 1;</code></pre>
+<p><strong>Output explanation:</strong> Rows where 'gap' is greater than 1 indicate a missing order_id between the current and next value.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> 'Gaps and islands' problems are a well-known SQL interview category — worth practicing beyond just this basic version.</div>
+</div>
+<h3 id="qa-scenario">Real-World SQL Scenario-Based Interview Questions</h3>
+<div class="qa-card" id="q81">
+<h4>Q81. Write a query to swap the values of two columns without using a temporary variable. <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> Use simultaneous assignment in a single UPDATE statement so both columns are swapped using their original values in one pass.</p>
+<p><strong>Example scenario:</strong> Swap salary and bonus columns for all employees.</p>
+<pre><code>UPDATE Employees SET salary = bonus, bonus = salary;</code></pre>
+<p><strong>Output explanation:</strong> In most databases this evaluates the right-hand side expressions before applying updates, correctly swapping both values in a single statement.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Double-check your specific database's evaluation order — a few databases require a CASE-based swap instead to guarantee correctness.</div>
+</div>
+<div class="qa-card" id="q82">
+<h4>Q82. How would you find employees hired in the last 30 days? <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> Compare the hire_date column to the current date minus 30 days using date functions, filtering with WHERE.</p>
+<p><strong>Example scenario:</strong> HR wants a report of very recent hires.</p>
+<pre><code>SELECT emp_name, hire_date FROM Employees WHERE hire_date &gt;= CURRENT_DATE - INTERVAL '30 days';</code></pre>
+<p><strong>Output explanation:</strong> Returns only employees whose hire_date falls within the past 30 days from today.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Know your database's date syntax variants (DATEADD in SQL Server, INTERVAL in PostgreSQL/MySQL) — mention you'd check documentation for the exact dialect.</div>
+</div>
+<div class="qa-card" id="q83">
+<h4>Q83. How do you find the total number of orders placed by each customer, including customers with zero orders? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> LEFT JOIN Customers to Orders and use COUNT() on the Orders key (not COUNT(*)), so customers with no matching orders correctly show 0 instead of being excluded.</p>
+<p><strong>Example scenario:</strong> A CRM report needs every customer represented, even inactive ones.</p>
+<pre><code>SELECT c.cust_name, COUNT(o.order_id) AS total_orders
+FROM Customers c LEFT JOIN Orders o ON c.cust_id = o.cust_id
+GROUP BY c.cust_name;</code></pre>
+<p><strong>Output explanation:</strong> Every customer appears in the result; customers with no orders show a count of 0 instead of being dropped.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> The classic mistake here is using COUNT(*) instead of COUNT(o.order_id) — COUNT(*) would incorrectly show 1 for customers with no matching orders.</div>
+</div>
+<div class="qa-card" id="q84">
+<h4>Q84. How would you find the maximum salary in each department along with the employee name? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> Use a window function MAX() OVER(PARTITION BY dept_id) to compute department max alongside each row, then filter where salary equals that max, or use a correlated subquery.</p>
+<p><strong>Example scenario:</strong> HR wants to know the top earner in every department.</p>
+<pre><code>SELECT emp_name, dept_id, salary FROM (
+  SELECT emp_name, dept_id, salary,
+  MAX(salary) OVER (PARTITION BY dept_id) AS max_sal
+  FROM Employees
+) t WHERE salary = max_sal;</code></pre>
+<p><strong>Output explanation:</strong> Returns the highest-paid employee(s) in each department, correctly including ties if two employees share the top salary.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> This approach naturally handles ties, unlike a simple GROUP BY MAX(salary) which would lose the emp_name column.</div>
+</div>
+<div class="qa-card" id="q85">
+<h4>Q85. How do you update a column value only if a condition is met across a join? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> Use an UPDATE statement with a JOIN (or a correlated subquery, depending on the database) so the update logic can reference columns from a related table.</p>
+<p><strong>Example scenario:</strong> Increase salary by 10% for employees in the 'Sales' department.</p>
+<pre><code>UPDATE Employees e
+JOIN Departments d ON e.dept_id = d.dept_id
+SET e.salary = e.salary * 1.10
+WHERE d.dept_name = 'Sales';</code></pre>
+<p><strong>Output explanation:</strong> Only employees belonging to the Sales department receive the 10% salary increase; all others remain unchanged.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Mention that standard SQL/PostgreSQL uses UPDATE ... FROM syntax instead of UPDATE ... JOIN — know both dialect variations.</div>
+</div>
+<div class="qa-card" id="q86">
+<h4>Q86. How would you find products that have never been ordered? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> LEFT JOIN Products to Orders and filter for rows where the Orders key is NULL, indicating no matching order exists for that product.</p>
+<p><strong>Example scenario:</strong> Inventory team wants to identify dead stock.</p>
+<pre><code>SELECT p.product_id, p.product_name FROM Products p
+LEFT JOIN Orders o ON p.product_id = o.product_id
+WHERE o.order_id IS NULL;</code></pre>
+<p><strong>Output explanation:</strong> Returns only products that have zero matching rows in the Orders table.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> This is structurally identical to the 'customers with no orders' pattern — recognizing reusable patterns saves time under pressure.</div>
+</div>
+<div class="qa-card" id="q87">
+<h4>Q87. How do you find consecutive days a customer has placed orders (a streak)? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> Use the 'gaps and islands' technique: subtract a row number (via ROW_NUMBER ordered by date) from the actual date; consecutive dates produce the same difference, which can then be grouped to find streaks.</p>
+<p><strong>Example scenario:</strong> Identify a customer's longest consecutive daily ordering streak for a loyalty program.</p>
+<pre><code>WITH Ordered AS (
+  SELECT cust_id, order_date,
+  order_date - ROW_NUMBER() OVER (PARTITION BY cust_id ORDER BY order_date) * INTERVAL '1 day' AS grp
+  FROM Orders
+)
+SELECT cust_id, grp, COUNT(*) AS streak_days
+FROM Ordered GROUP BY cust_id, grp;</code></pre>
+<p><strong>Output explanation:</strong> Rows sharing the same 'grp' value represent one unbroken streak of consecutive order dates for that customer.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> This is a genuinely hard, senior-level pattern — mentioning you know 'gaps and islands' by name alone earns credibility even if you need a moment to derive it.</div>
+</div>
+<div class="qa-card" id="q88">
+<h4>Q88. How would you find the median salary in a department using SQL? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> Use PERCENTILE_CONT(0.5) as a window/aggregate function if supported, or manually rank rows and average the middle value(s) for odd/even row counts.</p>
+<p><strong>Example scenario:</strong> HR wants the median (not average) salary per department to avoid outlier skew.</p>
+<pre><code>SELECT dept_id,
+PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY salary) OVER (PARTITION BY dept_id) AS median_salary
+FROM Employees;</code></pre>
+<p><strong>Output explanation:</strong> Returns the true middle salary value for each department, unaffected by extremely high or low outlier salaries.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> If PERCENTILE_CONT isn't available (e.g., older MySQL), mention the manual ROW_NUMBER + AVG-of-middle-rows fallback approach.</div>
+</div>
+<div class="qa-card" id="q89">
+<h4>Q89. How do you handle NULL values when calculating an average? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> AVG() automatically ignores NULL values in its calculation by default — it does not treat them as zero. To include them as zero explicitly, wrap the column with COALESCE(column, 0) first.</p>
+<p><strong>Example scenario:</strong> Calculate average bonus where some employees have no bonus recorded (NULL) versus employees with an actual 0 bonus.</p>
+<pre><code>SELECT AVG(bonus) AS avg_ignoring_null, AVG(COALESCE(bonus, 0)) AS avg_treating_null_as_zero
+FROM Employees;</code></pre>
+<p><strong>Output explanation:</strong> The first average excludes NULL rows entirely from both sum and count; the second treats every NULL as 0, lowering the result.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> This distinction trips up many candidates — always clarify which behavior the business actually wants before writing the query.</div>
+</div>
+<div class="qa-card" id="q90">
+<h4>Q90. How would you compare this month's active users to last month's using SQL? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> Aggregate distinct users per month, then use a self-join or LAG() across the monthly aggregated table to compare counts month over month.</p>
+<p><strong>Example scenario:</strong> A product analytics team tracks month-over-month active user retention.</p>
+<pre><code>WITH Monthly AS (
+  SELECT DATE_TRUNC('month', activity_date) AS month, COUNT(DISTINCT user_id) AS active_users
+  FROM UserActivity GROUP BY 1
+)
+SELECT month, active_users, LAG(active_users) OVER (ORDER BY month) AS prev_month_users
+FROM Monthly;</code></pre>
+<p><strong>Output explanation:</strong> Each row shows the current month's active user count alongside the previous month's count for direct comparison.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Data analyst interviews often extend this into retention/cohort analysis — be ready to discuss that natural next step.</div>
+</div>
+<div class="qa-card" id="q91">
+<h4>Q91. How do you safely archive old records before deleting them? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> Insert the qualifying rows into an archive table first, verify the insert succeeded, and only then delete them from the original table — ideally wrapped in a single transaction for safety.</p>
+<p><strong>Example scenario:</strong> Move orders older than 3 years into an OrdersArchive table.</p>
+<pre><code>BEGIN TRANSACTION;
+INSERT INTO OrdersArchive SELECT * FROM Orders WHERE order_date &lt; CURRENT_DATE - INTERVAL '3 years';
+DELETE FROM Orders WHERE order_date &lt; CURRENT_DATE - INTERVAL '3 years';
+COMMIT;</code></pre>
+<p><strong>Output explanation:</strong> Old orders are copied into the archive table and removed from the live table in one atomic transaction, so a failure leaves neither table inconsistently changed.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Emphasize the transaction wrapper — doing insert and delete as two separate uncommitted statements risks data loss on failure.</div>
+</div>
+<div class="qa-card" id="q92">
+<h4>Q92. How would you find overlapping date ranges (e.g., overlapping bookings)? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> Two ranges overlap when one range's start is before the other's end AND its end is after the other's start — this condition can be checked with a self-join on that logic.</p>
+<p><strong>Example scenario:</strong> A hotel booking system needs to detect double-booked rooms.</p>
+<pre><code>SELECT a.booking_id, b.booking_id FROM Bookings a
+JOIN Bookings b ON a.room_id = b.room_id AND a.booking_id &lt; b.booking_id
+WHERE a.start_date &lt; b.end_date AND a.end_date &gt; b.start_date;</code></pre>
+<p><strong>Output explanation:</strong> Returns pairs of bookings for the same room whose date ranges overlap, flagging a scheduling conflict.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Memorize this exact overlap condition (start1 &lt; end2 AND end1 &gt; start2) — deriving it live under pressure is much harder.</div>
+</div>
+<div class="qa-card" id="q93">
+<h4>Q93. How do you calculate the difference in days between two dates? <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> Use DATEDIFF() (SQL Server/MySQL) or simple subtraction of DATE types (PostgreSQL) to get the number of days between two date values.</p>
+<p><strong>Example scenario:</strong> Calculate how many days each order took to ship.</p>
+<pre><code>SELECT order_id, DATEDIFF(ship_date, order_date) AS days_to_ship FROM Orders;</code></pre>
+<p><strong>Output explanation:</strong> Returns the number of calendar days between the order date and the ship date for every order.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Mention the function name differs by database (DATEDIFF, AGE, or plain subtraction) — show dialect awareness.</div>
+</div>
+<div class="qa-card" id="q94">
+<h4>Q94. How do you find the first and last order date for each customer? <span class="badge diff-easy">Easy</span></h4>
+<p><strong>Answer:</strong> Use MIN() and MAX() aggregate functions on the order date column, grouped by customer.</p>
+<p><strong>Example scenario:</strong> Understand customer lifecycle by finding their first and most recent purchase.</p>
+<pre><code>SELECT cust_id, MIN(order_date) AS first_order, MAX(order_date) AS last_order
+FROM Orders GROUP BY cust_id;</code></pre>
+<p><strong>Output explanation:</strong> Returns one row per customer showing their earliest and most recent order dates.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> A natural follow-up is calculating customer lifetime in days — be ready to extend with DATEDIFF(MAX, MIN).</div>
+</div>
+<div class="qa-card" id="q95">
+<h4>Q95. How would you find students who failed in all subjects using a Marks table? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> Group by student, and use a HAVING clause with conditional aggregation (e.g., SUM of a CASE WHEN passing) to ensure every single subject was below the passing threshold.</p>
+<p><strong>Example scenario:</strong> Using a Students/Marks table, flag students who failed every subject they took.</p>
+<pre><code>SELECT student_id FROM Marks
+GROUP BY student_id
+HAVING SUM(CASE WHEN marks &gt;= 40 THEN 1 ELSE 0 END) = 0;</code></pre>
+<p><strong>Output explanation:</strong> Returns only students where the count of passing subjects (marks &gt;= 40) is exactly zero, meaning they failed everything.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Contrast this with 'failed in at least one subject' (HAVING SUM(...) &lt; COUNT(*)) — interviewers often ask both variants back to back.</div>
+</div>
+<div class="qa-card" id="q96">
+<h4>Q96. How do you find the class topper (highest total marks) per class/section? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> Sum marks per student, then rank students within each class/section using RANK() or ROW_NUMBER() and filter for the top rank.</p>
+<p><strong>Example scenario:</strong> Using Students and Marks tables, find the topper of each section.</p>
+<pre><code>WITH Totals AS (
+  SELECT s.section, s.student_id, SUM(m.marks) AS total_marks
+  FROM Students s JOIN Marks m ON s.student_id = m.student_id
+  GROUP BY s.section, s.student_id
+),
+Ranked AS (
+  SELECT *, RANK() OVER (PARTITION BY section ORDER BY total_marks DESC) AS rnk FROM Totals
+)
+SELECT * FROM Ranked WHERE rnk = 1;</code></pre>
+<p><strong>Output explanation:</strong> Returns the student (or tied students) with the highest total marks within each section.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> This layered CTE approach (aggregate → rank → filter) is a reusable template for many 'top performer per group' questions.</div>
+</div>
+<div class="qa-card" id="q97">
+<h4>Q97. What is the difference between a Data Warehouse and a Database? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> A Database is typically optimized for OLTP — fast, transactional, day-to-day operations on current data. A Data Warehouse is optimized for OLAP — storing large volumes of historical, integrated data from multiple sources for analysis and reporting, usually using denormalized star/snowflake schemas.</p>
+<p><strong>Example scenario:</strong> A retail company's live order system is a database; its multi-year sales analytics platform is a data warehouse.</p>
+<pre><code>-- Data warehouse fact table example
+CREATE TABLE FactSales (sale_id INT, date_key INT, product_key INT, customer_key INT, amount DECIMAL);</code></pre>
+<p><strong>Output explanation:</strong> The fact table stores pre-aggregated, denormalized sales data optimized for fast analytical queries across time, product, and customer dimensions.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Data analyst interviews often pair this with 'what is a star schema vs snowflake schema' — have a one-line distinction ready.</div>
+</div>
+<div class="qa-card" id="q98">
+<h4>Q98. How would you validate data quality using SQL (e.g., checking referential integrity manually)? <span class="badge diff-medium">Medium</span></h4>
+<p><strong>Answer:</strong> Write queries that check for orphan foreign keys, unexpected NULLs in required fields, duplicate primary keys, or values outside expected ranges/formats, often combined into a data quality checklist run periodically.</p>
+<p><strong>Example scenario:</strong> Check for Orders referencing a cust_id that doesn't exist in Customers.</p>
+<pre><code>SELECT o.order_id, o.cust_id FROM Orders o
+LEFT JOIN Customers c ON o.cust_id = c.cust_id
+WHERE c.cust_id IS NULL;</code></pre>
+<p><strong>Output explanation:</strong> Returns any orphan orders whose cust_id has no matching row in Customers, signaling a referential integrity issue.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Data analyst roles increasingly expect basic data-quality SQL — mention you'd automate such checks as scheduled validation queries.</div>
+</div>
+<div class="qa-card" id="q99">
+<h4>Q99. How do you find the second most recent order for each customer? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> Use ROW_NUMBER() partitioned by customer and ordered by order date descending, then filter for row number equal to 2.</p>
+<p><strong>Example scenario:</strong> A marketing team wants each customer's second-most-recent purchase for a re-engagement campaign.</p>
+<pre><code>WITH Ranked AS (
+  SELECT *, ROW_NUMBER() OVER (PARTITION BY cust_id ORDER BY order_date DESC) AS rn
+  FROM Orders
+)
+SELECT * FROM Ranked WHERE rn = 2;</code></pre>
+<p><strong>Output explanation:</strong> Returns exactly one row per customer — their second-most-recent order, based on descending order date.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> This 'Nth row per group' pattern using ROW_NUMBER is one of the highest-value templates to memorize for interviews.</div>
+</div>
+<div class="qa-card" id="q100">
+<h4>Q100. How would you design a query to detect salary outliers in a department? <span class="badge diff-hard">Hard</span></h4>
+<p><strong>Answer:</strong> Calculate the department's average and standard deviation of salary, then flag employees whose salary falls beyond a chosen number of standard deviations (e.g., 2) from the mean.</p>
+<p><strong>Example scenario:</strong> HR compliance wants to flag unusually high or low salaries within each department for review.</p>
+<pre><code>SELECT e.emp_name, e.salary, d.avg_sal, d.stddev_sal
+FROM Employees e
+JOIN (
+  SELECT dept_id, AVG(salary) AS avg_sal, STDDEV(salary) AS stddev_sal
+  FROM Employees GROUP BY dept_id
+) d ON e.dept_id = d.dept_id
+WHERE ABS(e.salary - d.avg_sal) &gt; 2 * d.stddev_sal;</code></pre>
+<p><strong>Output explanation:</strong> Returns employees whose salary deviates from their department's average by more than two standard deviations, flagging potential outliers.</p>
+<div class="tip-box"><strong>💡 Interview Tip:</strong> Bringing in STDDEV() for outlier detection shows statistical fluency beyond basic SQL — a strong differentiator for data analyst roles.</div>
+</div>
+
+<!-- ==================== COMMON MISTAKES ==================== -->
+<h2 id="common-mistakes">22. Common SQL Interview Mistakes</h2>
+<ul>
+<li><strong>Confusing WHERE and HAVING</strong> — WHERE filters rows before grouping; HAVING filters after.</li>
+<li><strong>Using COUNT(*) when COUNT(column) is needed</strong> — leads to incorrect counts with LEFT JOINs.</li>
+<li><strong>Forgetting the JOIN condition</strong> — accidentally creates a CROSS JOIN.</li>
+<li><strong>Using NOT IN with a nullable subquery</strong> — silently returns zero rows.</li>
+<li><strong>Assuming SQL executes top to bottom</strong> — the real logical order is FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY.</li>
+<li><strong>Overusing SELECT *</strong> — hurts performance and readability.</li>
+<li><strong>Not handling NULLs explicitly</strong> — NULL comparisons never evaluate to true.</li>
+<li><strong>Ignoring indexing on foreign keys</strong> — causes slow joins at scale.</li>
+</ul>
+<div class="warning-box"><strong>⚠️ Interview Warning:</strong> Even syntactically correct queries can be marked wrong if you can't explain the execution plan or edge cases (NULLs, duplicates, ties). Always narrate your thought process out loud.</div>
+
+<!-- ==================== OPTIMIZATION & PERFORMANCE ==================== -->
+<h2 id="optimization-tips">23. SQL Optimization &amp; Performance Tuning Tips</h2>
+<h3>Query Optimization Checklist</h3>
+<ul>
+<li>Select only required columns — avoid <code>SELECT *</code>.</li>
+<li>Filter early using WHERE before JOINs where possible.</li>
+<li>Index columns used in JOIN, WHERE, and ORDER BY clauses.</li>
+<li>Prefer JOINs over correlated subqueries for large datasets.</li>
+<li>Use EXPLAIN / EXPLAIN PLAN to detect full table scans.</li>
+<li>Use UNION ALL instead of UNION when duplicates are acceptable.</li>
+<li>Avoid functions on indexed columns in WHERE (e.g., <code>WHERE YEAR(order_date) = 2025</code> disables the index — use a date range instead).</li>
+<li>Batch large INSERT/UPDATE/DELETE operations instead of single massive transactions.</li>
+</ul>
+
+<h3>Indexing Interview Questions</h3>
+<div class="qa-card">
+<h4>What is a Composite Index and does column order matter?</h4>
+<p>A composite index spans multiple columns. Column order matters greatly — the index is most useful when queries filter on the leading (leftmost) column(s) first, similar to how a phone book is sorted by last name first, then first name.</p>
+<pre><code>CREATE INDEX idx_dept_salary ON Employees(dept_id, salary);
+-- Efficiently used by:
+SELECT * FROM Employees WHERE dept_id = 3 AND salary > 50000;
+-- NOT efficiently used by:
+SELECT * FROM Employees WHERE salary > 50000;</code></pre>
+</div>
+<div class="qa-card">
+<h4>Why might an index NOT be used even if it exists?</h4>
+<p>The optimizer may skip an index if the table is small (full scan is cheaper), if a function/calculation is applied to the indexed column, if there's a leading wildcard in a LIKE pattern (e.g., <code>LIKE '%abc'</code>), or if statistics are outdated.</p>
+</div>
+
+<!-- ==================== CHEAT SHEET ==================== -->
+<h2 id="cheat-sheet">24. SQL Cheat Sheet</h2>
+<table>
+<caption>Quick Syntax Cheat Sheet</caption>
+<thead><tr><th>Task</th><th>Syntax</th></tr></thead>
+<tbody>
+<tr><td>Select columns</td><td><code>SELECT col1, col2 FROM table;</code></td></tr>
+<tr><td>Filter rows</td><td><code>WHERE condition</code></td></tr>
+<tr><td>Sort results</td><td><code>ORDER BY col ASC|DESC</code></td></tr>
+<tr><td>Group rows</td><td><code>GROUP BY col</code></td></tr>
+<tr><td>Filter groups</td><td><code>HAVING condition</code></td></tr>
+<tr><td>Join tables</td><td><code>JOIN table ON condition</code></td></tr>
+<tr><td>Combine result sets</td><td><code>UNION / UNION ALL</code></td></tr>
+<tr><td>Rank rows</td><td><code>ROW_NUMBER() OVER (...)</code></td></tr>
+<tr><td>Temporary named query</td><td><code>WITH name AS (...)</code></td></tr>
+<tr><td>Save changes</td><td><code>COMMIT;</code></td></tr>
+<tr><td>Undo changes</td><td><code>ROLLBACK;</code></td></tr>
+</tbody>
+</table>
+
+<!-- ==================== REVISION NOTES ==================== -->
+<h2 id="revision-notes">25. Quick Revision Notes</h2>
+<ul>
+<li>Execution order: FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY → LIMIT.</li>
+<li>WHERE filters rows; HAVING filters groups.</li>
+<li>DDL auto-commits; DML can be rolled back.</li>
+<li>INNER JOIN = matches only; LEFT/RIGHT JOIN = all + matches; FULL OUTER = everything.</li>
+<li>ROW_NUMBER = unique; RANK = skips ties; DENSE_RANK = no skips.</li>
+<li>UNION removes duplicates; UNION ALL keeps them (and is faster).</li>
+<li>ACID = Atomicity, Consistency, Isolation, Durability.</li>
+<li>Normalize for data integrity; denormalize for read performance.</li>
+<li>NOT EXISTS is generally safer than NOT IN with nullable columns.</li>
+</ul>
+
+<!-- ==================== ROADMAP ==================== -->
+<h2 id="roadmap">26. SQL Interview Preparation Roadmap</h2>
+<h3>Week 1 — Foundations</h3>
+<ul>
+<li>SELECT, WHERE, ORDER BY, basic operators</li>
+<li>DDL/DML/DCL/TCL commands</li>
+<li>Constraints and Keys</li>
+</ul>
+<h3>Week 2 — Grouping &amp; Joins</h3>
+<ul>
+<li>GROUP BY, HAVING, aggregate functions</li>
+<li>All JOIN types with practice on Employees/Departments/Orders</li>
+</ul>
+<h3>Week 3 — Advanced Querying</h3>
+<ul>
+<li>Subqueries and correlated subqueries</li>
+<li>CTEs and recursive CTEs</li>
+<li>Window functions (ROW_NUMBER, RANK, LAG/LEAD)</li>
+</ul>
+<h3>Week 4 — Database Design &amp; Performance</h3>
+<ul>
+<li>Views, indexes, stored procedures, triggers</li>
+<li>Transactions, ACID, isolation levels</li>
+<li>Normalization, query optimization, EXPLAIN plans</li>
+</ul>
+<h3>Week 5 — Mock Practice</h3>
+<ul>
+<li>Solve all 100 questions in this guide without looking at answers first</li>
+<li>Practice explaining your query logic out loud (interviewers assess communication too)</li>
+<li>Attempt timed mock interviews or platforms like LeetCode SQL / HackerRank SQL</li>
+</ul>
+
+<!-- ==================== FAQS ==================== -->
+<h2 id="faqs">27. Frequently Asked Questions (FAQs)</h2>
+
+<div itemscope itemtype="https://schema.org/FAQPage">
+
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="qa-card">
+<h3 itemprop="name">Is SQL enough to get a Data Analyst job in 2026?</h3>
+<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<p itemprop="text">SQL is essential but rarely sufficient alone. Most Data Analyst roles in 2026 also expect Excel/Power BI or Tableau for visualization, Python (Pandas/NumPy) for deeper analysis, and strong business communication skills. SQL is typically the single most-tested skill in interviews, but it works best paired with these complementary tools.</p>
+</div>
+</div>
+
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="qa-card">
+<h3 itemprop="name">How long does it take to prepare for SQL interviews?</h3>
+<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<p itemprop="text">With focused daily practice, 4 to 6 weeks is typically enough to go from basics to confidently solving joins, window functions, and scenario-based questions, following a structured roadmap like the one in this article.</p>
+</div>
+</div>
+
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="qa-card">
+<h3 itemprop="name">What are the most important SQL topics for interviews?</h3>
+<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<p itemprop="text">JOINs, GROUP BY/HAVING, subqueries, window functions (ROW_NUMBER, RANK, DENSE_RANK, LAG/LEAD), and CTEs are the most frequently tested topics, alongside fundamental concepts like keys, constraints, and normalization.</p>
+</div>
+</div>
+
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="qa-card">
+<h3 itemprop="name">Which SQL database should I practice on: MySQL, PostgreSQL, or SQL Server?</h3>
+<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<p itemprop="text">Core SQL concepts transfer across all databases. PostgreSQL is a strong choice for practice because it closely follows the SQL standard and supports advanced features like window functions and recursive CTEs, but MySQL is equally acceptable for interview preparation.</p>
+</div>
+</div>
+
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="qa-card">
+<h3 itemprop="name">Do I need to memorize SQL syntax for interviews?</h3>
+<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<p itemprop="text">You should be comfortable writing common patterns (joins, GROUP BY, window functions) from memory, since many interviews involve a whiteboard or shared editor without autocomplete. Understanding the logic matters more than perfect syntax, but fluency builds confidence.</p>
+</div>
+</div>
+
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="qa-card">
+<h3 itemprop="name">What is the difference between SQL and MySQL?</h3>
+<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<p itemprop="text">SQL is the standard language used to interact with relational databases. MySQL is a specific database management system that implements SQL, along with its own extensions and dialect-specific features.</p>
+</div>
+</div>
+
+</div>
+
+<!-- ==================== INTERNAL LINKS ==================== -->
+<h2 id="internal-links">Continue Your Interview Preparation</h2>
+<p>Explore more interview-focused guides on AnkitIQCode to round out your Data Analyst and Software Engineering preparation:</p>
+<ul>
+<li><a href="/blog/python-interview-questions-and-answers">Python Interview Questions and Answers</a></li>
+<li><a href="/blog/power-bi-interview-questions-and-answers">Power BI Interview Questions and Answers</a></li>
+<li><a href="/blog/numpy-interview-questions-and-answers">NumPy Interview Questions and Answers</a></li>
+<li><a href="/blog/pandas-interview-questions-and-answers">Pandas Interview Questions and Answers</a></li>
+<li><a href="/blog/data-analyst-roadmap">Complete Data Analyst Roadmap (2026)</a></li>
+</ul>
+
+<!-- ==================== CONCLUSION ==================== -->
+<h2 id="conclusion">28. Conclusion</h2>
+<p>
+SQL remains one of the most in-demand, durable technical skills in tech — powering everything from startup MVPs to enterprise data warehouses. Mastering the concepts in this guide, from basic SELECT statements to window functions and query optimization, will put you well ahead of most candidates in your 2026 interviews.
+</p>
+<p>
+The key isn't memorizing 100 answers word-for-word — it's understanding <em>why</em> each query works, practicing on real tables like Employees, Orders, and Customers, and being able to explain your reasoning clearly under interview pressure. Revisit the cheat sheet and revision notes above the night before your interview, and work through the roadmap consistently in the weeks leading up to it.
+</p>
+
+<div class="cta-box">
+<h3>🚀 Keep Learning with AnkitIQCode</h3>
+<p>If this guide helped you, explore more in-depth, interview-focused tutorials on Python, SQL, Power BI, and Data Analytics at <a href="https://ankitiqcode-portfolio.netlify.app">ankitiqcode-portfolio.netlify.app</a>. Have questions or feedback? Connect with <strong>Ankit Verma (AnkitIQCode)</strong> on GitHub, LinkedIn, and YouTube — new tutorials and interview guides are added regularly to help you land your next role.</p>
+</div>
+
+</article>
