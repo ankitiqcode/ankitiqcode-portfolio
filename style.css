@@ -364,6 +364,10 @@ section { padding-block: var(--section-pad); position: relative; z-index: 1; }
 .hero-stat-label { font-size: 0.7rem; color: var(--muted); }
 
 @media (max-width: 860px) {
+  .hero {
+    min-height: auto;
+    align-items: flex-start;
+  }
   .hero .container { grid-template-columns: 1fr; text-align: center; }
   .hero-desc { margin-inline: auto; }
   .hero-cta, .hero-socials { justify-content: center; }
