@@ -772,3 +772,100 @@ p{ margin: 0; }
   .quick-nav__link--next{ text-align: left; margin-left: 0; }
 }
 /* ========================== END ARTICLE PAGE ADD-ONS ========================== */
+
+
+
+
+
+
+/* ==========================================================================
+   sql-interview-questions.css
+   Page-specific styles for sql-interview-questions.html
+
+   ADDITIVE ONLY — extends style.css, does not modify or override any
+   existing rule/token from the shared stylesheet. Reuses the same design
+   tokens defined in style.css's :root (--bg, --card, --accent, --nav-h,
+   --radius-*, --t-*, var(--font-*), etc.), so style.css must be loaded
+   BEFORE this file.
+   ========================================================================== */
+
+  /* Keep anchored sections (h2/h3/question-card ids) from hiding under the sticky navbar */
+  .article-content h2[id],
+  .article-content h3[id],
+  .question-card[id]{
+    scroll-margin-top: calc(var(--nav-h) + 24px);
+  }
+
+  /* Highlight a question card when it's the direct target of a #q-anchor link */
+  .question-card:target{
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px rgba(56,189,248,0.35), 0 18px 40px rgba(37,99,235,0.18);
+  }
+
+  /* Let long, unbroken SQL identifiers wrap instead of overflowing on mobile */
+  .code-block__code{
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  /* Question card header wraps cleanly on small screens instead of squeezing the badge */
+  .question-card__head{
+    flex-wrap: wrap;
+  }
+  .question-card__head h4{
+    margin: 0;
+    font-size: 1.02rem;
+    flex: 1 1 260px;
+  }
+
+  /* Responsive tables: scroll horizontally instead of breaking layout on small screens */
+  .article-table-wrap{
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--radius-md);
+  }
+  @media (max-width: 640px){
+    .article-table{ font-size: .84rem; }
+    .article-table th, .article-table td{ padding: .55rem .7rem; white-space: nowrap; }
+  }
+
+  /* Sidebar TOC: subtle left indicator on the active link, matching the accent gradient */
+  .toc__list a{ position: relative; padding-left: .8rem; display: inline-block; }
+  .toc__list a::before{
+    content: "";
+    position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+    width: 4px; height: 4px; border-radius: 50%;
+    background: var(--text-faint);
+    transition: background var(--t-fast) var(--ease), width var(--t-fast) var(--ease);
+  }
+  .toc__list a.is-active::before{
+    background: var(--accent);
+    width: 6px; height: 6px;
+  }
+
+  /* Difficulty badges sit neatly next to wrapped question titles */
+  .difficulty-badge{ flex-shrink: 0; }
+
+  /* FAQ answers respect the shared callout spacing rhythm when opened */
+  .faq-item__a p{ margin: 0; }
+
+  /* Author bio / newsletter card links use the accent color consistently on this page */
+  .author-bio__links .btn--ghost:hover,
+  .newsletter__card .btn--ghost:hover{
+    color: var(--accent);
+  }
+
+  /* Print-friendly output: hide chrome, keep the reference content */
+  @media print{
+    .navbar, .breadcrumb, .toc, .reading-progress, .back-to-top,
+    .share-row, .comments-placeholder, .footer, .code-block__copy,
+    .quick-nav, .newsletter__card{
+      display: none !important;
+    }
+    .article-layout{ grid-template-columns: 1fr; }
+    body{ background: #fff; color: #111; }
+    .question-card, .code-block, .output-block, .callout{
+      border: 1px solid #ccc; background: #fafafa; box-shadow: none;
+    }
+  }
