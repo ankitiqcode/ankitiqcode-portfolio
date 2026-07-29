@@ -283,10 +283,9 @@ section { padding-block: var(--section-pad); position: relative; z-index: 1; }
 
 /* ---------- Hero ---------- */
 .hero {
-  min-height: 100svh;
   display: flex;
   align-items: center;
-  padding-block: clamp(6rem, 12vw, 8rem) 3rem;
+  padding-block: clamp(6rem, 12vw, 8rem) clamp(3rem, 8vw, 5rem);
 }
 .hero .container {
   display: grid;
