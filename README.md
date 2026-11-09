@@ -5,8 +5,6 @@ A modern, responsive, and SEO-optimized portfolio showcasing my expertise in **D
 This portfolio highlights my projects, technical skills, certifications, achievements, resume, and technical blog, providing a complete overview of my learning journey and professional growth.
 
 ---
-
-
 ## ✨ Features
 
 - 💼 Professional Portfolio
